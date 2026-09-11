@@ -1,0 +1,76 @@
+{
+ "name": "Sarasota Pool Deck Surface Temperature Study",
+ "version": "0.1-protocol",
+ "status": "methodology published; measurements pending",
+ "publisher": "Sarasota Concrete (sarasotaconcrete.com)",
+ "license": "CC BY 4.0",
+ "published": "2026-09-10",
+ "planned_measurement_dates": [
+  "2027-01 (clear January day)",
+  "2027-07 (clear July day)"
+ ],
+ "location": "Sarasota, Florida (single site, samples side by side, full sun)",
+ "instrument": "Calibrated infrared thermometer, emissivity set for masonry (~0.94), distance-to-spot per instrument spec; readings taken 3x per surface, median reported",
+ "times_local": [
+  "10:00",
+  "14:00",
+  "17:00"
+ ],
+ "conditions_recorded": [
+  "air temperature (shaded)",
+  "sky condition",
+  "wind",
+  "surface dry/wet",
+  "time since last rain",
+  "sample color (light/medium/dark)"
+ ],
+ "surfaces": [
+  {
+   "id": "concrete-gray-broom",
+   "name": "Gray broom-finished concrete",
+   "color": "medium"
+  },
+  {
+   "id": "concrete-light-broom",
+   "name": "Light (white cement) broom-finished concrete",
+   "color": "light"
+  },
+  {
+   "id": "cool-deck-overlay",
+   "name": "Light textured cementitious overlay (cool deck type)",
+   "color": "light"
+  },
+  {
+   "id": "paver-gray",
+   "name": "Gray concrete paver",
+   "color": "medium"
+  },
+  {
+   "id": "paver-light",
+   "name": "Light-blend concrete paver",
+   "color": "light"
+  },
+  {
+   "id": "travertine-tumbled",
+   "name": "Tumbled travertine, light",
+   "color": "light"
+  },
+  {
+   "id": "shellstone",
+   "name": "Shellstone",
+   "color": "light"
+  },
+  {
+   "id": "marble-honed",
+   "name": "Honed marble, white/cream",
+   "color": "light"
+  },
+  {
+   "id": "porcelain-2cm",
+   "name": "2 cm porcelain paver, light",
+   "color": "light"
+  }
+ ],
+ "readings": [],
+ "note": "No temperature values are published until measured. Third-party claims (e.g., 20-35 F differences between light stone and dark concrete) are not reproduced here as data."
+}

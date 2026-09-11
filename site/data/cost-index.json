@@ -1,0 +1,143 @@
+{
+ "name": "Sarasota Concrete Cost Index",
+ "version": "0.1-baseline",
+ "license": "CC BY 4.0",
+ "publisher": "Sarasota Concrete (sarasotaconcrete.com)",
+ "status": "baseline from published sources; provider completed-job data begins Q1 2027",
+ "as_of": "2026-09-10",
+ "unit": "USD per square foot installed, planning range",
+ "geography": "Sarasota County and Charlotte County coast within 40 miles of Sarasota, Florida",
+ "method": "Baseline v0.1 compiles published Sarasota-area pricing pages read on 2026-09-10 (sources listed on /data-and-methods/). From Q1 2027 each quarterly release reports installed price per square foot by service, material and locality from the provider's completed jobs in the prior quarter, with sample size (n), median, 25th and 75th percentiles, and limitations. Localities with n<3 are suppressed.",
+ "series": [
+  {
+   "service": "concrete-driveway-broom",
+   "material": "4in 4000psi",
+   "low": 7,
+   "high": 12,
+   "n": null,
+   "source": "published"
+  },
+  {
+   "service": "concrete-patio-broom",
+   "material": "4in",
+   "low": 8,
+   "high": 13,
+   "n": null,
+   "source": "published"
+  },
+  {
+   "service": "concrete-pool-deck-new",
+   "material": "4in textured",
+   "low": 9,
+   "high": 14,
+   "n": null,
+   "source": "published"
+  },
+  {
+   "service": "pool-deck-overlay-basic",
+   "material": "cementitious overlay",
+   "low": 4,
+   "high": 8,
+   "n": null,
+   "source": "published"
+  },
+  {
+   "service": "pool-deck-overlay-decorative",
+   "material": "stamped/textured overlay",
+   "low": 10,
+   "high": 15,
+   "n": null,
+   "source": "published"
+  },
+  {
+   "service": "stamped-concrete",
+   "material": "4in stamped",
+   "low": 12,
+   "high": 20,
+   "n": null,
+   "source": "published"
+  },
+  {
+   "service": "concrete-walkway",
+   "material": "4in",
+   "low": 9,
+   "high": 14,
+   "n": null,
+   "source": "published"
+  },
+  {
+   "service": "paver-patio-pool-deck",
+   "material": "concrete pavers",
+   "low": 13,
+   "high": 16,
+   "n": null,
+   "source": "published"
+  },
+  {
+   "service": "paver-driveway",
+   "material": "concrete pavers vehicular",
+   "low": 14,
+   "high": 22,
+   "n": null,
+   "source": "published"
+  },
+  {
+   "service": "travertine-shellstone",
+   "material": "natural stone",
+   "low": 20,
+   "high": 26,
+   "n": null,
+   "source": "published"
+  },
+  {
+   "service": "marble",
+   "material": "honed marble",
+   "low": 24,
+   "high": 34,
+   "n": null,
+   "source": "published"
+  },
+  {
+   "service": "porcelain",
+   "material": "2cm porcelain",
+   "low": 22,
+   "high": 32,
+   "n": null,
+   "source": "published"
+  },
+  {
+   "service": "paver-clean-resand-seal",
+   "material": "service",
+   "low": 1,
+   "high": 3,
+   "n": null,
+   "source": "published"
+  },
+  {
+   "service": "paver-lift-reset",
+   "material": "service",
+   "low": 8,
+   "high": 15,
+   "n": null,
+   "source": "published"
+  }
+ ],
+ "localities_tracked": [
+  "sarasota",
+  "fruitville-bee-ridge",
+  "gulf-gate",
+  "siesta-key",
+  "palmer-ranch",
+  "longboat-key",
+  "osprey",
+  "nokomis",
+  "venice",
+  "south-venice",
+  "north-port",
+  "englewood",
+  "port-charlotte",
+  "rotonda-west",
+  "placida"
+ ],
+ "next_release": "2027-04 (Q1 2027 data)"
+}

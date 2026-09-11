@@ -1,0 +1,1248 @@
+{
+ "/404/": {
+  "words": 68,
+  "facts_per_150": 0.0,
+  "sentences": 8,
+  "avg_sentence": 8.9,
+  "problems": []
+ },
+ "/about/": {
+  "words": 567,
+  "facts_per_150": 1.06,
+  "sentences": 29,
+  "avg_sentence": 20.7,
+  "problems": []
+ },
+ "/accessibility/": {
+  "words": 103,
+  "facts_per_150": 0.0,
+  "sentences": 6,
+  "avg_sentence": 17.8,
+  "problems": []
+ },
+ "/areas/charlotte-county/": {
+  "words": 1364,
+  "facts_per_150": 2.2,
+  "sentences": 51,
+  "avg_sentence": 28.7,
+  "problems": []
+ },
+ "/areas/englewood/": {
+  "words": 639,
+  "facts_per_150": 4.69,
+  "sentences": 28,
+  "avg_sentence": 24.6,
+  "problems": []
+ },
+ "/areas/fruitville-bee-ridge/": {
+  "words": 642,
+  "facts_per_150": 4.21,
+  "sentences": 29,
+  "avg_sentence": 24.2,
+  "problems": []
+ },
+ "/areas/gulf-gate/": {
+  "words": 625,
+  "facts_per_150": 4.32,
+  "sentences": 36,
+  "avg_sentence": 18.8,
+  "problems": []
+ },
+ "/areas/": {
+  "words": 834,
+  "facts_per_150": 7.19,
+  "sentences": 28,
+  "avg_sentence": 34.3,
+  "problems": []
+ },
+ "/areas/longboat-key/": {
+  "words": 790,
+  "facts_per_150": 5.89,
+  "sentences": 33,
+  "avg_sentence": 25.8,
+  "problems": []
+ },
+ "/areas/nokomis/": {
+  "words": 605,
+  "facts_per_150": 4.46,
+  "sentences": 28,
+  "avg_sentence": 23.4,
+  "problems": []
+ },
+ "/areas/north-port/": {
+  "words": 681,
+  "facts_per_150": 3.08,
+  "sentences": 26,
+  "avg_sentence": 28.1,
+  "problems": []
+ },
+ "/areas/osprey/": {
+  "words": 588,
+  "facts_per_150": 4.34,
+  "sentences": 28,
+  "avg_sentence": 22.7,
+  "problems": []
+ },
+ "/areas/palmer-ranch/": {
+  "words": 590,
+  "facts_per_150": 5.59,
+  "sentences": 30,
+  "avg_sentence": 21.3,
+  "problems": []
+ },
+ "/areas/placida/": {
+  "words": 505,
+  "facts_per_150": 4.16,
+  "sentences": 26,
+  "avg_sentence": 20.9,
+  "problems": []
+ },
+ "/areas/port-charlotte/": {
+  "words": 530,
+  "facts_per_150": 5.66,
+  "sentences": 27,
+  "avg_sentence": 21.8,
+  "problems": []
+ },
+ "/areas/rotonda-west/": {
+  "words": 470,
+  "facts_per_150": 4.15,
+  "sentences": 24,
+  "avg_sentence": 21.1,
+  "problems": []
+ },
+ "/areas/sarasota/": {
+  "words": 832,
+  "facts_per_150": 4.15,
+  "sentences": 39,
+  "avg_sentence": 22.9,
+  "problems": []
+ },
+ "/areas/sarasota-county/": {
+  "words": 1786,
+  "facts_per_150": 5.88,
+  "sentences": 54,
+  "avg_sentence": 36.3,
+  "problems": []
+ },
+ "/areas/siesta-key/": {
+  "words": 773,
+  "facts_per_150": 5.63,
+  "sentences": 34,
+  "avg_sentence": 24.1,
+  "problems": []
+ },
+ "/areas/south-venice/": {
+  "words": 588,
+  "facts_per_150": 3.32,
+  "sentences": 29,
+  "avg_sentence": 22.0,
+  "problems": []
+ },
+ "/areas/venice/": {
+  "words": 686,
+  "facts_per_150": 4.59,
+  "sentences": 29,
+  "avg_sentence": 25.4,
+  "problems": []
+ },
+ "/coastal/": {
+  "words": 717,
+  "facts_per_150": 9.21,
+  "sentences": 23,
+  "avg_sentence": 34.3,
+  "problems": []
+ },
+ "/coastal/maintenance-calendar/": {
+  "words": 809,
+  "facts_per_150": 7.6,
+  "sentences": 19,
+  "avg_sentence": 47.4,
+  "problems": []
+ },
+ "/coastal/pool-deck-surface-temperature-study/": {
+  "words": 1051,
+  "facts_per_150": 2.28,
+  "sentences": 50,
+  "avg_sentence": 22.4,
+  "problems": []
+ },
+ "/coastal/post-storm-restoration/": {
+  "words": 1077,
+  "facts_per_150": 2.51,
+  "sentences": 51,
+  "avg_sentence": 22.5,
+  "problems": []
+ },
+ "/coastal/salt-and-concrete/": {
+  "words": 1071,
+  "facts_per_150": 1.82,
+  "sentences": 47,
+  "avg_sentence": 23.9,
+  "problems": []
+ },
+ "/coastal/storm-season-playbook/": {
+  "words": 982,
+  "facts_per_150": 2.29,
+  "sentences": 60,
+  "avg_sentence": 17.7,
+  "problems": []
+ },
+ "/compare/4-inch-vs-6-inch/": {
+  "words": 447,
+  "facts_per_150": 17.79,
+  "sentences": 39,
+  "avg_sentence": 13.5,
+  "problems": []
+ },
+ "/compare/concrete-vs-pavers-driveway/": {
+  "words": 599,
+  "facts_per_150": 13.52,
+  "sentences": 28,
+  "avg_sentence": 24.4,
+  "problems": []
+ },
+ "/compare/cool-deck-vs-pavers/": {
+  "words": 389,
+  "facts_per_150": 9.64,
+  "sentences": 18,
+  "avg_sentence": 24.5,
+  "problems": []
+ },
+ "/compare/": {
+  "words": 819,
+  "facts_per_150": 6.96,
+  "sentences": 42,
+  "avg_sentence": 21.2,
+  "problems": []
+ },
+ "/compare/pool-deck-surfaces-heat/": {
+  "words": 981,
+  "facts_per_150": 1.38,
+  "sentences": 44,
+  "avg_sentence": 24.1,
+  "problems": []
+ },
+ "/compare/rebar-vs-fiber/": {
+  "words": 377,
+  "facts_per_150": 6.37,
+  "sentences": 21,
+  "avg_sentence": 19.5,
+  "problems": []
+ },
+ "/compare/resurface-vs-replace-pool-deck/": {
+  "words": 416,
+  "facts_per_150": 16.95,
+  "sentences": 18,
+  "avg_sentence": 27.3,
+  "problems": []
+ },
+ "/compare/sealer-types-coastal/": {
+  "words": 367,
+  "facts_per_150": 2.45,
+  "sentences": 19,
+  "avg_sentence": 20.8,
+  "problems": []
+ },
+ "/compare/travertine-vs-concrete-pavers/": {
+  "words": 447,
+  "facts_per_150": 7.05,
+  "sentences": 25,
+  "avg_sentence": 19.6,
+  "problems": []
+ },
+ "/compare/travertine-vs-shellstone-vs-porcelain/": {
+  "words": 437,
+  "facts_per_150": 8.58,
+  "sentences": 25,
+  "avg_sentence": 19.2,
+  "problems": []
+ },
+ "/concrete/architectural/": {
+  "words": 934,
+  "facts_per_150": 3.53,
+  "sentences": 53,
+  "avg_sentence": 18.9,
+  "problems": []
+ },
+ "/concrete/driveways/englewood/": {
+  "words": 408,
+  "facts_per_150": 7.72,
+  "sentences": 21,
+  "avg_sentence": 22.2,
+  "problems": []
+ },
+ "/concrete/driveways/fruitville-bee-ridge/": {
+  "words": 430,
+  "facts_per_150": 8.37,
+  "sentences": 21,
+  "avg_sentence": 23.8,
+  "problems": []
+ },
+ "/concrete/driveways/gulf-gate/": {
+  "words": 406,
+  "facts_per_150": 9.61,
+  "sentences": 22,
+  "avg_sentence": 21.1,
+  "problems": []
+ },
+ "/concrete/driveways/": {
+  "words": 1669,
+  "facts_per_150": 6.02,
+  "sentences": 88,
+  "avg_sentence": 21.0,
+  "problems": []
+ },
+ "/concrete/driveways/nokomis/": {
+  "words": 391,
+  "facts_per_150": 7.67,
+  "sentences": 22,
+  "avg_sentence": 20.2,
+  "problems": []
+ },
+ "/concrete/driveways/north-port/": {
+  "words": 421,
+  "facts_per_150": 6.41,
+  "sentences": 20,
+  "avg_sentence": 23.2,
+  "problems": []
+ },
+ "/concrete/driveways/osprey/": {
+  "words": 401,
+  "facts_per_150": 8.23,
+  "sentences": 20,
+  "avg_sentence": 23.0,
+  "problems": []
+ },
+ "/concrete/driveways/palmer-ranch/": {
+  "words": 404,
+  "facts_per_150": 10.02,
+  "sentences": 23,
+  "avg_sentence": 19.9,
+  "problems": []
+ },
+ "/concrete/driveways/placida/": {
+  "words": 399,
+  "facts_per_150": 7.14,
+  "sentences": 21,
+  "avg_sentence": 21.9,
+  "problems": []
+ },
+ "/concrete/driveways/port-charlotte/": {
+  "words": 385,
+  "facts_per_150": 8.57,
+  "sentences": 21,
+  "avg_sentence": 20.9,
+  "problems": []
+ },
+ "/concrete/driveways/rotonda-west/": {
+  "words": 379,
+  "facts_per_150": 9.5,
+  "sentences": 23,
+  "avg_sentence": 18.9,
+  "problems": []
+ },
+ "/concrete/driveways/sarasota/": {
+  "words": 415,
+  "facts_per_150": 7.59,
+  "sentences": 19,
+  "avg_sentence": 24.4,
+  "problems": []
+ },
+ "/concrete/driveways/south-venice/": {
+  "words": 400,
+  "facts_per_150": 6.38,
+  "sentences": 20,
+  "avg_sentence": 22.4,
+  "problems": []
+ },
+ "/concrete/driveways/venice/": {
+  "words": 394,
+  "facts_per_150": 8.76,
+  "sentences": 22,
+  "avg_sentence": 19.7,
+  "problems": []
+ },
+ "/concrete/": {
+  "words": 1939,
+  "facts_per_150": 4.72,
+  "sentences": 89,
+  "avg_sentence": 23.8,
+  "problems": []
+ },
+ "/concrete/patios-lanais/": {
+  "words": 1182,
+  "facts_per_150": 5.58,
+  "sentences": 69,
+  "avg_sentence": 19.3,
+  "problems": []
+ },
+ "/concrete/patios-lanais/nokomis/": {
+  "words": 413,
+  "facts_per_150": 6.17,
+  "sentences": 21,
+  "avg_sentence": 22.3,
+  "problems": []
+ },
+ "/concrete/pool-decks/gulf-gate/": {
+  "words": 423,
+  "facts_per_150": 6.03,
+  "sentences": 24,
+  "avg_sentence": 19.7,
+  "problems": []
+ },
+ "/concrete/pool-decks/": {
+  "words": 1809,
+  "facts_per_150": 5.14,
+  "sentences": 96,
+  "avg_sentence": 20.7,
+  "problems": []
+ },
+ "/concrete/pool-decks/palmer-ranch/": {
+  "words": 401,
+  "facts_per_150": 5.61,
+  "sentences": 25,
+  "avg_sentence": 17.8,
+  "problems": []
+ },
+ "/concrete/pool-decks/sarasota/": {
+  "words": 482,
+  "facts_per_150": 6.54,
+  "sentences": 24,
+  "avg_sentence": 22.7,
+  "problems": []
+ },
+ "/concrete/pool-decks/siesta-key/": {
+  "words": 436,
+  "facts_per_150": 5.16,
+  "sentences": 22,
+  "avg_sentence": 22.2,
+  "problems": []
+ },
+ "/concrete/pool-decks/venice/": {
+  "words": 418,
+  "facts_per_150": 5.74,
+  "sentences": 20,
+  "avg_sentence": 23.1,
+  "problems": []
+ },
+ "/concrete/repair/englewood/": {
+  "words": 410,
+  "facts_per_150": 6.22,
+  "sentences": 21,
+  "avg_sentence": 21.6,
+  "problems": []
+ },
+ "/concrete/repair/fruitville-bee-ridge/": {
+  "words": 406,
+  "facts_per_150": 6.28,
+  "sentences": 22,
+  "avg_sentence": 20.5,
+  "problems": []
+ },
+ "/concrete/repair/gulf-gate/": {
+  "words": 398,
+  "facts_per_150": 5.28,
+  "sentences": 21,
+  "avg_sentence": 21.2,
+  "problems": []
+ },
+ "/concrete/repair/": {
+  "words": 1134,
+  "facts_per_150": 3.84,
+  "sentences": 62,
+  "avg_sentence": 20.1,
+  "problems": []
+ },
+ "/concrete/repair/north-port/": {
+  "words": 406,
+  "facts_per_150": 5.54,
+  "sentences": 20,
+  "avg_sentence": 22.4,
+  "problems": []
+ },
+ "/concrete/repair/placida/": {
+  "words": 407,
+  "facts_per_150": 7.0,
+  "sentences": 22,
+  "avg_sentence": 20.5,
+  "problems": []
+ },
+ "/concrete/repair/port-charlotte/": {
+  "words": 377,
+  "facts_per_150": 6.76,
+  "sentences": 20,
+  "avg_sentence": 20.9,
+  "problems": []
+ },
+ "/concrete/repair/rotonda-west/": {
+  "words": 380,
+  "facts_per_150": 5.53,
+  "sentences": 22,
+  "avg_sentence": 18.9,
+  "problems": []
+ },
+ "/concrete/repair/sarasota/": {
+  "words": 392,
+  "facts_per_150": 6.89,
+  "sentences": 19,
+  "avg_sentence": 23.4,
+  "problems": []
+ },
+ "/concrete/repair/south-venice/": {
+  "words": 405,
+  "facts_per_150": 5.56,
+  "sentences": 22,
+  "avg_sentence": 20.5,
+  "problems": []
+ },
+ "/concrete/resurfacing/": {
+  "words": 984,
+  "facts_per_150": 3.96,
+  "sentences": 66,
+  "avg_sentence": 16.3,
+  "problems": []
+ },
+ "/concrete/resurfacing/venice/": {
+  "words": 397,
+  "facts_per_150": 6.05,
+  "sentences": 22,
+  "avg_sentence": 20.2,
+  "problems": []
+ },
+ "/concrete/sidewalks-walkways/": {
+  "words": 917,
+  "facts_per_150": 7.03,
+  "sentences": 59,
+  "avg_sentence": 17.3,
+  "problems": []
+ },
+ "/concrete/slabs/fruitville-bee-ridge/": {
+  "words": 467,
+  "facts_per_150": 9.96,
+  "sentences": 22,
+  "avg_sentence": 24.7,
+  "problems": []
+ },
+ "/concrete/slabs/": {
+  "words": 1069,
+  "facts_per_150": 8.7,
+  "sentences": 73,
+  "avg_sentence": 16.7,
+  "problems": []
+ },
+ "/concrete/slabs/north-port/": {
+  "words": 421,
+  "facts_per_150": 8.91,
+  "sentences": 22,
+  "avg_sentence": 22.0,
+  "problems": []
+ },
+ "/concrete/slabs/south-venice/": {
+  "words": 419,
+  "facts_per_150": 10.74,
+  "sentences": 22,
+  "avg_sentence": 22.3,
+  "problems": []
+ },
+ "/concrete/stamped/": {
+  "words": 1114,
+  "facts_per_150": 4.58,
+  "sentences": 66,
+  "avg_sentence": 18.6,
+  "problems": []
+ },
+ "/contact/": {
+  "words": 88,
+  "facts_per_150": 0.0,
+  "sentences": 7,
+  "avg_sentence": 13.9,
+  "problems": []
+ },
+ "/data-and-methods/": {
+  "words": 582,
+  "facts_per_150": 2.58,
+  "sentences": 33,
+  "avg_sentence": 18.8,
+  "problems": []
+ },
+ "/directories/": {
+  "words": 133,
+  "facts_per_150": 3.38,
+  "sentences": 12,
+  "avg_sentence": 11.6,
+  "problems": []
+ },
+ "/editorial-standards/": {
+  "words": 531,
+  "facts_per_150": 2.26,
+  "sentences": 21,
+  "avg_sentence": 26.6,
+  "problems": []
+ },
+ "/faq/concrete/": {
+  "words": 588,
+  "facts_per_150": 4.59,
+  "sentences": 38,
+  "avg_sentence": 16.9,
+  "problems": []
+ },
+ "/faq/cost/": {
+  "words": 486,
+  "facts_per_150": 20.68,
+  "sentences": 23,
+  "avg_sentence": 25.4,
+  "problems": []
+ },
+ "/faq/": {
+  "words": 2716,
+  "facts_per_150": 1.16,
+  "sentences": 200,
+  "avg_sentence": 14.1,
+  "problems": []
+ },
+ "/faq/pavers/": {
+  "words": 570,
+  "facts_per_150": 4.21,
+  "sentences": 38,
+  "avg_sentence": 16.1,
+  "problems": []
+ },
+ "/faq/permits-hoa-flood/": {
+  "words": 633,
+  "facts_per_150": 10.43,
+  "sentences": 37,
+  "avg_sentence": 18.8,
+  "problems": []
+ },
+ "/faq/pool-decks/": {
+  "words": 541,
+  "facts_per_150": 6.93,
+  "sentences": 29,
+  "avg_sentence": 20.8,
+  "problems": []
+ },
+ "/financing/": {
+  "words": 120,
+  "facts_per_150": 1.25,
+  "sentences": 7,
+  "avg_sentence": 18.3,
+  "problems": []
+ },
+ "/gallery/": {
+  "words": 842,
+  "facts_per_150": 0.18,
+  "sentences": 13,
+  "avg_sentence": 70.8,
+  "problems": []
+ },
+ "/guides/ask-the-estimator/": {
+  "words": 241,
+  "facts_per_150": 1.24,
+  "sentences": 16,
+  "avg_sentence": 15.9,
+  "problems": []
+ },
+ "/guides/condo-pool-deck-boards/": {
+  "words": 505,
+  "facts_per_150": 2.97,
+  "sentences": 24,
+  "avg_sentence": 22.2,
+  "problems": []
+ },
+ "/guides/cure-times-and-rain/": {
+  "words": 529,
+  "facts_per_150": 8.22,
+  "sentences": 27,
+  "avg_sentence": 21.7,
+  "problems": []
+ },
+ "/guides/deposits-and-warranties/": {
+  "words": 503,
+  "facts_per_150": 5.67,
+  "sentences": 27,
+  "avg_sentence": 20.3,
+  "problems": []
+ },
+ "/guides/efflorescence/": {
+  "words": 406,
+  "facts_per_150": 1.48,
+  "sentences": 23,
+  "avg_sentence": 18.5,
+  "problems": []
+ },
+ "/guides/golf-cart-paths/": {
+  "words": 447,
+  "facts_per_150": 3.36,
+  "sentences": 22,
+  "avg_sentence": 21.8,
+  "problems": []
+ },
+ "/guides/hurricane-insurance-documentation/": {
+  "words": 436,
+  "facts_per_150": 1.38,
+  "sentences": 25,
+  "avg_sentence": 18.2,
+  "problems": []
+ },
+ "/guides/": {
+  "words": 313,
+  "facts_per_150": 1.92,
+  "sentences": 18,
+  "avg_sentence": 18.2,
+  "problems": []
+ },
+ "/guides/north-port-gdc-lot-driveways/": {
+  "words": 539,
+  "facts_per_150": 1.95,
+  "sentences": 27,
+  "avg_sentence": 21.3,
+  "problems": []
+ },
+ "/guides/permeable-pavers-impervious-limit/": {
+  "words": 539,
+  "facts_per_150": 6.4,
+  "sentences": 30,
+  "avg_sentence": 19.2,
+  "problems": []
+ },
+ "/guides/polymeric-sand-weeds-ants/": {
+  "words": 544,
+  "facts_per_150": 1.65,
+  "sentences": 28,
+  "avg_sentence": 20.9,
+  "problems": []
+ },
+ "/guides/snowbird-project-guide/": {
+  "words": 557,
+  "facts_per_150": 1.08,
+  "sentences": 32,
+  "avg_sentence": 18.3,
+  "problems": []
+ },
+ "/guides/verify-contractor-license-sarasota/": {
+  "words": 542,
+  "facts_per_150": 3.04,
+  "sentences": 26,
+  "avg_sentence": 21.8,
+  "problems": []
+ },
+ "/guides/well-water-rust-stains/": {
+  "words": 954,
+  "facts_per_150": 2.04,
+  "sentences": 32,
+  "avg_sentence": 32.0,
+  "problems": []
+ },
+ "/guides/why-concrete-cracks-sarasota/": {
+  "words": 627,
+  "facts_per_150": 4.07,
+  "sentences": 31,
+  "avg_sentence": 22.0,
+  "problems": []
+ },
+ "/hoa/barrier-island-condos/": {
+  "words": 1128,
+  "facts_per_150": 4.12,
+  "sentences": 57,
+  "avg_sentence": 21.6,
+  "problems": []
+ },
+ "/hoa/": {
+  "words": 1461,
+  "facts_per_150": 1.64,
+  "sentences": 56,
+  "avg_sentence": 27.5,
+  "problems": []
+ },
+ "/hoa/palmer-ranch/": {
+  "words": 941,
+  "facts_per_150": 3.51,
+  "sentences": 45,
+  "avg_sentence": 22.2,
+  "problems": []
+ },
+ "/hoa/wellen-park/": {
+  "words": 984,
+  "facts_per_150": 1.22,
+  "sentences": 49,
+  "avg_sentence": 21.0,
+  "problems": []
+ },
+ "/": {
+  "words": 3261,
+  "facts_per_150": 2.44,
+  "sentences": 156,
+  "avg_sentence": 22.4,
+  "problems": []
+ },
+ "/pavers/artificial-turf/": {
+  "words": 854,
+  "facts_per_150": 3.16,
+  "sentences": 55,
+  "avg_sentence": 16.8,
+  "problems": []
+ },
+ "/pavers/driveways/gulf-gate/": {
+  "words": 382,
+  "facts_per_150": 5.89,
+  "sentences": 21,
+  "avg_sentence": 20.2,
+  "problems": []
+ },
+ "/pavers/driveways/": {
+  "words": 1413,
+  "facts_per_150": 5.2,
+  "sentences": 78,
+  "avg_sentence": 19.8,
+  "problems": []
+ },
+ "/pavers/driveways/longboat-key/": {
+  "words": 447,
+  "facts_per_150": 5.7,
+  "sentences": 23,
+  "avg_sentence": 21.3,
+  "problems": []
+ },
+ "/pavers/driveways/nokomis/": {
+  "words": 432,
+  "facts_per_150": 5.56,
+  "sentences": 23,
+  "avg_sentence": 20.6,
+  "problems": []
+ },
+ "/pavers/driveways/osprey/": {
+  "words": 410,
+  "facts_per_150": 6.59,
+  "sentences": 22,
+  "avg_sentence": 20.7,
+  "problems": []
+ },
+ "/pavers/driveways/palmer-ranch/": {
+  "words": 389,
+  "facts_per_150": 5.01,
+  "sentences": 22,
+  "avg_sentence": 19.5,
+  "problems": []
+ },
+ "/pavers/driveways/placida/": {
+  "words": 410,
+  "facts_per_150": 6.95,
+  "sentences": 22,
+  "avg_sentence": 20.9,
+  "problems": []
+ },
+ "/pavers/driveways/port-charlotte/": {
+  "words": 388,
+  "facts_per_150": 7.35,
+  "sentences": 21,
+  "avg_sentence": 20.8,
+  "problems": []
+ },
+ "/pavers/driveways/rotonda-west/": {
+  "words": 366,
+  "facts_per_150": 6.15,
+  "sentences": 22,
+  "avg_sentence": 18.8,
+  "problems": []
+ },
+ "/pavers/driveways/sarasota/": {
+  "words": 384,
+  "facts_per_150": 7.81,
+  "sentences": 21,
+  "avg_sentence": 20.3,
+  "problems": []
+ },
+ "/pavers/": {
+  "words": 1904,
+  "facts_per_150": 3.47,
+  "sentences": 69,
+  "avg_sentence": 29.6,
+  "problems": []
+ },
+ "/pavers/marble-porcelain/": {
+  "words": 996,
+  "facts_per_150": 4.07,
+  "sentences": 58,
+  "avg_sentence": 18.8,
+  "problems": []
+ },
+ "/pavers/outdoor-lighting/": {
+  "words": 969,
+  "facts_per_150": 4.8,
+  "sentences": 52,
+  "avg_sentence": 19.9,
+  "problems": []
+ },
+ "/pavers/patios-lanais/fruitville-bee-ridge/": {
+  "words": 451,
+  "facts_per_150": 5.65,
+  "sentences": 22,
+  "avg_sentence": 23.3,
+  "problems": []
+ },
+ "/pavers/patios-lanais/": {
+  "words": 1068,
+  "facts_per_150": 4.78,
+  "sentences": 68,
+  "avg_sentence": 17.5,
+  "problems": []
+ },
+ "/pavers/patios-lanais/south-venice/": {
+  "words": 420,
+  "facts_per_150": 6.07,
+  "sentences": 23,
+  "avg_sentence": 21.0,
+  "problems": []
+ },
+ "/pavers/pool-decks/englewood/": {
+  "words": 450,
+  "facts_per_150": 7.33,
+  "sentences": 24,
+  "avg_sentence": 20.8,
+  "problems": []
+ },
+ "/pavers/pool-decks/": {
+  "words": 1469,
+  "facts_per_150": 4.19,
+  "sentences": 75,
+  "avg_sentence": 21.6,
+  "problems": []
+ },
+ "/pavers/pool-decks/longboat-key/": {
+  "words": 473,
+  "facts_per_150": 8.56,
+  "sentences": 23,
+  "avg_sentence": 22.7,
+  "problems": []
+ },
+ "/pavers/pool-decks/nokomis/": {
+  "words": 428,
+  "facts_per_150": 5.96,
+  "sentences": 23,
+  "avg_sentence": 21.0,
+  "problems": []
+ },
+ "/pavers/pool-decks/north-port/": {
+  "words": 403,
+  "facts_per_150": 6.33,
+  "sentences": 22,
+  "avg_sentence": 20.4,
+  "problems": []
+ },
+ "/pavers/pool-decks/osprey/": {
+  "words": 460,
+  "facts_per_150": 5.87,
+  "sentences": 23,
+  "avg_sentence": 22.0,
+  "problems": []
+ },
+ "/pavers/pool-decks/palmer-ranch/": {
+  "words": 398,
+  "facts_per_150": 6.78,
+  "sentences": 22,
+  "avg_sentence": 20.2,
+  "problems": []
+ },
+ "/pavers/pool-decks/placida/": {
+  "words": 436,
+  "facts_per_150": 6.88,
+  "sentences": 23,
+  "avg_sentence": 21.1,
+  "problems": []
+ },
+ "/pavers/pool-decks/port-charlotte/": {
+  "words": 415,
+  "facts_per_150": 6.87,
+  "sentences": 22,
+  "avg_sentence": 21.0,
+  "problems": []
+ },
+ "/pavers/pool-decks/rotonda-west/": {
+  "words": 391,
+  "facts_per_150": 6.52,
+  "sentences": 21,
+  "avg_sentence": 21.0,
+  "problems": []
+ },
+ "/pavers/pool-decks/sarasota/": {
+  "words": 448,
+  "facts_per_150": 6.03,
+  "sentences": 22,
+  "avg_sentence": 22.5,
+  "problems": []
+ },
+ "/pavers/pool-decks/siesta-key/": {
+  "words": 455,
+  "facts_per_150": 6.59,
+  "sentences": 23,
+  "avg_sentence": 22.1,
+  "problems": []
+ },
+ "/pavers/pool-decks/venice/": {
+  "words": 390,
+  "facts_per_150": 5.77,
+  "sentences": 21,
+  "avg_sentence": 20.4,
+  "problems": []
+ },
+ "/pavers/repair-storm-restoration/englewood/": {
+  "words": 435,
+  "facts_per_150": 6.55,
+  "sentences": 24,
+  "avg_sentence": 20.4,
+  "problems": []
+ },
+ "/pavers/repair-storm-restoration/": {
+  "words": 1037,
+  "facts_per_150": 3.04,
+  "sentences": 57,
+  "avg_sentence": 19.5,
+  "problems": []
+ },
+ "/pavers/repair-storm-restoration/longboat-key/": {
+  "words": 452,
+  "facts_per_150": 6.64,
+  "sentences": 24,
+  "avg_sentence": 20.8,
+  "problems": []
+ },
+ "/pavers/repair-storm-restoration/siesta-key/": {
+  "words": 444,
+  "facts_per_150": 5.74,
+  "sentences": 21,
+  "avg_sentence": 23.2,
+  "problems": []
+ },
+ "/pavers/retaining-walls-outdoor-living/": {
+  "words": 948,
+  "facts_per_150": 4.11,
+  "sentences": 50,
+  "avg_sentence": 20.7,
+  "problems": []
+ },
+ "/pavers/sealing/": {
+  "words": 956,
+  "facts_per_150": 4.24,
+  "sentences": 62,
+  "avg_sentence": 16.8,
+  "problems": []
+ },
+ "/pavers/sealing/longboat-key/": {
+  "words": 400,
+  "facts_per_150": 6.38,
+  "sentences": 24,
+  "avg_sentence": 18.7,
+  "problems": []
+ },
+ "/pavers/sealing/sarasota/": {
+  "words": 419,
+  "facts_per_150": 7.16,
+  "sentences": 22,
+  "avg_sentence": 21.3,
+  "problems": []
+ },
+ "/pavers/sealing/siesta-key/": {
+  "words": 417,
+  "facts_per_150": 5.04,
+  "sentences": 23,
+  "avg_sentence": 20.2,
+  "problems": []
+ },
+ "/pavers/travertine-shellstone/": {
+  "words": 1009,
+  "facts_per_150": 3.27,
+  "sentences": 59,
+  "avg_sentence": 18.4,
+  "problems": []
+ },
+ "/pavers/travertine-shellstone/osprey/": {
+  "words": 432,
+  "facts_per_150": 4.17,
+  "sentences": 23,
+  "avg_sentence": 20.7,
+  "problems": []
+ },
+ "/pavers/walkways-steps/": {
+  "words": 1003,
+  "facts_per_150": 4.04,
+  "sentences": 56,
+  "avg_sentence": 19.7,
+  "problems": []
+ },
+ "/permits/charlotte-county/": {
+  "words": 826,
+  "facts_per_150": 5.27,
+  "sentences": 37,
+  "avg_sentence": 24.4,
+  "problems": []
+ },
+ "/permits/city-of-sarasota/": {
+  "words": 1033,
+  "facts_per_150": 3.63,
+  "sentences": 43,
+  "avg_sentence": 25.2,
+  "problems": []
+ },
+ "/permits/flood-zones-50-percent-rule/": {
+  "words": 1491,
+  "facts_per_150": 4.93,
+  "sentences": 61,
+  "avg_sentence": 26.0,
+  "problems": []
+ },
+ "/permits/": {
+  "words": 1275,
+  "facts_per_150": 3.18,
+  "sentences": 63,
+  "avg_sentence": 21.3,
+  "problems": []
+ },
+ "/permits/longboat-key/": {
+  "words": 1009,
+  "facts_per_150": 6.1,
+  "sentences": 43,
+  "avg_sentence": 25.5,
+  "problems": []
+ },
+ "/permits/north-port/": {
+  "words": 869,
+  "facts_per_150": 1.9,
+  "sentences": 39,
+  "avg_sentence": 23.2,
+  "problems": []
+ },
+ "/permits/sarasota-county/": {
+  "words": 1344,
+  "facts_per_150": 7.03,
+  "sentences": 52,
+  "avg_sentence": 28.3,
+  "problems": []
+ },
+ "/permits/sea-turtle-lighting/": {
+  "words": 807,
+  "facts_per_150": 6.13,
+  "sentences": 36,
+  "avg_sentence": 23.6,
+  "problems": []
+ },
+ "/permits/venice/": {
+  "words": 923,
+  "facts_per_150": 4.39,
+  "sentences": 40,
+  "avg_sentence": 24.1,
+  "problems": []
+ },
+ "/pricing/concrete/": {
+  "words": 1273,
+  "facts_per_150": 22.15,
+  "sentences": 56,
+  "avg_sentence": 28.1,
+  "problems": []
+ },
+ "/pricing/": {
+  "words": 1775,
+  "facts_per_150": 6.0,
+  "sentences": 76,
+  "avg_sentence": 25.4,
+  "problems": []
+ },
+ "/pricing/pavers/": {
+  "words": 1321,
+  "facts_per_150": 26.12,
+  "sentences": 61,
+  "avg_sentence": 27.0,
+  "problems": []
+ },
+ "/pricing/pool-decks/": {
+  "words": 1238,
+  "facts_per_150": 20.23,
+  "sentences": 53,
+  "avg_sentence": 27.9,
+  "problems": []
+ },
+ "/pricing/sarasota-concrete-cost-index/": {
+  "words": 1128,
+  "facts_per_150": 5.72,
+  "sentences": 51,
+  "avg_sentence": 24.3,
+  "problems": []
+ },
+ "/privacy/": {
+  "words": 257,
+  "facts_per_150": 0.58,
+  "sentences": 15,
+  "avg_sentence": 17.5,
+  "problems": []
+ },
+ "/projects/": {
+  "words": 155,
+  "facts_per_150": 4.84,
+  "sentences": 10,
+  "avg_sentence": 16.5,
+  "problems": []
+ },
+ "/reviews/": {
+  "words": 141,
+  "facts_per_150": 1.06,
+  "sentences": 7,
+  "avg_sentence": 20.6,
+  "problems": []
+ },
+ "/terms/": {
+  "words": 226,
+  "facts_per_150": 0.66,
+  "sentences": 17,
+  "avg_sentence": 13.8,
+  "problems": []
+ },
+ "/thank-you/": {
+  "words": 99,
+  "facts_per_150": 1.52,
+  "sentences": 6,
+  "avg_sentence": 17.5,
+  "problems": []
+ },
+ "/tools/coastal-surface-selector/": {
+  "words": 241,
+  "facts_per_150": 4.36,
+  "sentences": 16,
+  "avg_sentence": 16.2,
+  "problems": []
+ },
+ "/tools/concrete-paver-calculator/": {
+  "words": 232,
+  "facts_per_150": 10.34,
+  "sentences": 16,
+  "avg_sentence": 16.6,
+  "problems": []
+ },
+ "/tools/": {
+  "words": 147,
+  "facts_per_150": 2.04,
+  "sentences": 8,
+  "avg_sentence": 19.8,
+  "problems": []
+ },
+ "/tools/permit-flood-setback-finder/": {
+  "words": 206,
+  "facts_per_150": 5.83,
+  "sentences": 9,
+  "avg_sentence": 24.0,
+  "problems": []
+ },
+ "/tools/pour-calendar/": {
+  "words": 201,
+  "facts_per_150": 10.45,
+  "sentences": 12,
+  "avg_sentence": 21.8,
+  "problems": []
+ },
+ "/warranty/": {
+  "words": 278,
+  "facts_per_150": 0.54,
+  "sentences": 15,
+  "avg_sentence": 19.3,
+  "problems": []
+ }
+}

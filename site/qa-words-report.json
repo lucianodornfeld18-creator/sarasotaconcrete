@@ -1,0 +1,1782 @@
+[
+ {
+  "route": "/404/",
+  "type": "other",
+  "main_words": 68,
+  "body_words": 423,
+  "floor": 0,
+  "target": 0,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/about/",
+  "type": "about",
+  "main_words": 567,
+  "body_words": 922,
+  "floor": 485,
+  "target": 900,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/accessibility/",
+  "type": "other",
+  "main_words": 103,
+  "body_words": 458,
+  "floor": 0,
+  "target": 0,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/areas/charlotte-county/",
+  "type": "county",
+  "main_words": 1364,
+  "body_words": 1719,
+  "floor": 0,
+  "target": 2000,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/areas/englewood/",
+  "type": "city_t1",
+  "main_words": 893,
+  "body_words": 1248,
+  "floor": 1144,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/areas/fruitville-bee-ridge/",
+  "type": "city_t1",
+  "main_words": 896,
+  "body_words": 1251,
+  "floor": 1144,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/areas/gulf-gate/",
+  "type": "city_t1",
+  "main_words": 879,
+  "body_words": 1234,
+  "floor": 1144,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/areas/",
+  "type": "city_t1",
+  "main_words": 834,
+  "body_words": 1189,
+  "floor": 1144,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/areas/longboat-key/",
+  "type": "city_t1",
+  "main_words": 1044,
+  "body_words": 1399,
+  "floor": 1144,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/areas/nokomis/",
+  "type": "city_t1",
+  "main_words": 859,
+  "body_words": 1214,
+  "floor": 1144,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/areas/north-port/",
+  "type": "city_t1",
+  "main_words": 935,
+  "body_words": 1290,
+  "floor": 1144,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/areas/osprey/",
+  "type": "city_t1",
+  "main_words": 842,
+  "body_words": 1197,
+  "floor": 1144,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/areas/palmer-ranch/",
+  "type": "city_t1",
+  "main_words": 844,
+  "body_words": 1199,
+  "floor": 1144,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/areas/placida/",
+  "type": "city_t2",
+  "main_words": 759,
+  "body_words": 1114,
+  "floor": 455,
+  "target": 1000,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/areas/port-charlotte/",
+  "type": "city_t2",
+  "main_words": 784,
+  "body_words": 1139,
+  "floor": 455,
+  "target": 1000,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/areas/rotonda-west/",
+  "type": "city_t2",
+  "main_words": 724,
+  "body_words": 1079,
+  "floor": 455,
+  "target": 1000,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/areas/sarasota/",
+  "type": "city_t1",
+  "main_words": 1086,
+  "body_words": 1441,
+  "floor": 1144,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/areas/sarasota-county/",
+  "type": "county",
+  "main_words": 1786,
+  "body_words": 2141,
+  "floor": 0,
+  "target": 2000,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/areas/siesta-key/",
+  "type": "city_t1",
+  "main_words": 1027,
+  "body_words": 1382,
+  "floor": 1144,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/areas/south-venice/",
+  "type": "city_t1",
+  "main_words": 842,
+  "body_words": 1197,
+  "floor": 1144,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/areas/venice/",
+  "type": "city_t1",
+  "main_words": 940,
+  "body_words": 1295,
+  "floor": 1144,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/coastal/",
+  "type": "guide",
+  "main_words": 717,
+  "body_words": 1072,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/coastal/maintenance-calendar/",
+  "type": "guide",
+  "main_words": 809,
+  "body_words": 1164,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/coastal/pool-deck-surface-temperature-study/",
+  "type": "guide",
+  "main_words": 1051,
+  "body_words": 1406,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/coastal/post-storm-restoration/",
+  "type": "guide",
+  "main_words": 1077,
+  "body_words": 1432,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/coastal/salt-and-concrete/",
+  "type": "guide",
+  "main_words": 1071,
+  "body_words": 1426,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/coastal/storm-season-playbook/",
+  "type": "guide",
+  "main_words": 982,
+  "body_words": 1337,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/compare/4-inch-vs-6-inch/",
+  "type": "guide",
+  "main_words": 447,
+  "body_words": 802,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/compare/concrete-vs-pavers-driveway/",
+  "type": "guide",
+  "main_words": 599,
+  "body_words": 954,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/compare/cool-deck-vs-pavers/",
+  "type": "guide",
+  "main_words": 389,
+  "body_words": 744,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/compare/",
+  "type": "guide",
+  "main_words": 819,
+  "body_words": 1174,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/compare/pool-deck-surfaces-heat/",
+  "type": "guide",
+  "main_words": 981,
+  "body_words": 1336,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/compare/rebar-vs-fiber/",
+  "type": "guide",
+  "main_words": 377,
+  "body_words": 732,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/compare/resurface-vs-replace-pool-deck/",
+  "type": "guide",
+  "main_words": 416,
+  "body_words": 771,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/compare/sealer-types-coastal/",
+  "type": "guide",
+  "main_words": 367,
+  "body_words": 722,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/compare/travertine-vs-concrete-pavers/",
+  "type": "guide",
+  "main_words": 447,
+  "body_words": 802,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/compare/travertine-vs-shellstone-vs-porcelain/",
+  "type": "guide",
+  "main_words": 437,
+  "body_words": 792,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/architectural/",
+  "type": "service",
+  "main_words": 934,
+  "body_words": 1289,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/driveways/englewood/",
+  "type": "city_service",
+  "main_words": 662,
+  "body_words": 1017,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/driveways/fruitville-bee-ridge/",
+  "type": "city_service",
+  "main_words": 684,
+  "body_words": 1039,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/driveways/gulf-gate/",
+  "type": "city_service",
+  "main_words": 660,
+  "body_words": 1015,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/driveways/",
+  "type": "service",
+  "main_words": 1669,
+  "body_words": 2024,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/concrete/driveways/nokomis/",
+  "type": "city_service",
+  "main_words": 645,
+  "body_words": 1000,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/driveways/north-port/",
+  "type": "city_service",
+  "main_words": 675,
+  "body_words": 1030,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/driveways/osprey/",
+  "type": "city_service",
+  "main_words": 655,
+  "body_words": 1010,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/driveways/palmer-ranch/",
+  "type": "city_service",
+  "main_words": 658,
+  "body_words": 1013,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/driveways/placida/",
+  "type": "city_service",
+  "main_words": 653,
+  "body_words": 1008,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/driveways/port-charlotte/",
+  "type": "city_service",
+  "main_words": 639,
+  "body_words": 994,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/driveways/rotonda-west/",
+  "type": "city_service",
+  "main_words": 633,
+  "body_words": 988,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/driveways/sarasota/",
+  "type": "city_service",
+  "main_words": 669,
+  "body_words": 1024,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/driveways/south-venice/",
+  "type": "city_service",
+  "main_words": 654,
+  "body_words": 1009,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/driveways/venice/",
+  "type": "city_service",
+  "main_words": 648,
+  "body_words": 1003,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/",
+  "type": "pillar",
+  "main_words": 1939,
+  "body_words": 2294,
+  "floor": 1470,
+  "target": 2200,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/concrete/patios-lanais/",
+  "type": "service",
+  "main_words": 1182,
+  "body_words": 1537,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/patios-lanais/nokomis/",
+  "type": "city_service",
+  "main_words": 667,
+  "body_words": 1022,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/pool-decks/gulf-gate/",
+  "type": "city_service",
+  "main_words": 677,
+  "body_words": 1032,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/pool-decks/",
+  "type": "service",
+  "main_words": 1809,
+  "body_words": 2164,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/concrete/pool-decks/palmer-ranch/",
+  "type": "city_service",
+  "main_words": 655,
+  "body_words": 1010,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/pool-decks/sarasota/",
+  "type": "city_service",
+  "main_words": 736,
+  "body_words": 1091,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/pool-decks/siesta-key/",
+  "type": "city_service",
+  "main_words": 690,
+  "body_words": 1045,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/pool-decks/venice/",
+  "type": "city_service",
+  "main_words": 672,
+  "body_words": 1027,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/repair/englewood/",
+  "type": "city_service",
+  "main_words": 664,
+  "body_words": 1019,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/repair/fruitville-bee-ridge/",
+  "type": "city_service",
+  "main_words": 660,
+  "body_words": 1015,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/repair/gulf-gate/",
+  "type": "city_service",
+  "main_words": 652,
+  "body_words": 1007,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/repair/",
+  "type": "service",
+  "main_words": 1134,
+  "body_words": 1489,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/repair/north-port/",
+  "type": "city_service",
+  "main_words": 660,
+  "body_words": 1015,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/repair/placida/",
+  "type": "city_service",
+  "main_words": 661,
+  "body_words": 1016,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/repair/port-charlotte/",
+  "type": "city_service",
+  "main_words": 631,
+  "body_words": 986,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/repair/rotonda-west/",
+  "type": "city_service",
+  "main_words": 634,
+  "body_words": 989,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/repair/sarasota/",
+  "type": "city_service",
+  "main_words": 646,
+  "body_words": 1001,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/repair/south-venice/",
+  "type": "city_service",
+  "main_words": 659,
+  "body_words": 1014,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/resurfacing/",
+  "type": "service",
+  "main_words": 984,
+  "body_words": 1339,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/resurfacing/venice/",
+  "type": "city_service",
+  "main_words": 651,
+  "body_words": 1006,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/sidewalks-walkways/",
+  "type": "service",
+  "main_words": 917,
+  "body_words": 1272,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/slabs/fruitville-bee-ridge/",
+  "type": "city_service",
+  "main_words": 721,
+  "body_words": 1076,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/slabs/",
+  "type": "service",
+  "main_words": 1069,
+  "body_words": 1424,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/slabs/north-port/",
+  "type": "city_service",
+  "main_words": 675,
+  "body_words": 1030,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/slabs/south-venice/",
+  "type": "city_service",
+  "main_words": 673,
+  "body_words": 1028,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/concrete/stamped/",
+  "type": "service",
+  "main_words": 1114,
+  "body_words": 1469,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/contact/",
+  "type": "contact",
+  "main_words": 342,
+  "body_words": 697,
+  "floor": 537,
+  "target": 500,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/data-and-methods/",
+  "type": "about",
+  "main_words": 582,
+  "body_words": 937,
+  "floor": 485,
+  "target": 900,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/directories/",
+  "type": "other",
+  "main_words": 133,
+  "body_words": 488,
+  "floor": 0,
+  "target": 0,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/editorial-standards/",
+  "type": "about",
+  "main_words": 531,
+  "body_words": 886,
+  "floor": 485,
+  "target": 900,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/faq/concrete/",
+  "type": "faq_topic",
+  "main_words": 588,
+  "body_words": 943,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/faq/cost/",
+  "type": "faq_topic",
+  "main_words": 486,
+  "body_words": 841,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/faq/",
+  "type": "faq",
+  "main_words": 2716,
+  "body_words": 3071,
+  "floor": 0,
+  "target": 3000,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/faq/pavers/",
+  "type": "faq_topic",
+  "main_words": 570,
+  "body_words": 925,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/faq/permits-hoa-flood/",
+  "type": "faq_topic",
+  "main_words": 633,
+  "body_words": 988,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/faq/pool-decks/",
+  "type": "faq_topic",
+  "main_words": 541,
+  "body_words": 896,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/financing/",
+  "type": "other",
+  "main_words": 120,
+  "body_words": 475,
+  "floor": 0,
+  "target": 0,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/gallery/",
+  "type": "other",
+  "main_words": 842,
+  "body_words": 1197,
+  "floor": 0,
+  "target": 0,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/guides/ask-the-estimator/",
+  "type": "guide",
+  "main_words": 241,
+  "body_words": 596,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/guides/condo-pool-deck-boards/",
+  "type": "guide",
+  "main_words": 505,
+  "body_words": 860,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/guides/cure-times-and-rain/",
+  "type": "guide",
+  "main_words": 529,
+  "body_words": 884,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/guides/deposits-and-warranties/",
+  "type": "guide",
+  "main_words": 503,
+  "body_words": 858,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/guides/efflorescence/",
+  "type": "guide",
+  "main_words": 406,
+  "body_words": 761,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/guides/golf-cart-paths/",
+  "type": "guide",
+  "main_words": 447,
+  "body_words": 802,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/guides/hurricane-insurance-documentation/",
+  "type": "guide",
+  "main_words": 436,
+  "body_words": 791,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/guides/",
+  "type": "guide",
+  "main_words": 313,
+  "body_words": 668,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/guides/north-port-gdc-lot-driveways/",
+  "type": "guide",
+  "main_words": 539,
+  "body_words": 894,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/guides/permeable-pavers-impervious-limit/",
+  "type": "guide",
+  "main_words": 539,
+  "body_words": 894,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/guides/polymeric-sand-weeds-ants/",
+  "type": "guide",
+  "main_words": 544,
+  "body_words": 899,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/guides/snowbird-project-guide/",
+  "type": "guide",
+  "main_words": 557,
+  "body_words": 912,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/guides/verify-contractor-license-sarasota/",
+  "type": "guide",
+  "main_words": 542,
+  "body_words": 897,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/guides/well-water-rust-stains/",
+  "type": "guide",
+  "main_words": 954,
+  "body_words": 1309,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/guides/why-concrete-cracks-sarasota/",
+  "type": "guide",
+  "main_words": 627,
+  "body_words": 982,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/hoa/barrier-island-condos/",
+  "type": "guide",
+  "main_words": 1128,
+  "body_words": 1483,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/hoa/",
+  "type": "guide",
+  "main_words": 1461,
+  "body_words": 1816,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/hoa/palmer-ranch/",
+  "type": "guide",
+  "main_words": 941,
+  "body_words": 1296,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/hoa/wellen-park/",
+  "type": "guide",
+  "main_words": 984,
+  "body_words": 1339,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/",
+  "type": "home",
+  "main_words": 3515,
+  "body_words": 3870,
+  "floor": 3358,
+  "target": 3800,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/pavers/artificial-turf/",
+  "type": "service",
+  "main_words": 854,
+  "body_words": 1209,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/driveways/gulf-gate/",
+  "type": "city_service",
+  "main_words": 636,
+  "body_words": 991,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/driveways/",
+  "type": "service",
+  "main_words": 1413,
+  "body_words": 1768,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/driveways/longboat-key/",
+  "type": "city_service",
+  "main_words": 701,
+  "body_words": 1056,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/driveways/nokomis/",
+  "type": "city_service",
+  "main_words": 686,
+  "body_words": 1041,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/driveways/osprey/",
+  "type": "city_service",
+  "main_words": 664,
+  "body_words": 1019,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/driveways/palmer-ranch/",
+  "type": "city_service",
+  "main_words": 643,
+  "body_words": 998,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/driveways/placida/",
+  "type": "city_service",
+  "main_words": 664,
+  "body_words": 1019,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/driveways/port-charlotte/",
+  "type": "city_service",
+  "main_words": 642,
+  "body_words": 997,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/driveways/rotonda-west/",
+  "type": "city_service",
+  "main_words": 620,
+  "body_words": 975,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/driveways/sarasota/",
+  "type": "city_service",
+  "main_words": 638,
+  "body_words": 993,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/",
+  "type": "pillar",
+  "main_words": 1904,
+  "body_words": 2259,
+  "floor": 1470,
+  "target": 2200,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/pavers/marble-porcelain/",
+  "type": "service",
+  "main_words": 996,
+  "body_words": 1351,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/outdoor-lighting/",
+  "type": "service",
+  "main_words": 969,
+  "body_words": 1324,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/patios-lanais/fruitville-bee-ridge/",
+  "type": "city_service",
+  "main_words": 705,
+  "body_words": 1060,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/patios-lanais/",
+  "type": "service",
+  "main_words": 1068,
+  "body_words": 1423,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/patios-lanais/south-venice/",
+  "type": "city_service",
+  "main_words": 674,
+  "body_words": 1029,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/pool-decks/englewood/",
+  "type": "city_service",
+  "main_words": 704,
+  "body_words": 1059,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/pool-decks/",
+  "type": "service",
+  "main_words": 1469,
+  "body_words": 1824,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/pavers/pool-decks/longboat-key/",
+  "type": "city_service",
+  "main_words": 727,
+  "body_words": 1082,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/pool-decks/nokomis/",
+  "type": "city_service",
+  "main_words": 682,
+  "body_words": 1037,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/pool-decks/north-port/",
+  "type": "city_service",
+  "main_words": 657,
+  "body_words": 1012,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/pool-decks/osprey/",
+  "type": "city_service",
+  "main_words": 714,
+  "body_words": 1069,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/pool-decks/palmer-ranch/",
+  "type": "city_service",
+  "main_words": 652,
+  "body_words": 1007,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/pool-decks/placida/",
+  "type": "city_service",
+  "main_words": 690,
+  "body_words": 1045,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/pool-decks/port-charlotte/",
+  "type": "city_service",
+  "main_words": 669,
+  "body_words": 1024,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/pool-decks/rotonda-west/",
+  "type": "city_service",
+  "main_words": 645,
+  "body_words": 1000,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/pool-decks/sarasota/",
+  "type": "city_service",
+  "main_words": 702,
+  "body_words": 1057,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/pool-decks/siesta-key/",
+  "type": "city_service",
+  "main_words": 709,
+  "body_words": 1064,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/pool-decks/venice/",
+  "type": "city_service",
+  "main_words": 644,
+  "body_words": 999,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/repair-storm-restoration/englewood/",
+  "type": "city_service",
+  "main_words": 689,
+  "body_words": 1044,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/repair-storm-restoration/",
+  "type": "service",
+  "main_words": 1037,
+  "body_words": 1392,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/repair-storm-restoration/longboat-key/",
+  "type": "city_service",
+  "main_words": 706,
+  "body_words": 1061,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/repair-storm-restoration/siesta-key/",
+  "type": "city_service",
+  "main_words": 698,
+  "body_words": 1053,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/retaining-walls-outdoor-living/",
+  "type": "service",
+  "main_words": 948,
+  "body_words": 1303,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/sealing/",
+  "type": "service",
+  "main_words": 956,
+  "body_words": 1311,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/sealing/longboat-key/",
+  "type": "city_service",
+  "main_words": 654,
+  "body_words": 1009,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/sealing/sarasota/",
+  "type": "city_service",
+  "main_words": 673,
+  "body_words": 1028,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/sealing/siesta-key/",
+  "type": "city_service",
+  "main_words": 671,
+  "body_words": 1026,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/travertine-shellstone/",
+  "type": "service",
+  "main_words": 1009,
+  "body_words": 1364,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/travertine-shellstone/osprey/",
+  "type": "city_service",
+  "main_words": 686,
+  "body_words": 1041,
+  "floor": 0,
+  "target": 1200,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pavers/walkways-steps/",
+  "type": "service",
+  "main_words": 1003,
+  "body_words": 1358,
+  "floor": 1000,
+  "target": 1800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/permits/charlotte-county/",
+  "type": "guide",
+  "main_words": 826,
+  "body_words": 1181,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/permits/city-of-sarasota/",
+  "type": "guide",
+  "main_words": 1033,
+  "body_words": 1388,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/permits/flood-zones-50-percent-rule/",
+  "type": "guide",
+  "main_words": 1491,
+  "body_words": 1846,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/permits/",
+  "type": "guide",
+  "main_words": 1275,
+  "body_words": 1630,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/permits/longboat-key/",
+  "type": "guide",
+  "main_words": 1009,
+  "body_words": 1364,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/permits/north-port/",
+  "type": "guide",
+  "main_words": 869,
+  "body_words": 1224,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/permits/sarasota-county/",
+  "type": "guide",
+  "main_words": 1344,
+  "body_words": 1699,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/permits/sea-turtle-lighting/",
+  "type": "guide",
+  "main_words": 807,
+  "body_words": 1162,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/permits/venice/",
+  "type": "guide",
+  "main_words": 923,
+  "body_words": 1278,
+  "floor": 0,
+  "target": 1500,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pricing/concrete/",
+  "type": "cost",
+  "main_words": 1273,
+  "body_words": 1628,
+  "floor": 0,
+  "target": 2000,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pricing/",
+  "type": "cost",
+  "main_words": 1775,
+  "body_words": 2130,
+  "floor": 0,
+  "target": 2000,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/pricing/pavers/",
+  "type": "cost",
+  "main_words": 1321,
+  "body_words": 1676,
+  "floor": 0,
+  "target": 2000,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pricing/pool-decks/",
+  "type": "cost",
+  "main_words": 1238,
+  "body_words": 1593,
+  "floor": 0,
+  "target": 2000,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/pricing/sarasota-concrete-cost-index/",
+  "type": "cost",
+  "main_words": 1128,
+  "body_words": 1483,
+  "floor": 0,
+  "target": 2000,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/privacy/",
+  "type": "other",
+  "main_words": 257,
+  "body_words": 612,
+  "floor": 0,
+  "target": 0,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/projects/",
+  "type": "other",
+  "main_words": 155,
+  "body_words": 510,
+  "floor": 0,
+  "target": 0,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/reviews/",
+  "type": "other",
+  "main_words": 141,
+  "body_words": 496,
+  "floor": 0,
+  "target": 0,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/terms/",
+  "type": "other",
+  "main_words": 226,
+  "body_words": 581,
+  "floor": 0,
+  "target": 0,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/thank-you/",
+  "type": "other",
+  "main_words": 99,
+  "body_words": 454,
+  "floor": 0,
+  "target": 0,
+  "meets_floor": true,
+  "meets_target": true
+ },
+ {
+  "route": "/tools/coastal-surface-selector/",
+  "type": "tool",
+  "main_words": 340,
+  "body_words": 695,
+  "floor": 0,
+  "target": 800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/tools/concrete-paver-calculator/",
+  "type": "tool",
+  "main_words": 319,
+  "body_words": 674,
+  "floor": 0,
+  "target": 800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/tools/",
+  "type": "tool",
+  "main_words": 147,
+  "body_words": 502,
+  "floor": 0,
+  "target": 800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/tools/permit-flood-setback-finder/",
+  "type": "tool",
+  "main_words": 328,
+  "body_words": 683,
+  "floor": 0,
+  "target": 800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/tools/pour-calendar/",
+  "type": "tool",
+  "main_words": 216,
+  "body_words": 571,
+  "floor": 0,
+  "target": 800,
+  "meets_floor": true,
+  "meets_target": false
+ },
+ {
+  "route": "/warranty/",
+  "type": "other",
+  "main_words": 278,
+  "body_words": 633,
+  "floor": 0,
+  "target": 0,
+  "meets_floor": true,
+  "meets_target": true
+ }
+]

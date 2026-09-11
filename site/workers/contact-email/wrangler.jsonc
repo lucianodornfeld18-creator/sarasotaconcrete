@@ -1,0 +1,11 @@
+{
+  "name": "sarasotaconcrete-contact",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-10",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "send_email": [{ "name": "EMAIL", "allowed_sender_addresses": ["hello@sarasotaconcrete.com"] }],
+  "vars": { "FROM_EMAIL": "hello@sarasotaconcrete.com" },
+  // DESTINATION_EMAIL is a secret: wrangler secret put DESTINATION_EMAIL  (value = {{MAIN_DESTINATION_EMAIL}})
+  "observability": { "enabled": true, "logs": { "enabled": true, "invocation_logs": true } }
+}

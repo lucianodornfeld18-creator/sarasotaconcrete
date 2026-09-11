@@ -1,0 +1,138 @@
+# 301 map: lakewoodranchconcretefl.com -> sarasotaconcrete.com
+# Cloudflare Pages _redirects syntax. DO NOT deploy before (1) sarasotaconcrete.com is
+# indexed (site: query + Search Console) and (2) each source URL has been checked in
+# Search Console for the last 16 months (rule: <50 impressions/month and 0 leads -> 301 now;
+# otherwise keep 90 days with rewritten intro, then re-evaluate). Generated 2026-09-10.
+
+# --- City hubs (Sarasota County + Port Charlotte) ---
+/sarasota/ https://sarasotaconcrete.com/areas/sarasota/ 301
+/venice/ https://sarasotaconcrete.com/areas/venice/ 301
+/north-port/ https://sarasotaconcrete.com/areas/north-port/ 301
+/osprey/ https://sarasotaconcrete.com/areas/osprey/ 301
+/nokomis/ https://sarasotaconcrete.com/areas/nokomis/ 301
+/longboat-key/ https://sarasotaconcrete.com/areas/longboat-key/ 301
+/port-charlotte/ https://sarasotaconcrete.com/areas/port-charlotte/ 301
+
+# --- Concrete driveways ---
+/concrete-driveways/sarasota/ https://sarasotaconcrete.com/concrete/driveways/sarasota/ 301
+/concrete-driveways/venice/ https://sarasotaconcrete.com/concrete/driveways/venice/ 301
+/concrete-driveways/north-port/ https://sarasotaconcrete.com/concrete/driveways/north-port/ 301
+/concrete-driveways/osprey/ https://sarasotaconcrete.com/concrete/driveways/osprey/ 301
+/concrete-driveways/nokomis/ https://sarasotaconcrete.com/concrete/driveways/nokomis/ 301
+/concrete-driveways/longboat-key/ https://sarasotaconcrete.com/concrete/driveways/ 301
+/concrete-driveways/port-charlotte/ https://sarasotaconcrete.com/concrete/driveways/port-charlotte/ 301
+
+# --- Concrete pool decks ---
+/concrete-pool-decks/sarasota/ https://sarasotaconcrete.com/concrete/pool-decks/sarasota/ 301
+/concrete-pool-decks/venice/ https://sarasotaconcrete.com/concrete/pool-decks/venice/ 301
+/concrete-pool-decks/north-port/ https://sarasotaconcrete.com/concrete/pool-decks/ 301
+/concrete-pool-decks/osprey/ https://sarasotaconcrete.com/concrete/pool-decks/ 301
+/concrete-pool-decks/nokomis/ https://sarasotaconcrete.com/concrete/pool-decks/ 301
+/concrete-pool-decks/longboat-key/ https://sarasotaconcrete.com/concrete/pool-decks/ 301
+/concrete-pool-decks/port-charlotte/ https://sarasotaconcrete.com/concrete/pool-decks/port-charlotte/ 301
+
+# --- Pool deck pavers / travertine ---
+/pool-deck-pavers/sarasota/ https://sarasotaconcrete.com/pavers/pool-decks/sarasota/ 301
+/pool-deck-pavers/venice/ https://sarasotaconcrete.com/pavers/pool-decks/venice/ 301
+/pool-deck-pavers/north-port/ https://sarasotaconcrete.com/pavers/pool-decks/north-port/ 301
+/pool-deck-pavers/osprey/ https://sarasotaconcrete.com/pavers/pool-decks/osprey/ 301
+/pool-deck-pavers/nokomis/ https://sarasotaconcrete.com/pavers/pool-decks/nokomis/ 301
+/pool-deck-pavers/longboat-key/ https://sarasotaconcrete.com/pavers/pool-decks/longboat-key/ 301
+/pool-deck-pavers/port-charlotte/ https://sarasotaconcrete.com/pavers/pool-decks/port-charlotte/ 301
+
+# --- Paver driveways ---
+/paver-driveways/sarasota/ https://sarasotaconcrete.com/pavers/driveways/sarasota/ 301
+/paver-driveways/venice/ https://sarasotaconcrete.com/pavers/driveways/ 301
+/paver-driveways/north-port/ https://sarasotaconcrete.com/pavers/driveways/ 301
+/paver-driveways/osprey/ https://sarasotaconcrete.com/pavers/driveways/osprey/ 301
+/paver-driveways/nokomis/ https://sarasotaconcrete.com/pavers/driveways/nokomis/ 301
+/paver-driveways/longboat-key/ https://sarasotaconcrete.com/pavers/driveways/longboat-key/ 301
+/paver-driveways/port-charlotte/ https://sarasotaconcrete.com/pavers/driveways/port-charlotte/ 301
+
+# --- Other services -> service parent on this hub ---
+/concrete-patios/sarasota/ https://sarasotaconcrete.com/concrete/patios-lanais/ 301
+/concrete-patios/venice/ https://sarasotaconcrete.com/concrete/patios-lanais/ 301
+/concrete-patios/north-port/ https://sarasotaconcrete.com/concrete/patios-lanais/ 301
+/concrete-patios/osprey/ https://sarasotaconcrete.com/concrete/patios-lanais/ 301
+/concrete-patios/nokomis/ https://sarasotaconcrete.com/concrete/patios-lanais/nokomis/ 301
+/concrete-patios/longboat-key/ https://sarasotaconcrete.com/concrete/patios-lanais/ 301
+/concrete-patios/port-charlotte/ https://sarasotaconcrete.com/concrete/patios-lanais/ 301
+/stamped-concrete/sarasota/ https://sarasotaconcrete.com/concrete/stamped/ 301
+/stamped-concrete/venice/ https://sarasotaconcrete.com/concrete/stamped/ 301
+/stamped-concrete/north-port/ https://sarasotaconcrete.com/concrete/stamped/ 301
+/stamped-concrete/osprey/ https://sarasotaconcrete.com/concrete/stamped/ 301
+/stamped-concrete/nokomis/ https://sarasotaconcrete.com/concrete/stamped/ 301
+/stamped-concrete/longboat-key/ https://sarasotaconcrete.com/concrete/stamped/ 301
+/stamped-concrete/port-charlotte/ https://sarasotaconcrete.com/concrete/stamped/ 301
+/concrete-slabs/sarasota/ https://sarasotaconcrete.com/concrete/slabs/ 301
+/concrete-slabs/venice/ https://sarasotaconcrete.com/concrete/slabs/ 301
+/concrete-slabs/north-port/ https://sarasotaconcrete.com/concrete/slabs/north-port/ 301
+/concrete-slabs/osprey/ https://sarasotaconcrete.com/concrete/slabs/ 301
+/concrete-slabs/nokomis/ https://sarasotaconcrete.com/concrete/slabs/ 301
+/concrete-slabs/longboat-key/ https://sarasotaconcrete.com/concrete/slabs/ 301
+/concrete-slabs/port-charlotte/ https://sarasotaconcrete.com/concrete/slabs/ 301
+/concrete-resurfacing/sarasota/ https://sarasotaconcrete.com/concrete/repair/sarasota/ 301
+/concrete-resurfacing/venice/ https://sarasotaconcrete.com/concrete/resurfacing/venice/ 301
+/concrete-resurfacing/north-port/ https://sarasotaconcrete.com/concrete/repair/north-port/ 301
+/concrete-resurfacing/osprey/ https://sarasotaconcrete.com/concrete/resurfacing/ 301
+/concrete-resurfacing/nokomis/ https://sarasotaconcrete.com/concrete/resurfacing/ 301
+/concrete-resurfacing/longboat-key/ https://sarasotaconcrete.com/concrete/resurfacing/ 301
+/concrete-resurfacing/port-charlotte/ https://sarasotaconcrete.com/concrete/repair/port-charlotte/ 301
+/paver-patios-walkways/sarasota/ https://sarasotaconcrete.com/pavers/patios-lanais/ 301
+/paver-patios-walkways/venice/ https://sarasotaconcrete.com/pavers/patios-lanais/ 301
+/paver-patios-walkways/north-port/ https://sarasotaconcrete.com/pavers/patios-lanais/ 301
+/paver-patios-walkways/osprey/ https://sarasotaconcrete.com/pavers/patios-lanais/ 301
+/paver-patios-walkways/nokomis/ https://sarasotaconcrete.com/pavers/patios-lanais/ 301
+/paver-patios-walkways/longboat-key/ https://sarasotaconcrete.com/pavers/patios-lanais/ 301
+/paver-patios-walkways/port-charlotte/ https://sarasotaconcrete.com/pavers/patios-lanais/ 301
+/paver-sealing/sarasota/ https://sarasotaconcrete.com/pavers/sealing/sarasota/ 301
+/paver-sealing/venice/ https://sarasotaconcrete.com/pavers/sealing/ 301
+/paver-sealing/north-port/ https://sarasotaconcrete.com/pavers/sealing/ 301
+/paver-sealing/osprey/ https://sarasotaconcrete.com/pavers/sealing/ 301
+/paver-sealing/nokomis/ https://sarasotaconcrete.com/pavers/sealing/ 301
+/paver-sealing/longboat-key/ https://sarasotaconcrete.com/pavers/sealing/longboat-key/ 301
+/paver-sealing/port-charlotte/ https://sarasotaconcrete.com/pavers/sealing/ 301
+
+# --- Cost posts (42) -> cost guides ---
+/blog/concrete-driveways-cost-sarasota/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/concrete-driveways-cost-venice/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/concrete-driveways-cost-north-port/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/concrete-driveways-cost-osprey/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/concrete-driveways-cost-nokomis/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/concrete-driveways-cost-longboat-key/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/concrete-driveways-cost-port-charlotte/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/concrete-patios-cost-sarasota/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/concrete-patios-cost-venice/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/concrete-patios-cost-north-port/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/concrete-patios-cost-osprey/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/concrete-patios-cost-nokomis/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/concrete-patios-cost-longboat-key/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/concrete-patios-cost-port-charlotte/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/stamped-concrete-cost-sarasota/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/stamped-concrete-cost-venice/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/stamped-concrete-cost-north-port/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/stamped-concrete-cost-osprey/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/stamped-concrete-cost-nokomis/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/stamped-concrete-cost-longboat-key/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/stamped-concrete-cost-port-charlotte/ https://sarasotaconcrete.com/pricing/concrete/ 301
+/blog/paver-driveways-cost-sarasota/ https://sarasotaconcrete.com/pricing/pavers/ 301
+/blog/paver-driveways-cost-venice/ https://sarasotaconcrete.com/pricing/pavers/ 301
+/blog/paver-driveways-cost-north-port/ https://sarasotaconcrete.com/pricing/pavers/ 301
+/blog/paver-driveways-cost-osprey/ https://sarasotaconcrete.com/pricing/pavers/ 301
+/blog/paver-driveways-cost-nokomis/ https://sarasotaconcrete.com/pricing/pavers/ 301
+/blog/paver-driveways-cost-longboat-key/ https://sarasotaconcrete.com/pricing/pavers/ 301
+/blog/paver-driveways-cost-port-charlotte/ https://sarasotaconcrete.com/pricing/pavers/ 301
+/blog/concrete-pool-decks-cost-sarasota/ https://sarasotaconcrete.com/pricing/pool-decks/ 301
+/blog/concrete-pool-decks-cost-venice/ https://sarasotaconcrete.com/pricing/pool-decks/ 301
+/blog/concrete-pool-decks-cost-north-port/ https://sarasotaconcrete.com/pricing/pool-decks/ 301
+/blog/concrete-pool-decks-cost-osprey/ https://sarasotaconcrete.com/pricing/pool-decks/ 301
+/blog/concrete-pool-decks-cost-nokomis/ https://sarasotaconcrete.com/pricing/pool-decks/ 301
+/blog/concrete-pool-decks-cost-longboat-key/ https://sarasotaconcrete.com/pricing/pool-decks/ 301
+/blog/concrete-pool-decks-cost-port-charlotte/ https://sarasotaconcrete.com/pricing/pool-decks/ 301
+/blog/pool-deck-pavers-cost-sarasota/ https://sarasotaconcrete.com/pricing/pool-decks/ 301
+/blog/pool-deck-pavers-cost-venice/ https://sarasotaconcrete.com/pricing/pool-decks/ 301
+/blog/pool-deck-pavers-cost-north-port/ https://sarasotaconcrete.com/pricing/pool-decks/ 301
+/blog/pool-deck-pavers-cost-osprey/ https://sarasotaconcrete.com/pricing/pool-decks/ 301
+/blog/pool-deck-pavers-cost-nokomis/ https://sarasotaconcrete.com/pricing/pool-decks/ 301
+/blog/pool-deck-pavers-cost-longboat-key/ https://sarasotaconcrete.com/pricing/pool-decks/ 301
+/blog/pool-deck-pavers-cost-port-charlotte/ https://sarasotaconcrete.com/pricing/pool-decks/ 301

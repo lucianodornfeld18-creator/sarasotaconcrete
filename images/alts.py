@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+"""Alt text for the photo library, written for this site (distinct wording from the sibling hubs that use
+the same provider photos). Descriptive, no city claims, renderings labelled."""
+ALTS = {
+    "charcoal-slate-texture-pavers-detail": "Detail of slate-textured charcoal pavers set tight against a straight border course, joints filled and flush",
+    "gray-paver-driveway-charcoal-grid-border": "Gray herringbone paver driveway crossed by charcoal banding, running from the curb to a two-car garage",
+    "paver-clad-entry-pillar-with-light": "Entry pillar faced in the same gray and charcoal pavers as the driveway, with a lantern mounted on its face",
+    "gray-charcoal-paver-driveway-garage-approach": "Approach to a dark garage door over gray pavers with charcoal bands and a paver walk splitting off to the side",
+    "marble-pool-coping-and-deck-detail": "Rounded marble coping meeting a marble paver field along the curved edge of a pool",
+    "marble-paver-lanai-pool-deck": "Caged lanai floored in marble pavers around a freeform pool, with a slot drain and a stacked-rock waterfall",
+    "paver-driveway-installation-in-progress": "Crew laying a paver driveway field from stacked cubes staged on the screeded sand bed",
+    "paver-driveway-bedding-and-edge-line": "Cubes of pavers staged beside a driveway under construction, the sand bed screeded level to the lawn edge",
+    "travertine-look-paver-pool-deck-square-pool": "Rectangular pool ringed by tumbled travertine-style pavers and a perimeter drain, oak canopy overhead",
+    "large-format-paver-patio-gravel-joints": "Patio of oversized square concrete pavers with pea-gravel joints on a compacted base behind a house",
+    "raised-paver-terrace-stone-wall-pergola": "Curved raised terrace faced in stacked-stone veneer, paved in large-format pavers, under a wood pergola at the water",
+    "multi-level-paver-patio-pool-terrace-under-construction": "Two-level paver patio mid-build: raised pool terrace, paver-faced risers, wet saw on the lower level",
+    "paver-patio-under-pergola": "Tan tumbled-paver patio shaded by a dark-stained pergola off the rear of a one-story home",
+    "mixed-tone-paver-driveway-two-car-garage": "Random-ashlar driveway in gray, tan and terracotta pavers leading to a two-car garage",
+    "tan-paver-driveway-meeting-concrete-apron": "Tan-blend paver driveway ending at a poured concrete apron where it meets the street",
+    "tan-gray-paver-driveway-random-pattern": "Tan and gray paver driveway laid in a random pattern, edged by lawn and low solar path lights",
+    "concrete-paver-side-yard-patio": "Narrow side-yard patio of square concrete pavers on gravel, open joints, between a house wall and a vinyl fence",
+    "poured-concrete-entry-steps-porcelain-treads": "Front steps of poured concrete finished with large porcelain paver treads and stucco side walls",
+    "tan-paver-front-walkway-concept": "Concept rendering: tan paver front walk with a soldier-course edge curving to a covered entry",
+    "curved-paver-driveway-charcoal-border-concept": "Concept rendering: curved tan paver driveway with a charcoal border before a tile-roofed house",
+    "curved-paver-driveway-aerial-concept": "Concept rendering from above: a paver driveway with a dark border sweeping between two oaks",
+    "brick-tone-paver-walkway-running-bond-concept": "Concept rendering: brick-colored pavers in running bond forming a bordered path to a front door",
+    "small-paver-patio-bistro-concept": "Concept rendering: compact tan paver patio with a two-seat bistro table against a wood privacy fence",
+    "paver-entry-courtyard-planting-beds-concept": "Concept rendering: paver entry courtyard with planting beds cut into the field and a walk to the door",
+    "paver-walkway-recessed-step-lights-dusk-concept": "Concept rendering at dusk: gray paver walk and a single step lit by recessed fixtures",
+    "curved-paver-steps-riser-lighting-concept": "Concept rendering: curved paver steps with lights set into the risers and a winding path beyond",
+}

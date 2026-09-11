@@ -1,0 +1,98 @@
+keyword,family,pillar,intent,volume_fl_emd,competition,cpc_low,cpc_high,volume_geo,evidence,owner_url,exists_on_lakewoodranch,exists_on_bradenton
+sarasota concrete,core,concrete,commercial,50,High 97,4.00,13.68,BLOCKED,VOLUME,/,yes (/sarasota/),no
+sarasota concrete contractor,contractor,concrete,commercial,50,Medium 63,4.51,22.60,BLOCKED,VOLUME,/concrete/,yes,no
+sarasota concrete repair,repair,concrete,commercial,50,Medium 53,,,BLOCKED,VOLUME,/concrete/repair/,yes (/concrete-resurfacing/sarasota/),no
+sarasota concrete company,company,concrete,commercial,—,,,,BLOCKED,VOLUME(none),/concrete/,yes,no
+sarasota concrete driveway,driveway,concrete,commercial,—,,,,BLOCKED,VOLUME(none),/concrete/driveways/sarasota/,yes (/concrete-driveways/sarasota/),no
+sarasota concrete patio,patio,concrete,commercial,—,,,,BLOCKED,VOLUME(none),/concrete/patios-lanais/,yes (/concrete-patios/sarasota/),no
+venice concrete,core,concrete,commercial,50,Medium 52,,,BLOCKED,VOLUME,/areas/venice/,yes (/venice/),no
+venice concrete contractors,contractor,concrete,commercial,50,High 78,,,BLOCKED,VOLUME,/areas/venice/,yes,no
+north port concrete,core,concrete,commercial,50,Low 31,,,BLOCKED,VOLUME,/areas/north-port/,yes (/north-port/),no
+north port concrete contractors,contractor,concrete,commercial,50,High 100,,,BLOCKED,VOLUME,/areas/north-port/,yes,no
+port charlotte concrete,core,concrete,commercial,50,Low 22,,,BLOCKED,VOLUME,/areas/port-charlotte/,yes (/port-charlotte/),no
+concrete port charlotte,reverse_core,concrete,commercial,50,High 92,3.51,12.00,BLOCKED,VOLUME,/areas/port-charlotte/,yes,no
+nokomis concrete,core,concrete,commercial,50,,,,BLOCKED,VOLUME,/areas/nokomis/,yes (/nokomis/),no
+siesta key concrete,core,concrete,commercial,—,,,,BLOCKED,VOLUME(none),/areas/siesta-key/,no,no
+osprey concrete,core,concrete,commercial,—,,,,BLOCKED,VOLUME(none),/areas/osprey/,yes (/osprey/),no
+englewood concrete,core,concrete,commercial,—,,,,BLOCKED,VOLUME(none),/areas/englewood/,no,no
+sarasota county concrete,regional,concrete,commercial,—,,,,BLOCKED,VOLUME(none),/areas/sarasota-county/,no,no
+concrete contractors near me (Sarasota geo),near_me,concrete,commercial,,,,,BLOCKED,COMPETITOR,/,no,no
+concrete company sarasota fl,company,concrete,commercial,,,,,BLOCKED,COMPETITOR,/concrete/,no,no
+concrete driveway cost sarasota,cost,concrete,commercial,,,,,BLOCKED,COMPETITOR,/pricing/concrete/,yes (blog cost),no
+concrete driveway replacement sarasota,replacement,concrete,commercial,,,,,BLOCKED,COMPETITOR,/concrete/driveways/,yes,no
+driveway extension sarasota,extension,concrete,commercial,,,,,BLOCKED,EXPERT-GAP,/concrete/driveways/,no,no
+concrete patio sarasota fl,patio,concrete,commercial,,,,,BLOCKED,COMPETITOR,/concrete/patios-lanais/,yes,no
+lanai slab sarasota,patio,concrete,commercial,,,,,BLOCKED,EXPERT-GAP,/concrete/patios-lanais/,no,no
+concrete pool deck sarasota,pool_deck,concrete,commercial,,,,,BLOCKED,COMPETITOR,/concrete/pool-decks/,yes,no
+pool deck resurfacing sarasota,resurfacing,concrete,commercial,,,,,BLOCKED,COMPETITOR,/concrete/resurfacing/,yes,no
+cool deck resurfacing sarasota,resurfacing,concrete,commercial,,,,,BLOCKED,COMPETITOR,/compare/cool-deck-vs-pavers/,no,no
+kool deck repair sarasota,resurfacing,concrete,commercial,,,,,BLOCKED,COMPETITOR,/concrete/resurfacing/,no,no
+stamped concrete sarasota,stamped,concrete,commercial,,,,,BLOCKED,COMPETITOR,/concrete/stamped/,yes,no
+stamped concrete cost sarasota,cost,concrete,commercial,,,,,BLOCKED,COMPETITOR,/concrete/stamped/,yes (blog cost),no
+concrete slab sarasota,slab,concrete,commercial,,,,,BLOCKED,COMPETITOR,/concrete/slabs/,yes,no
+shed pad concrete sarasota,slab,concrete,commercial,,,,,BLOCKED,EXPERT-GAP,/concrete/slabs/,no,no
+generator pad sarasota,slab,concrete,commercial,,,,,BLOCKED,EXPERT-GAP,/concrete/slabs/,no,no
+concrete sidewalk sarasota,sidewalk,concrete,commercial,,,,,BLOCKED,COMPETITOR,/concrete/sidewalks-walkways/,yes (/concrete-walkways/),no
+concrete repair sarasota,repair,concrete,commercial,,,,,BLOCKED,VOLUME(sarasota concrete repair),/concrete/repair/,yes,no
+concrete leveling sarasota,leveling,concrete,commercial,,,,,BLOCKED,EXPERT-GAP,/concrete/repair/,no,no
+spalling concrete repair sarasota,repair,concrete,commercial,,,,,BLOCKED,EXPERT-GAP,/concrete/repair/,no,no
+architectural concrete sarasota,architectural,concrete,commercial,,,,,BLOCKED,EXPERT-GAP,/concrete/architectural/,no,no
+pavers sarasota fl,core,pavers,commercial,,,,,BLOCKED,COMPETITOR,/pavers/,yes (/pavers/),no
+paver installation sarasota,installation,pavers,commercial,,,,,BLOCKED,COMPETITOR,/pavers/,yes,no
+paver contractor sarasota,contractor,pavers,commercial,,,,,BLOCKED,COMPETITOR,/pavers/,yes,no
+pavers near me (Sarasota geo),near_me,pavers,commercial,,,,,BLOCKED,COMPETITOR,/pavers/,no,no
+pool deck pavers sarasota,pool_deck,pavers,commercial,,,,,BLOCKED,COMPETITOR,/pavers/pool-decks/,yes (/pool-deck-pavers/sarasota/),no
+travertine pool deck sarasota,travertine,pavers,commercial,,,,,BLOCKED,COMPETITOR,/pavers/travertine-shellstone/,yes,no
+travertine pavers sarasota,travertine,pavers,commercial,,,,,BLOCKED,COMPETITOR,/pavers/travertine-shellstone/,yes,no
+shellstone pool deck sarasota,shellstone,pavers,commercial,,,,,BLOCKED,EXPERT-GAP,/pavers/travertine-shellstone/,no,no
+marble pavers pool deck sarasota,marble,pavers,commercial,,,,,BLOCKED,EXPERT-GAP,/pavers/marble-porcelain/,no,no
+porcelain pavers sarasota,porcelain,pavers,commercial,,,,,BLOCKED,EXPERT-GAP,/pavers/marble-porcelain/,no,no
+paver driveway sarasota,driveway,pavers,commercial,,,,,BLOCKED,COMPETITOR,/pavers/driveways/,yes,no
+paver driveway cost sarasota,cost,pavers,commercial,,,,,BLOCKED,COMPETITOR,/pricing/pavers/,yes (blog cost),no
+paver patio sarasota,patio,pavers,commercial,,,,,BLOCKED,COMPETITOR,/pavers/patios-lanais/,yes,no
+paver walkway sarasota,walkway,pavers,commercial,,,,,BLOCKED,COMPETITOR,/pavers/walkways-steps/,yes,no
+paver sealing sarasota,sealing,pavers,commercial,,,,,BLOCKED,COMPETITOR,/pavers/sealing/,yes,no
+paver cleaning and sealing cost sarasota,cost,pavers,commercial,,,,,BLOCKED,COMPETITOR,/pavers/sealing/,no,no
+paver re-sanding sarasota,sealing,pavers,commercial,,,,,BLOCKED,COMPETITOR,/pavers/sealing/,no,no
+paver repair sarasota,repair,pavers,commercial,,,,,BLOCKED,EXPERT-GAP,/pavers/repair-storm-restoration/,no,no
+sinking pavers repair sarasota,repair,pavers,commercial,,,,,BLOCKED,EXPERT-GAP,/pavers/repair-storm-restoration/,no,no
+retaining wall pavers sarasota,walls,pavers,commercial,,,,,BLOCKED,COMPETITOR,/pavers/retaining-walls-outdoor-living/,no,no
+outdoor kitchen pavers sarasota,outdoor_living,pavers,commercial,,,,,BLOCKED,COMPETITOR (paver mac),/pavers/retaining-walls-outdoor-living/,no,no
+fire pit pavers sarasota,outdoor_living,pavers,commercial,,,,,BLOCKED,COMPETITOR (paver mac),/pavers/retaining-walls-outdoor-living/,no,no
+artificial turf sarasota,turf,pavers,commercial,,,,,BLOCKED,EXPERT-GAP,/pavers/artificial-turf/,no,no
+landscape lighting sarasota hardscape,lighting,pavers,commercial,,,,,BLOCKED,EXPERT-GAP,/pavers/outdoor-lighting/,no,no
+sea turtle lighting sarasota,lighting,pavers,informational,,,,,BLOCKED,EXPERT-GAP,/permits/sea-turtle-lighting/,no,no
+concrete vs pavers driveway florida,compare,both,informational,,,,,BLOCKED,COMPETITOR (LWR blog),/compare/concrete-vs-pavers-driveway/,yes (blog),no
+travertine vs concrete pavers pool deck,compare,pavers,informational,,,,,BLOCKED,COMPETITOR,/compare/travertine-vs-concrete-pavers/,no,no
+travertine vs shellstone vs porcelain,compare,pavers,informational,,,,,BLOCKED,COMPETITOR (FL blogs),/compare/travertine-vs-shellstone-vs-porcelain/,no,no
+coolest pool deck surface florida,heat,both,informational,,,,,BLOCKED,COMPETITOR (LWR blog + FL blogs),/coastal/pool-deck-surface-temperature-study/,yes (blog),no
+pool deck too hot,heat,both,informational,,,,,BLOCKED,EXPERT-GAP,/compare/pool-deck-surfaces-heat/,no,no
+slip resistant pool deck,slip,both,informational,,,,,BLOCKED,EXPERT-GAP,/compare/pool-deck-surfaces-heat/,no,no
+resurfacing vs replacement pool deck,compare,concrete,informational,,,,,BLOCKED,COMPETITOR,/compare/resurface-vs-replace-pool-deck/,yes (FAQ),no
+4 inch vs 6 inch driveway,thickness,concrete,informational,,,,,BLOCKED,COMPETITOR,/compare/4-inch-vs-6-inch/,no,no
+3000 vs 4000 psi driveway,psi,concrete,informational,,,,,BLOCKED,COMPETITOR,/compare/4-inch-vs-6-inch/,no,no
+rebar vs fiber mesh driveway,reinforcement,concrete,informational,,,,,BLOCKED,COMPETITOR,/compare/rebar-vs-fiber/,no,no
+how long before driving on new concrete,cure,concrete,informational,,,,,BLOCKED,COMPETITOR,/guides/cure-times-and-rain/,no,no
+rain on new concrete,cure,concrete,informational,,,,,BLOCKED,COMPETITOR,/guides/cure-times-and-rain/,no,no
+why concrete cracks florida,cracks,concrete,informational,,,,,BLOCKED,COMPETITOR (LWR blog),/guides/why-concrete-cracks-sarasota/,yes (blog),no
+driveway permit sarasota county,permit,both,informational,,,,,BLOCKED,EXPERT-GAP,/permits/sarasota-county/,no,no
+city of sarasota driveway permit,permit,both,informational,,,,,BLOCKED,EXPERT-GAP,/permits/city-of-sarasota/,no,no
+venice fl driveway permit,permit,both,informational,,,,,BLOCKED,EXPERT-GAP,/permits/venice/,no,no
+north port culvert permit,permit,both,informational,,,,,BLOCKED,EXPERT-GAP,/permits/north-port/,no,no
+longboat key building permit pavers,permit,both,informational,,,,,BLOCKED,EXPERT-GAP,/permits/longboat-key/,no,no
+charlotte county slab permit pavers,permit,both,informational,,,,,BLOCKED,EXPERT-GAP,/permits/charlotte-county/,no,no
+fema 50 percent rule pool deck,flood,both,informational,,,,,BLOCKED,EXPERT-GAP,/permits/flood-zones-50-percent-rule/,no,no
+gulf beach setback line pool,flood,both,informational,,,,,BLOCKED,EXPERT-GAP,/permits/flood-zones-50-percent-rule/,no,no
+hoa approval pavers driveway,hoa,both,informational,,,,,BLOCKED,COMPETITOR (FL blogs),/hoa/,no,no
+palmer ranch arc approval,hoa,both,informational,,,,,BLOCKED,EXPERT-GAP,/hoa/palmer-ranch/,no,no
+wellen park arc guidelines driveway,hoa,both,informational,,,,,BLOCKED,EXPERT-GAP,/hoa/wellen-park/,no,no
+salt damage concrete near ocean,coastal,concrete,informational,,,,,BLOCKED,EXPERT-GAP,/coastal/salt-and-concrete/,no,no
+hurricane damage pavers what to do,coastal,pavers,informational,,,,,BLOCKED,COMPETITOR (FL blogs),/coastal/post-storm-restoration/,no,no
+storm surge pool deck damage,coastal,both,informational,,,,,BLOCKED,EXPERT-GAP,/coastal/post-storm-restoration/,no,no
+how often seal pavers near ocean,sealing,pavers,informational,,,,,BLOCKED,COMPETITOR (FL blogs),/pavers/sealing/,no,no
+efflorescence pavers,maintenance,pavers,informational,,,,,BLOCKED,COMPETITOR,/guides/efflorescence/,no,no
+polymeric sand weeds ants,maintenance,pavers,informational,,,,,BLOCKED,COMPETITOR,/guides/polymeric-sand-weeds-ants/,no,no
+rust stains pavers well water,maintenance,pavers,informational,,,,,BLOCKED,COMPETITOR,/guides/well-water-rust-stains/,no,no
+wet look vs penetrating sealer,sealer,pavers,informational,,,,,BLOCKED,COMPETITOR,/compare/sealer-types-coastal/,no,no
+cement driveway sarasota,colloquial,concrete,commercial,,,,,BLOCKED,—,/concrete/driveways/,no,no
+epoxy garage floor sarasota,epoxy,coatings,commercial,,,,,BLOCKED,COMPETITOR (garageexperts/paradigm),PENDING (catálogo não confirmado),no,no

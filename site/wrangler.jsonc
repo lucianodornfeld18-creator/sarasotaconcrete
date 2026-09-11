@@ -1,0 +1,11 @@
+{
+  "name": "sarasotaconcrete",
+  "compatibility_date": "2026-09-10",
+  "pages_build_output_dir": "dist",
+  // Bindings for functions/api/contact.js:
+  //   CONTACT_EMAIL  -> service binding to the Worker "sarasotaconcrete-contact"
+  //   RATE_LIMIT_KV  -> KV namespace (create: wrangler kv namespace create RATE_LIMIT_KV)
+  //   TURNSTILE_SECRET_KEY -> secret (Pages > Settings > Environment variables)
+  "services": [{ "binding": "CONTACT_EMAIL", "service": "sarasotaconcrete-contact" }],
+  "kv_namespaces": [{ "binding": "RATE_LIMIT_KV", "id": "{{RATE_LIMIT_KV_ID}}" }]
+}

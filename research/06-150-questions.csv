@@ -1,0 +1,151 @@
+id,question,intent,lead_stage,geo,pillar,evidence,source,volume,owner_url,format
+1,How much does a paver pool deck cost per square foot in Sarasota in 2026?,commercial,consider,Sarasota,pavers,COMPETITOR,handys.now; tuscanpavingstone; homeyou (cost pages),BLOCKED,/pricing/pool-decks/,table+capsule
+2,What does a two-car concrete driveway cost in Sarasota County?,commercial,consider,Sarasota County,concrete,COMPETITOR,homeblue/homeadvisor cost pages,BLOCKED,/pricing/concrete/,table+capsule
+3,What does a 12x20 lanai slab cost in Venice?,commercial,consider,Venice,concrete,EXPERT-GAP,audit: no local lanai pricing,BLOCKED,/pricing/concrete/,capsule
+4,When is pool deck resurfacing cheaper than replacement in Sarasota and when is it money wasted?,commercial,consider,Sarasota,concrete,COMPETITOR,paradigm/elite FAQ; decocreteservices,BLOCKED,/compare/resurface-vs-replace-pool-deck/,comparison
+5,What does travertine cost installed around a pool on Siesta Key?,commercial,consider,Siesta Key,pavers,COMPETITOR,tuscan; wellbuiltflorida,BLOCKED,/pavers/pool-decks/siesta-key/,capsule
+6,How much does paver cleaning and sealing cost per square foot on the Suncoast?,commercial,consider,Suncoast,pavers,COMPETITOR,paversealingsarasotafl.com cost article,BLOCKED,/pavers/sealing/,table
+7,Why do three Sarasota quotes for the same driveway differ by thousands of dollars?,informational,consider,Sarasota,both,EXPERT-GAP,audit: no competitor explains,BLOCKED,/pricing/,article
+8,What is the Sarasota Concrete Cost Index and how is it calculated?,informational,research,Sarasota County,both,EXPERT-GAP,own dataset,BLOCKED,/pricing/sarasota-concrete-cost-index/,dataset
+9,Do hardscape prices rise during snowbird season from January to April?,informational,consider,Sarasota County,both,EXPERT-GAP,seasonality (scgov population),BLOCKED,/pricing/,capsule
+10,How much deposit is normal for a concrete or paver job in Florida and what should the contract say?,informational,decide,Florida,both,EXPERT-GAP,F.S. 489.126 deposit rules,BLOCKED,/guides/deposits-and-warranties/,article
+11,What does a permit add to the cost and timeline of a driveway in the City of Venice?,informational,consider,Venice,both,EXPERT-GAP,venicegov engineering,BLOCKED,/permits/venice/,capsule
+12,How much does it cost to lift and reset sunken pavers after a storm?,commercial,consider,Sarasota County,pavers,EXPERT-GAP,post-storm blogs (no local pricing),BLOCKED,/pavers/repair-storm-restoration/,capsule
+13,What does a generator or AC pad cost in Sarasota?,commercial,consider,Sarasota,concrete,EXPERT-GAP,audit,BLOCKED,/concrete/slabs/,capsule
+14,How much more does a 6-inch driveway cost than a 4-inch driveway?,informational,consider,Sarasota County,concrete,COMPETITOR,thickness guides,BLOCKED,/compare/4-inch-vs-6-inch/,comparison
+15,What does stamped concrete cost versus pavers for a Sarasota patio?,commercial,consider,Sarasota,concrete,COMPETITOR,homeadvisor stamped pages,BLOCKED,/concrete/stamped/,table
+16,How much does a marble or porcelain paver pool deck cost on Longboat Key?,commercial,consider,Longboat Key,pavers,EXPERT-GAP,audit,BLOCKED,/pavers/pool-decks/longboat-key/,capsule
+17,Can I finance a pool deck or driveway project?,commercial,decide,Sarasota County,both,COMPETITOR,pavermac financing,BLOCKED,/financing/,page
+18,Is a paver driveway or a concrete driveway cheaper over 20 years in North Port?,informational,consider,North Port,both,COMPETITOR,LWR blog pavers vs concrete,BLOCKED,/compare/concrete-vs-pavers-driveway/,comparison
+19,Do I need a permit to replace my driveway in unincorporated Sarasota County?,informational,consider,Sarasota County,both,EXPERT-GAP,Sarasota County Code ch. 98 §98-3; ch. 74,BLOCKED,/permits/sarasota-county/,capsule
+20,Who issues the permit for a driveway inside Sarasota city limits?,informational,consider,City of Sarasota,both,EXPERT-GAP,sarasotafl.gov FTG portal,BLOCKED,/permits/city-of-sarasota/,capsule
+21,Does replacing the apron between the sidewalk and the street need a City of Sarasota permit?,informational,consider,City of Sarasota,both,COMPETITOR,tropicalgardenslandscape (local guide),BLOCKED,/permits/city-of-sarasota/,capsule
+22,Do I need a culvert permit for a driveway on a North Port GDC lot?,informational,consider,North Port,both,EXPERT-GAP,North Port ROW use permit form,BLOCKED,/permits/north-port/,capsule
+23,What does the City of Venice require for pavers in the right-of-way?,informational,consider,Venice,pavers,EXPERT-GAP,Venice Code ch. 62,BLOCKED,/permits/venice/,capsule
+24,Does the Town of Longboat Key require a permit for a paver driveway or pool deck?,informational,consider,Longboat Key,both,EXPERT-GAP,longboatkey.org; Code ch. 154/158,BLOCKED,/permits/longboat-key/,capsule
+25,Does Charlotte County require a permit for a concrete slab or for pavers?,informational,consider,Charlotte County,both,EXPERT-GAP,charlottecountyfl.gov residential slab page,BLOCKED,/permits/charlotte-county/,capsule
+26,Who pulls the permit for hardscape: the homeowner or the contractor?,informational,decide,Sarasota County,both,COMPETITOR,sarasotapermits.com,BLOCKED,/permits/,capsule
+27,What is a Notice of Commencement and when does Charlotte County require one?,informational,decide,Charlotte County,both,EXPERT-GAP,charlottecountyfl.gov,BLOCKED,/permits/charlotte-county/,capsule
+28,Can I do my own driveway as an owner-builder in Sarasota County?,informational,consider,Sarasota County,both,EXPERT-GAP,Code §22-122 owner-contractor,BLOCKED,/permits/sarasota-county/,capsule
+29,What happens if a previous owner replaced the pool deck without a permit?,informational,research,Sarasota County,both,EXPERT-GAP,audit,BLOCKED,/permits/,capsule
+30,How long does a driveway or slab permit take in Sarasota County?,informational,consider,Sarasota County,both,COMPETITOR,permitflow guide,BLOCKED,/permits/sarasota-county/,capsule
+31,Is a permit required for a shed pad or AC pad under 100 square feet in Sarasota County?,informational,consider,Sarasota County,concrete,COMPETITOR,permitflow shed rule,BLOCKED,/concrete/slabs/,capsule
+32,Does a pool deck overlay need a permit?,informational,consider,Sarasota County,concrete,EXPERT-GAP,audit,BLOCKED,/concrete/resurfacing/,capsule
+33,What is the $7500 residential permit exemption (HB 803) and does it cover flatwork?,informational,consider,Sarasota County,both,EXPERT-GAP,scgov Bulletin 2026-0002 (snippet),BLOCKED,/permits/,capsule
+34,Does replacing pavers with new pavers on the same footprint need a permit?,informational,consider,Sarasota County,pavers,EXPERT-GAP,audit,BLOCKED,/permits/,capsule
+35,Does the 50 percent impervious-coverage limit stop my driveway extension?,informational,consider,Sarasota County,both,EXPERT-GAP,Zoning App. A §6.5,BLOCKED,/guides/permeable-pavers-impervious-limit/,article
+36,Do permeable pavers count as impervious surface in Sarasota County?,informational,consider,Sarasota County,pavers,EXPERT-GAP,Zoning App. A §6.5; LID guidance,BLOCKED,/guides/permeable-pavers-impervious-limit/,capsule
+37,How do I look up existing permits on my Sarasota County property?,informational,research,Sarasota County,both,EXPERT-GAP,building.scgov.net,BLOCKED,/permits/sarasota-county/,capsule
+38,Does a seat wall or decorative retaining wall need a permit in Sarasota County?,informational,consider,Sarasota County,pavers,COMPETITOR,City of Sarasota 3.5 ft rule (snippet),BLOCKED,/pavers/retaining-walls-outdoor-living/,capsule
+39,Does a golf-cart path or driveway widening need approval in Venice-area communities?,informational,consider,Venice,both,EXPERT-GAP,HOA ARC guides,BLOCKED,/guides/golf-cart-paths/,article
+40,Which office handles permits on Siesta Key: county or city?,informational,consider,Siesta Key,both,EXPERT-GAP,jurisdiction map,BLOCKED,/areas/siesta-key/,capsule
+41,Does a new pool deck count toward the FEMA 50 percent rule on Siesta Key?,informational,consider,Siesta Key,both,EXPERT-GAP,FEMA P-758; Sarasota Property Appraiser; Fort Myers Beach FAQ q13,BLOCKED,/permits/flood-zones-50-percent-rule/,capsule
+42,What is the difference between AE and VE flood zones for hardscape?,informational,research,barrier islands,both,EXPERT-GAP,FEMA zone definitions,BLOCKED,/permits/flood-zones-50-percent-rule/,capsule
+43,Can I build a pool deck seaward of the Gulf Beach Setback Line?,informational,consider,Sarasota County,both,EXPERT-GAP,Code ch. 54 §54-723; variance cases,BLOCKED,/permits/flood-zones-50-percent-rule/,capsule
+44,What lighting can I put on a pool deck on Longboat Key between May 1 and October 31?,informational,consider,Longboat Key,pavers,EXPERT-GAP,LBK Ordinance 2021-01 ch. 100,BLOCKED,/permits/sea-turtle-lighting/,capsule
+45,What does 560-nanometer turtle-friendly lighting mean?,informational,research,barrier islands,pavers,EXPERT-GAP,longboatkey.org/218,BLOCKED,/permits/sea-turtle-lighting/,capsule
+46,Do path lights in a paver walkway need to be turtle compliant on Casey Key?,informational,consider,Casey Key,pavers,EXPERT-GAP,Sarasota County ch. 54 art. XXIII,BLOCKED,/permits/sea-turtle-lighting/,capsule
+47,How does salt air damage concrete near the Gulf?,informational,research,coast,concrete,EXPERT-GAP,ACI 201 durability; audit,BLOCKED,/coastal/salt-and-concrete/,article
+48,What is spalling and why does it show up on coastal pool decks first?,informational,research,coast,concrete,EXPERT-GAP,audit,BLOCKED,/concrete/repair/,capsule
+49,What should I do with pavers that shifted during storm surge?,informational,decide,barrier islands,pavers,COMPETITOR,oldtownpavers; craft-pavers post-storm blogs,BLOCKED,/coastal/post-storm-restoration/,article
+50,How do I document hardscape damage for a hurricane insurance claim?,informational,decide,Sarasota County,both,EXPERT-GAP,audit,BLOCKED,/guides/hurricane-insurance-documentation/,checklist
+51,Should I seal pavers before hurricane season?,informational,consider,coast,pavers,COMPETITOR,FL sealing blogs,BLOCKED,/coastal/storm-season-playbook/,capsule
+52,How long does paver sealer last one mile from the Gulf?,informational,consider,coast,pavers,COMPETITOR,abuffandbeyond; press-seal; bic-cc,BLOCKED,/pavers/sealing/,capsule
+53,Does a salt-water pool damage travertine coping?,informational,consider,Sarasota County,pavers,COMPETITOR,hydroseal; reelpainters,BLOCKED,/pavers/travertine-shellstone/,capsule
+54,What happens to a concrete driveway that sat under two feet of salt water?,informational,research,barrier islands,concrete,EXPERT-GAP,audit,BLOCKED,/coastal/post-storm-restoration/,capsule
+55,How high was the storm surge on Longboat Key during Helene and Milton?,informational,research,Longboat Key,both,EXPERT-GAP,NPR 2024-10-14 (6.68 ft),BLOCKED,/areas/longboat-key/,capsule
+56,Does an elevated coastal home need an engineered slab under a paver deck?,informational,consider,barrier islands,pavers,EXPERT-GAP,audit,BLOCKED,/coastal/,capsule
+57,What is a coastal maintenance calendar for pavers and concrete?,informational,research,coast,both,EXPERT-GAP,own asset,BLOCKED,/coastal/maintenance-calendar/,calendar
+58,Does the Manasota Key Conservation District affect hardscape?,informational,research,Englewood,both,EXPERT-GAP,Code ch. 54 art. XXVII,BLOCKED,/areas/englewood/,capsule
+59,Does beach sand pushed onto a paver driveway damage it?,informational,research,barrier islands,pavers,COMPETITOR,foxweather Milton sand,BLOCKED,/coastal/post-storm-restoration/,capsule
+60,Should I choose pavers or poured concrete in a VE zone?,informational,consider,barrier islands,both,EXPERT-GAP,audit,BLOCKED,/permits/flood-zones-50-percent-rule/,capsule
+61,Which pool deck surface stays coolest barefoot in Sarasota in July?,informational,consider,Sarasota,both,COMPETITOR,FL blogs claim 20-30F without local data,BLOCKED,/coastal/pool-deck-surface-temperature-study/,dataset
+62,How hot does a gray concrete pool deck get at 2 p.m. in August in Sarasota?,informational,research,Sarasota,concrete,EXPERT-GAP,own measurement planned,BLOCKED,/coastal/pool-deck-surface-temperature-study/,dataset
+63,Is light travertine cooler than white porcelain?,informational,consider,Florida,pavers,COMPETITOR,craft-pavers; pldfl,BLOCKED,/compare/travertine-vs-shellstone-vs-porcelain/,comparison
+64,Is shellstone a good pool deck around a salt pool?,informational,consider,Sarasota County,pavers,COMPETITOR,platinumpavers; coastalcustompool,BLOCKED,/compare/travertine-vs-shellstone-vs-porcelain/,comparison
+65,Does cool deck really stay cool and how long does it last?,informational,consider,Sarasota County,concrete,COMPETITOR,floorgripmedic; innovativeoutdoorliving,BLOCKED,/compare/cool-deck-vs-pavers/,comparison
+66,Are marble pavers slippery when wet around a pool?,informational,consider,Sarasota County,pavers,EXPERT-GAP,audit,BLOCKED,/pavers/marble-porcelain/,capsule
+67,What slip rating (DCOF) should a pool deck surface have?,informational,research,Florida,both,EXPERT-GAP,ANSI A326.3,BLOCKED,/compare/pool-deck-surfaces-heat/,capsule
+68,Is stamped concrete slippery around a pool?,informational,consider,Sarasota County,concrete,COMPETITOR,LWR FAQ (different question),BLOCKED,/concrete/stamped/,capsule
+69,Which travertine finish is best for a pool deck: tumbled honed or brushed?,informational,consider,Sarasota County,pavers,COMPETITOR,ntpavers,BLOCKED,/pavers/travertine-shellstone/,capsule
+70,How thick should a concrete pool deck be in Sarasota County?,informational,consider,Sarasota County,concrete,EXPERT-GAP,FBC ch. 19; ACI 332,BLOCKED,/concrete/pool-decks/,capsule
+71,Should a Sarasota driveway be 4 inches or 6 inches thick?,informational,consider,Sarasota,concrete,COMPETITOR,todayshomeowner; kaliconcrete,BLOCKED,/compare/4-inch-vs-6-inch/,comparison
+72,Should a driveway mix in Sarasota County be 3000 or 4000 PSI?,informational,consider,Sarasota County,concrete,COMPETITOR,jaxterra psi guide,BLOCKED,/compare/4-inch-vs-6-inch/,capsule
+73,Rebar wire mesh or fiber: what actually works on Myakka fine sand?,informational,consider,Sarasota County,concrete,COMPETITOR,concretenetwork; USDA Myakka OSD,BLOCKED,/compare/rebar-vs-fiber/,comparison
+74,What base depth do driveway pavers need on a high-water-table lot?,informational,consider,Sarasota County,pavers,EXPERT-GAP,ICPI Tech Spec 2,BLOCKED,/pavers/driveways/,capsule
+75,What is polymeric sand and when should it be replaced?,informational,research,Florida,pavers,COMPETITOR,unilock; polymericsandstore,BLOCKED,/guides/polymeric-sand-weeds-ants/,article
+76,Why do weeds and ants keep coming back between my pavers?,informational,research,Florida,pavers,COMPETITOR,horsemanslandscape; amruss,BLOCKED,/guides/polymeric-sand-weeds-ants/,capsule
+77,What is efflorescence on new pavers and will it go away?,informational,research,Florida,pavers,COMPETITOR,gappsi; paversealerstore,BLOCKED,/guides/efflorescence/,article
+78,Are permeable pavers strong enough for a driveway?,informational,consider,Sarasota County,pavers,EXPERT-GAP,ICPI PICP,BLOCKED,/guides/permeable-pavers-impervious-limit/,capsule
+79,What is architectural concrete (honed board-formed) and where does it make sense?,informational,research,Sarasota,concrete,EXPERT-GAP,GCM catalog,BLOCKED,/concrete/architectural/,capsule
+80,Is artificial turf a good pairing with pavers in Florida heat?,informational,consider,Sarasota County,pavers,EXPERT-GAP,GCM catalog,BLOCKED,/pavers/artificial-turf/,capsule
+81,Are large-format porcelain pavers a good pool deck in Florida?,informational,consider,Sarasota County,pavers,COMPETITOR,craft-pavers,BLOCKED,/pavers/marble-porcelain/,capsule
+82,Does exposed aggregate stay cooler than broom finish?,informational,research,Florida,concrete,EXPERT-GAP,audit,BLOCKED,/concrete/patios-lanais/,capsule
+83,Why does concrete crack in Sarasota?,informational,research,Sarasota,concrete,COMPETITOR,LWR blog (Manatee angle),BLOCKED,/guides/why-concrete-cracks-sarasota/,article
+84,What happens if it rains on my pour during a July afternoon storm?,informational,research,Sarasota,concrete,COMPETITOR,theconstructor; civiconcepts,BLOCKED,/guides/cure-times-and-rain/,capsule
+85,What is the best month to pour concrete in Sarasota?,informational,consider,Sarasota,concrete,EXPERT-GAP,NOAA normals,BLOCKED,/tools/pour-calendar/,tool
+86,How long before I can drive on a new driveway in Sarasota heat?,informational,research,Sarasota,concrete,COMPETITOR,concretenetwork,BLOCKED,/guides/cure-times-and-rain/,capsule
+87,How long does a paver driveway take to install?,informational,consider,Sarasota County,pavers,COMPETITOR,competitor FAQ,BLOCKED,/pavers/driveways/,capsule
+88,How long after resurfacing can I use the pool deck?,informational,research,Sarasota County,concrete,COMPETITOR,paradigm FAQ,BLOCKED,/concrete/resurfacing/,capsule
+89,Can you pour concrete during hurricane season?,informational,consider,Sarasota County,concrete,EXPERT-GAP,audit,BLOCKED,/coastal/storm-season-playbook/,capsule
+90,What does proper base prep look like on Myakka fine sand?,informational,research,Sarasota County,both,EXPERT-GAP,USDA OSD,BLOCKED,/guides/why-concrete-cracks-sarasota/,capsule
+91,How are control joints spaced on a driveway?,informational,research,Florida,concrete,COMPETITOR,ACI 332; NRMCA CIP 6,BLOCKED,/concrete/driveways/,capsule
+92,Does the crew remove and haul away my old driveway?,informational,decide,Sarasota County,concrete,COMPETITOR,adam case demolition,BLOCKED,/concrete/driveways/,capsule
+93,What happens to irrigation lines during a driveway replacement?,informational,research,Sarasota County,both,EXPERT-GAP,audit,BLOCKED,/concrete/driveways/,capsule
+94,When can pavers go over an existing lanai slab and when must the slab come out?,informational,consider,Sarasota County,pavers,COMPETITOR,LWR FAQ (overlay yes/no),BLOCKED,/pavers/patios-lanais/,capsule
+95,How do you run a job when the owner is out of state for the summer?,informational,decide,Sarasota County,both,COMPETITOR,snowbird remodel blogs,BLOCKED,/guides/snowbird-project-guide/,article
+96,What is the lead time in season versus summer?,informational,decide,Sarasota County,both,EXPERT-GAP,audit,BLOCKED,/guides/snowbird-project-guide/,capsule
+97,Does Palmer Ranch require ARC approval for a paver driveway?,informational,consider,Palmer Ranch,pavers,COMPETITOR,locallifehomes; hoabulletinboard,BLOCKED,/hoa/palmer-ranch/,article
+98,What do Wellen Park ARC guidelines say about driveway width and extensions?,informational,consider,Wellen Park,both,COMPETITOR,poolcreationsfl HOA guide,BLOCKED,/hoa/wellen-park/,article
+99,How does a condo association approve a pool deck replacement on Siesta Key?,informational,consider,Siesta Key,pavers,EXPERT-GAP,F.S. 718 reserves,BLOCKED,/hoa/barrier-island-condos/,article
+100,What goes in an ARC submittal packet for pavers?,informational,decide,Sarasota County,pavers,COMPETITOR,outdoorlifepros HOA checklist,BLOCKED,/hoa/,checklist
+101,Can I widen my driveway in Islandwalk or Grand Palm?,informational,consider,Venice/North Port,both,EXPERT-GAP,HOA ARC guides,BLOCKED,/hoa/wellen-park/,capsule
+102,Does the Rotonda West Association review driveway changes?,informational,consider,Rotonda West,both,EXPERT-GAP,audit,BLOCKED,/areas/rotonda-west/,capsule
+103,Does The Meadows require approval for a patio extension?,informational,consider,The Meadows,both,EXPERT-GAP,audit,BLOCKED,/areas/fruitville-bee-ridge/,capsule
+104,Which comes first: HOA approval or the permit?,informational,decide,Sarasota County,both,COMPETITOR,empirehoa ARC guide,BLOCKED,/hoa/,capsule
+105,Do HOAs in the Venice area restrict paver colors and patterns?,informational,consider,Venice,pavers,COMPETITOR,pacificpavers HOA guide,BLOCKED,/hoa/,capsule
+106,How does a condo board phase a pool deck project with a reserve study?,informational,decide,Sarasota County,pavers,COMPETITOR,linkedconcrete HOA resurfacing; F.S. 718.112,BLOCKED,/guides/condo-pool-deck-boards/,article
+107,Do golf-cart communities in Venice allow a second driveway for the cart?,informational,consider,Venice,both,EXPERT-GAP,audit,BLOCKED,/guides/golf-cart-paths/,capsule
+108,Does Bay Isles or the Longboat Key Club require architectural review for pavers?,informational,consider,Longboat Key,pavers,EXPERT-GAP,audit,BLOCKED,/areas/longboat-key/,capsule
+109,Can a cracked driveway be repaired or must it be replaced?,commercial,consider,Sarasota County,concrete,COMPETITOR,ericschroeder blog,BLOCKED,/concrete/repair/,capsule
+110,What makes pavers sink on a Nokomis lot and how is it fixed?,informational,consider,Nokomis,pavers,COMPETITOR,mainstreetlandscaping sinking,BLOCKED,/pavers/repair-storm-restoration/,capsule
+111,How do I remove rust stains from well-water irrigation on pavers?,informational,research,Sarasota County,pavers,COMPETITOR,paversealerstore; ctigerclean,BLOCKED,/guides/well-water-rust-stains/,article
+112,Should I pressure wash my pavers myself?,informational,research,Florida,pavers,COMPETITOR,Patrick's DIY section,BLOCKED,/pavers/sealing/,capsule
+113,Does concrete lifting or leveling work on sandy soil?,informational,consider,Sarasota County,concrete,EXPERT-GAP,audit,BLOCKED,/concrete/repair/,capsule
+114,How often do pavers need re-sanding near the coast?,informational,research,coast,pavers,COMPETITOR,gappsi; unilock,BLOCKED,/coastal/maintenance-calendar/,capsule
+115,Is a trip hazard on the sidewalk in front of my house my responsibility?,informational,research,Sarasota County,concrete,EXPERT-GAP,audit,BLOCKED,/concrete/sidewalks-walkways/,capsule
+116,Why is my new concrete driveway a different color in patches?,informational,research,Florida,concrete,EXPERT-GAP,NRMCA CIP 23,BLOCKED,/concrete/driveways/,capsule
+117,Can an overlay fix a spalled pool deck?,informational,consider,Sarasota County,concrete,COMPETITOR,paradigm,BLOCKED,/concrete/resurfacing/,capsule
+118,How long does a paver driveway last in Florida?,informational,research,Florida,pavers,COMPETITOR,innovativeoutdoorliving,BLOCKED,/pavers/driveways/,capsule
+119,How long does a concrete driveway last near the Gulf?,informational,research,coast,concrete,EXPERT-GAP,audit,BLOCKED,/concrete/driveways/,capsule
+120,Wet-look or penetrating sealer: which is better near the coast?,informational,consider,coast,pavers,COMPETITOR,stonorama; hdsurfacesolutions,BLOCKED,/compare/sealer-types-coastal/,comparison
+121,Why did the sealer on my pool deck peel?,informational,research,Florida,pavers,COMPETITOR,sealing blogs,BLOCKED,/pavers/sealing/,capsule
+122,Do I need to seal a new concrete driveway?,informational,research,Florida,concrete,COMPETITOR,competitor FAQ,BLOCKED,/concrete/driveways/,capsule
+123,Can hairline cracks in stamped concrete be fixed?,informational,consider,Sarasota County,concrete,EXPERT-GAP,audit,BLOCKED,/concrete/stamped/,capsule
+124,What maintenance does artificial turf need in Florida?,informational,research,Florida,pavers,EXPERT-GAP,GCM catalog,BLOCKED,/pavers/artificial-turf/,capsule
+125,What flood zone is most of Siesta Key in?,informational,research,Siesta Key,both,COMPETITOR,wrightway; teamrenick,BLOCKED,/areas/siesta-key/,capsule
+126,What soil is under Palmer Ranch homes?,informational,research,Palmer Ranch,both,EXPERT-GAP,USDA WSS,BLOCKED,/areas/palmer-ranch/,capsule
+127,Why are 1960s Gulf Gate driveways failing now?,informational,research,Gulf Gate,concrete,EXPERT-GAP,audit,BLOCKED,/areas/gulf-gate/,capsule
+128,What is different about a driveway on a North Port GDC lot with a swale?,informational,research,North Port,concrete,COMPETITOR,lawnandlandservices GDC drainage,BLOCKED,/guides/north-port-gdc-lot-driveways/,article
+129,Which permit office serves Nokomis and Laurel?,informational,research,Nokomis,both,EXPERT-GAP,jurisdiction map,BLOCKED,/areas/nokomis/,capsule
+130,Is Osprey inside a city or in unincorporated Sarasota County?,informational,research,Osprey,both,EXPERT-GAP,jurisdiction map,BLOCKED,/areas/osprey/,capsule
+131,Where does South Venice end and the City of Venice begin for permits?,informational,research,South Venice,both,EXPERT-GAP,jurisdiction map,BLOCKED,/areas/south-venice/,capsule
+132,Which county handles Englewood permits?,informational,research,Englewood,both,EXPERT-GAP,jurisdiction map,BLOCKED,/areas/englewood/,capsule
+133,How far is Rotonda West from Sarasota and is it served?,informational,research,Rotonda West,both,EXPERT-GAP,radius map,BLOCKED,/areas/rotonda-west/,capsule
+134,Do Port Charlotte's older grid neighborhoods have drainage issues that affect driveways?,informational,research,Port Charlotte,concrete,EXPERT-GAP,audit,BLOCKED,/areas/port-charlotte/,capsule
+135,What bridges and travel times connect Sarasota to Longboat Key?,informational,research,Longboat Key,both,EXPERT-GAP,radius map,BLOCKED,/areas/longboat-key/,capsule
+136,Are Placida and Grove City served?,informational,research,Placida,both,EXPERT-GAP,radius map,BLOCKED,/areas/placida/,capsule
+137,Which neighborhoods are inside Sarasota city limits versus the county?,informational,research,Sarasota,both,EXPERT-GAP,jurisdiction map,BLOCKED,/areas/sarasota/,capsule
+138,Why do The Meadows and Fruitville behave differently from the keys for drainage?,informational,research,Fruitville,both,EXPERT-GAP,USDA OSD,BLOCKED,/areas/fruitville-bee-ridge/,capsule
+139,How old are Venice Gardens homes and what does that mean for driveways?,informational,research,South Venice,concrete,EXPERT-GAP,ACS housing age (verify),BLOCKED,/areas/south-venice/,capsule
+140,Are Lakewood Ranch and Bradenton covered from this site?,informational,research,Manatee,both,EXPERT-GAP,network registry,BLOCKED,/areas/,capsule
+141,What rules apply across unincorporated Sarasota County for hardscape?,informational,research,Sarasota County,both,EXPERT-GAP,Code ch. 22/54/98; App. A,BLOCKED,/areas/sarasota-county/,article
+142,What does Charlotte County require differently from Sarasota County?,informational,research,Charlotte County,both,EXPERT-GAP,charlottecountyfl.gov,BLOCKED,/areas/charlotte-county/,article
+143,How do I verify a concrete contractor's license in Sarasota County?,informational,decide,Sarasota County,both,COMPETITOR,sarasotapermits.com,BLOCKED,/guides/verify-contractor-license-sarasota/,article
+144,Does a paver installer need a state license in Florida?,informational,decide,Florida,pavers,COMPETITOR,benchmarkpavers; levelset,BLOCKED,/guides/verify-contractor-license-sarasota/,capsule
+145,What insurance should a concrete contractor show me?,informational,decide,Florida,both,COMPETITOR,sarasotapermits.com,BLOCKED,/guides/verify-contractor-license-sarasota/,capsule
+146,What should a written warranty cover for pavers and concrete?,informational,decide,Florida,both,EXPERT-GAP,audit,BLOCKED,/warranty/,capsule
+147,Who writes this site and how is it reviewed?,informational,research,—,both,EXPERT-GAP,editorial standards,BLOCKED,/editorial-standards/,page
+148,How were the pool deck surface temperatures measured?,informational,research,Sarasota,both,EXPERT-GAP,own method,BLOCKED,/data-and-methods/,page
+149,Where do the cost ranges on this site come from?,informational,research,Sarasota County,both,EXPERT-GAP,own method,BLOCKED,/data-and-methods/,page
+150,How do I get a quote without being home?,commercial,decide,Sarasota County,both,COMPETITOR,snowbird blogs,BLOCKED,/guides/snowbird-project-guide/,capsule

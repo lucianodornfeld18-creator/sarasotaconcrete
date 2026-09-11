@@ -1,0 +1,7 @@
+site/dist/
+site/__pycache__/
+site/.wrangler/
+site/build-report.json
+__pycache__/
+*.pyc
+node_modules/
