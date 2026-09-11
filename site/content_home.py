@@ -124,7 +124,11 @@ def get_pages():
                     ["November to December", "Owners returning; turtle season ends October 31", "Finish line for summer jobs; sealing season opens"]], "The Suncoast hardscape year") +
                 p(f'The {link("/tools/pour-calendar/", "pour calendar")} turns the NOAA normals into a start hour for any month, and the {link("/guides/snowbird-project-guide/", "snowbird guide")} lays out the March-to-November plan for owners who spend summers elsewhere.'))
     body += faq_block(FAQ, "Straight answers before you call")
-    body += sec("Request a written estimate", p(f'{("Call or text " + link("tel:" + BUSINESS["phone_tel"], BUSINESS["phone_display"]) + ", or ") if has("phone_display") else ""}send the form. Photos help; a survey or site plan helps more.') + lead_form())
+    body += sec("Tell us more about the project",
+                p(f'The hero form is four fields because that is all a first contact needs. This one asks '
+                  f'for the location, a description and a photo, which is what makes the first call short. '
+                  f'{("Call or text " + link("tel:" + BUSINESS["phone_tel"], BUSINESS["phone_display"]) + " if you prefer." ) if has("phone_display") else ""}')
+                + lead_form(prefix="bf"))
     body += reviewed("September 10, 2026", "First publication.")
 
     return [{
@@ -135,5 +139,16 @@ def get_pages():
         "kicker": "Sarasota County · Charlotte County coast · 40 miles from Sarasota",
         "lede": "Poured concrete and paver hardscape for Sarasota, the keys, Palmer Ranch, Venice, North Port and the Englewood coast. Local cost ranges with a date on them, the permit office for your address, and the flood, salt and turtle-lighting rules explained before you spend anything.",
         "body_html": body, "faq": FAQ,
+        # Real provider job photo, full-bleed behind the hero, under a graphite wash. The alt text
+        # says what is visible and does not claim a Sarasota address, because this install is a
+        # Central Florida job. The credit line under the hero says the same thing in the open.
+        "hero_photo": {
+            "slug": "hero-surface", "w": 1440, "h": 810,
+            "alt": ("Charcoal slate-texture concrete pavers with a soldier-course border, laid tight "
+                    "with even joints across a finished driveway"),
+            "credit": "Provider job photo. Suncoast project photos are added as each one is documented.",
+        },
+        "hero_badges": ["Insured", "Free written estimate", "Sarasota County and the Charlotte coast",
+                        "Concrete and pavers, priced separately"],
         "schema": image_schema(feat, BASE_URL),
     }]

@@ -936,17 +936,6 @@
    ]
   ],
   [
-   "/areas/",
-   "/",
-   42,
-   4.5,
-   [
-    "15 to 25 minutes via the siesta drive",
-    "2 is the charlotte county coast inside the",
-    "20 to 25 minutes on us-41 casey key"
-   ]
-  ],
-  [
    "/areas/placida/",
    "/areas/port-charlotte/",
    21,
@@ -1099,6 +1088,17 @@
     "concrete driveways concrete repair all other services concrete",
     "concrete repair all other services concrete pavers questions"
    ]
+  ],
+  [
+   "/areas/port-charlotte/",
+   "/areas/rotonda-west/",
+   20,
+   4.4,
+   [
+    "by charlotte county which permits every slab and",
+    "charlotte county which permits every slab and paver",
+    "concrete driveways concrete repair all other services concrete"
+   ]
   ]
  ],
  "internal_over_15": [],
@@ -1119,15 +1119,6 @@
     [
      0.2,
      1,
-     "/areas/nokomis/",
-     "nokomis\\index.html",
-     [
-      "calusa lakes sorrento east and south mission valley"
-     ]
-    ],
-    [
-     0.2,
-     1,
      "/concrete/driveways/north-port/",
      "concrete-driveways\\north-port\\index.html",
      [
@@ -1142,6 +1133,15 @@
      [
       "a cracked driveway be repaired or does it",
       "can a cracked driveway be repaired or does"
+     ]
+    ],
+    [
+     0.1,
+     1,
+     "/areas/nokomis/",
+     "nokomis\\index.html",
+     [
+      "calusa lakes sorrento east and south mission valley"
      ]
     ],
     [

@@ -82,6 +82,24 @@ nav.primary.open{display:block}nav.primary>ul{flex-direction:column}nav.primary 
 /* hero */
 .hero{position:relative;padding:44px 0 26px;overflow:hidden}
 .hero .wrap{position:relative;max-width:900px}
+/* Photo hero (home only): a real job photo under a graphite wash so white text clears AA. */
+.hero.photo{padding:0;background:#1A1A1B}
+.hero.photo .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero.photo::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(103deg,rgba(20,20,21,.70) 0%,rgba(20,20,21,.62) 44%,rgba(20,20,21,.42) 78%,rgba(20,20,21,.28) 100%)}
+.hero.photo .wrap{position:relative;z-index:2;max-width:var(--w);padding-top:46px;padding-bottom:54px}
+.hero.photo h1{color:#fff}
+.hero.photo .kicker{color:var(--gold-lt)}
+.hero.photo .lede{color:#EFEDE8;max-width:46ch}
+.hero.photo .crumbs,.hero.photo .crumbs a{color:#DCD9D2}
+.hero-grid{display:grid;grid-template-columns:1.1fr minmax(320px,.9fr);grid-template-areas:"copy form" "badges form";column-gap:46px;row-gap:0;align-items:start}
+.hero-copy{grid-area:copy}.hero-form{grid-area:form}
+/* On one column the form moves directly under the headline and the badges go last, so the form is
+   reachable without scrolling past a full screen of copy on a phone. */
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;grid-template-areas:"copy" "form" "badges";row-gap:24px}.hero.photo .lede{max-width:none}}
+@media(max-width:560px){.hero.photo h1{font-size:1.72rem}.hero.photo .lede{font-size:1rem}.hero.photo .wrap{padding-top:30px;padding-bottom:34px}}
+.hero-badges{grid-area:badges;display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}
+.hero-badges li{font-size:.84rem;color:#E6E3DC;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.17);border-radius:999px;padding:5px 13px}
+.hero-credit{position:relative;z-index:2;margin:0;padding:0 20px 10px;font-size:.7rem;color:rgba(255,255,255,.86);text-align:right}
 .hero .kicker{display:inline-block;font-family:var(--disp);font-weight:700;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--deep);margin-bottom:10px}
 .hero .lede{font-size:1.15rem;color:#2C3A47;max-width:62ch;margin:.4em 0 0}
 .tide{position:absolute;right:-60px;top:-30px;width:520px;height:320px;opacity:.55;pointer-events:none}
@@ -134,6 +152,11 @@ aside.rail h3{margin-top:0;font-size:1rem}aside.rail ul{padding-left:1.1em;margi
 .stripe{background:var(--sand);padding:28px 0;margin:28px 0}
 /* forms */
 form.lead{background:#fff;border:1px solid var(--rule);border-radius:14px;padding:22px}
+form.lead.short{padding:20px;box-shadow:0 18px 44px rgba(0,0,0,.28)}
+form.lead.short .lead-h{margin:0 0 2px;font-family:var(--disp);font-weight:800;font-size:1.18rem;line-height:1.2}
+form.lead.short .lead-s{margin:0 0 4px;font-size:.9rem;color:var(--mute)}
+form.lead .disclosure{margin:12px 0 0;font-size:.78rem;line-height:1.45;color:var(--mute)}
+form.lead.short button{width:100%;margin-top:14px;font-size:1rem;padding:13px 20px}
 form.lead .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:640px){form.lead .row{grid-template-columns:1fr}}
 label{display:block;font-weight:600;font-size:.9rem;margin:10px 0 4px}
 input,select,textarea{width:100%;font:inherit;padding:10px 12px;border:1px solid #C9C2B4;border-radius:8px;background:#fff}
@@ -216,23 +239,53 @@ def _footer():
             f'</div></div></footer>')
 
 
-def lead_form(compact=False, city=None, service=None):
+def lead_form(short=False, city=None, service=None, prefix="f"):
+    """Renders the lead form.
+
+    short=True is the open form in the home hero: four fields, because every extra field on a
+    first-touch form costs completions. The long form on /contact/ also asks for the location, a
+    description and a photo, which is what shortens the first phone call.
+
+    prefix keeps element ids unique: the home page carries two forms, and duplicate ids are invalid
+    HTML and break label-for association.
+
+    Consent: the long form uses an explicit checkbox. The short form puts the disclosure directly
+    above the button and submits consent="submit" (disclosure-by-submission), so the visitor still
+    reads it before the affirmative act. api/contact.js accepts either value.
+    """
     opt = lambda xs, sel=None: "".join(f'<option{" selected" if x == sel else ""}>{esc(x)}</option>' for x in xs)
     turn = f'<div class="cf-turnstile" data-sitekey="{TURNSTILE_SITE_KEY}"></div>' if not TURNSTILE_SITE_KEY.startswith("{{") else ""
+    hidden = ('<input type="hidden" name="hub_id" value="sarasota">'
+              '<input type="hidden" name="page_url" value=""><input type="hidden" name="referrer" value="">'
+              '<input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value="">'
+              '<input type="hidden" name="utm_campaign" value=""><input type="hidden" name="client_ts" value="">')
+    honeypot = '<div class="hp" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>'
+    services = f'<optgroup label="Concrete">{opt(FORM_SERVICES_CONCRETE, service)}</optgroup><optgroup label="Pavers &amp; hardscape">{opt(FORM_SERVICES_PAVERS, service)}</optgroup>'
+
+    if short:
+        return f'''<form class="lead short" method="post" action="/api/contact" novalidate aria-labelledby="{prefix}-h">
+{hidden}<input type="hidden" name="consent" value="submit">
+{honeypot}
+<p class="lead-h" id="{prefix}-h">Get a written estimate</p>
+<p class="lead-s">Four fields. We reply the same or next business day.</p>
+<label for="{prefix}-name">Name</label><input id="{prefix}-name" name="name" required autocomplete="name" maxlength="100">
+<div class="row"><div><label for="{prefix}-phone">Phone</label><input id="{prefix}-phone" name="phone" type="tel" required autocomplete="tel" maxlength="40"></div>
+<div><label for="{prefix}-email">Email</label><input id="{prefix}-email" name="email" type="email" required autocomplete="email" maxlength="254"></div></div>
+<label for="{prefix}-service">What do you need?</label><select id="{prefix}-service" name="service">{services}</select>
+{turn}<button class="btn" type="submit">Send my request</button>
+<p class="disclosure">By sending, you agree {PUBLIC_NAME} may contact you about this request and may forward it to the insured provider that serves your area. Reply STOP to end texts. See the <a href="/privacy/">privacy policy</a>.</p>
+<p class="form-msg" aria-live="polite"></p></form>'''
+
     return f'''<form class="lead" method="post" action="/api/contact" enctype="multipart/form-data" novalidate>
-<input type="hidden" name="hub_id" value="sarasota"><input type="hidden" name="page_url" value=""><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="referrer" value=""><input type="hidden" name="client_ts" value="">
-<div class="hp" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
-<div class="row"><div><label for="f-name">Name</label><input id="f-name" name="name" required autocomplete="name" maxlength="100"></div>
-<div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" required autocomplete="tel" maxlength="40"></div></div>
-<div class="row"><div><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email" maxlength="254"></div>
-<div><label for="f-city">Where is the property?</label><select id="f-city" name="city">{opt(FORM_LOCALITIES, city)}</select></div></div>
-<div class="row"><div><label for="f-service">What do you need?</label><select id="f-service" name="service"><optgroup label="Concrete">{opt(FORM_SERVICES_CONCRETE, service)}</optgroup><optgroup label="Pavers &amp; hardscape">{opt(FORM_SERVICES_PAVERS, service)}</optgroup></select></div>
-<div><label for="f-prop">Property type</label><select id="f-prop" name="property_type">{opt(FORM_PROPERTY)}</select></div></div>
-<div class="row"><div><label for="f-flood">Flood zone, if you know it</label><select id="f-flood" name="flood_zone">{opt(FORM_FLOOD)}</select></div>
-<div><label for="f-time">Timeline</label><select id="f-time" name="timeline">{opt(FORM_TIMELINE)}</select></div></div>
-<label for="f-presence">Are you at the property?</label><select id="f-presence" name="presence">{opt(FORM_PRESENCE)}</select>
-<label for="f-msg">Tell us about the project (size, material, what's there now)</label><textarea id="f-msg" name="message" maxlength="3000"></textarea>
-<label for="f-photo">Photo (optional, JPG or PNG up to 8 MB)</label><input id="f-photo" name="photo" type="file" accept="image/jpeg,image/png">
+{hidden}
+{honeypot}
+<div class="row"><div><label for="{prefix}-name">Name</label><input id="{prefix}-name" name="name" required autocomplete="name" maxlength="100"></div>
+<div><label for="{prefix}-phone">Phone</label><input id="{prefix}-phone" name="phone" type="tel" required autocomplete="tel" maxlength="40"></div></div>
+<div class="row"><div><label for="{prefix}-email">Email</label><input id="{prefix}-email" name="email" type="email" required autocomplete="email" maxlength="254"></div>
+<div><label for="{prefix}-city">Where is the property?</label><select id="{prefix}-city" name="city">{opt(FORM_LOCALITIES, city)}</select></div></div>
+<label for="{prefix}-service">What do you need?</label><select id="{prefix}-service" name="service">{services}</select>
+<label for="{prefix}-msg">Anything useful to know? (optional)</label><textarea id="{prefix}-msg" name="message" maxlength="3000" placeholder="Rough size, the material you have in mind, what is there now."></textarea>
+<label for="{prefix}-photo">Photo (optional, JPG or PNG up to 8 MB)</label><input id="{prefix}-photo" name="photo" type="file" accept="image/jpeg,image/png">
 <label class="consent"><input type="checkbox" name="consent" value="yes" required><span>{esc(BUSINESS["consent_text"])} See the <a href="/privacy/">privacy policy</a>.</span></label>
 {turn}<button class="btn" type="submit">Send my request</button><p class="form-msg" aria-live="polite"></p></form>'''
 
@@ -289,6 +342,22 @@ def render_page(page):
     kicker = f'<span class="kicker">{esc(page["kicker"])}</span>' if page.get("kicker") else ""
     lede = f'<p class="lede">{page["lede"]}</p>' if page.get("lede") else ""
     crumbs = _breadcrumbs(page["breadcrumbs"]) if page.get("breadcrumbs") and not page.get("is_home") else ""
+    if page.get("hero_photo"):
+        hp = page["hero_photo"]
+        srcset = ", ".join(f'/static/images/{hp["slug"]}-{w}.webp {w}w' for w in (480, 768, 1024, 1440, 1920))
+        badges = ('<ul class="hero-badges">' + "".join(f"<li>{esc(b)}</li>" for b in page.get("hero_badges", [])) + "</ul>") if page.get("hero_badges") else ""
+        hero_preload = (f'<link rel="preload" as="image" href="/static/images/{hp["slug"]}-1440.webp" '
+                        f'imagesrcset="{srcset}" imagesizes="100vw" fetchpriority="high">')
+        hero = (f'<div class="hero photo">'
+                f'<img class="hero-img" src="/static/images/{hp["slug"]}-1440.webp" srcset="{srcset}" sizes="100vw" '
+                f'width="{hp["w"]}" height="{hp["h"]}" alt="{esc(hp["alt"])}" fetchpriority="high" decoding="async">'
+                f'<div class="wrap"><div class="hero-grid"><div class="hero-copy">{crumbs}{kicker}'
+                f'<h1>{page["h1"]}</h1>{lede}</div>'
+                f'<div class="hero-form">{lead_form(short=True, prefix="hf")}</div>{badges}</div></div>'
+                f'<p class="hero-credit">{esc(hp["credit"])}</p></div>')
+    else:
+        hero_preload = ""
+        hero = f'<div class="hero">{TIDE_SVG}<div class="wrap">{crumbs}{kicker}<h1>{page["h1"]}</h1>{lede}</div></div>'
     return f'''<!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -299,7 +368,7 @@ def render_page(page):
 {robots}
 <link rel="canonical" href="{url}">
 <link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/static/brand/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/static/brand/icon-192.png"><link rel="manifest" href="/site.webmanifest">
-<link rel="preload" href="/static/fonts/bricolage-normal-400-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/static/fonts/bricolage-normal-400-800-latin.woff2" as="font" type="font/woff2" crossorigin>{hero_preload}
 <meta property="og:site_name" content="{PUBLIC_NAME}"><meta property="og:type" content="{'website' if page.get('is_home') else 'article'}"><meta property="og:title" content="{esc(full_title)}"><meta property="og:description" content="{esc(description_for(page))}"><meta property="og:url" content="{url}"><meta property="og:image" content="{og_img}"><meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" type="application/rss+xml" title="Ask the Estimator" href="/feed.xml">
@@ -310,7 +379,7 @@ def render_page(page):
 <a class="skip" href="#main">Skip to content</a>
 {_nav()}
 <main id="main">
-<div class="hero">{TIDE_SVG}<div class="wrap">{crumbs}{kicker}<h1>{page["h1"]}</h1>{lede}</div></div>
+{hero}
 <div class="wrap">{page["body_html"]}</div>
 </main>
 {_footer()}

@@ -225,6 +225,8 @@ def main():
     print(f"[build] DEPTH5 {content_depth5.apply(pages)} page(s) extended")
     import content_depth6
     print(f"[build] DEPTH6 {content_depth6.apply(pages)} page(s) extended")
+    import content_areas_extra
+    print(f"[build] AREAS+ {content_areas_extra.apply(pages)} locality page(s) extended")
     problems, sizes = [], {}
     for p in pages:
         problems += seo_check(p, title_for(p))

@@ -28,31 +28,31 @@
   "problems": []
  },
  "/areas/englewood/": {
-  "words": 639,
-  "facts_per_150": 4.69,
-  "sentences": 28,
-  "avg_sentence": 24.6,
+  "words": 821,
+  "facts_per_150": 4.57,
+  "sentences": 33,
+  "avg_sentence": 26.8,
   "problems": []
  },
  "/areas/fruitville-bee-ridge/": {
-  "words": 642,
-  "facts_per_150": 4.21,
-  "sentences": 29,
-  "avg_sentence": 24.2,
+  "words": 854,
+  "facts_per_150": 3.34,
+  "sentences": 38,
+  "avg_sentence": 24.3,
   "problems": []
  },
  "/areas/gulf-gate/": {
-  "words": 625,
-  "facts_per_150": 4.32,
-  "sentences": 36,
-  "avg_sentence": 18.8,
+  "words": 812,
+  "facts_per_150": 3.51,
+  "sentences": 48,
+  "avg_sentence": 18.4,
   "problems": []
  },
  "/areas/": {
-  "words": 834,
-  "facts_per_150": 7.19,
-  "sentences": 28,
-  "avg_sentence": 34.3,
+  "words": 1024,
+  "facts_per_150": 6.01,
+  "sentences": 39,
+  "avg_sentence": 29.8,
   "problems": []
  },
  "/areas/longboat-key/": {
@@ -63,31 +63,31 @@
   "problems": []
  },
  "/areas/nokomis/": {
-  "words": 605,
-  "facts_per_150": 4.46,
-  "sentences": 28,
-  "avg_sentence": 23.4,
+  "words": 817,
+  "facts_per_150": 4.22,
+  "sentences": 34,
+  "avg_sentence": 25.8,
   "problems": []
  },
  "/areas/north-port/": {
-  "words": 681,
-  "facts_per_150": 3.08,
-  "sentences": 26,
-  "avg_sentence": 28.1,
+  "words": 855,
+  "facts_per_150": 2.46,
+  "sentences": 29,
+  "avg_sentence": 31.4,
   "problems": []
  },
  "/areas/osprey/": {
-  "words": 588,
-  "facts_per_150": 4.34,
-  "sentences": 28,
-  "avg_sentence": 22.7,
+  "words": 804,
+  "facts_per_150": 3.36,
+  "sentences": 42,
+  "avg_sentence": 20.5,
   "problems": []
  },
  "/areas/palmer-ranch/": {
-  "words": 590,
-  "facts_per_150": 5.59,
-  "sentences": 30,
-  "avg_sentence": 21.3,
+  "words": 795,
+  "facts_per_150": 4.15,
+  "sentences": 40,
+  "avg_sentence": 21.6,
   "problems": []
  },
  "/areas/placida/": {
@@ -133,10 +133,10 @@
   "problems": []
  },
  "/areas/south-venice/": {
-  "words": 588,
-  "facts_per_150": 3.32,
-  "sentences": 29,
-  "avg_sentence": 22.0,
+  "words": 778,
+  "facts_per_150": 2.89,
+  "sentences": 35,
+  "avg_sentence": 24.2,
   "problems": []
  },
  "/areas/venice/": {
@@ -770,9 +770,9 @@
   "problems": []
  },
  "/": {
-  "words": 3261,
-  "facts_per_150": 2.44,
-  "sentences": 156,
+  "words": 3311,
+  "facts_per_150": 2.4,
+  "sentences": 158,
   "avg_sentence": 22.4,
   "problems": []
  },

@@ -14,9 +14,17 @@ function isAllowedOrigin(origin) {
   try {
     const { hostname, protocol } = new URL(origin);
     if (protocol !== "https:" && hostname !== "localhost" && hostname !== "127.0.0.1") return false;
-    return hostname === "sarasotaconcrete.com" || hostname === "www.sarasotaconcrete.com" ||
-      hostname === "sarasotaconcrete.pages.dev" || hostname.endsWith(".sarasotaconcrete.pages.dev") ||
-      hostname === "localhost" || hostname === "127.0.0.1";
+    if (hostname === "sarasotaconcrete.com" || hostname === "www.sarasotaconcrete.com") return true;
+    if (hostname === "localhost" || hostname === "127.0.0.1") return true;
+    // Pages hosts for this project: sarasotaconcrete.pages.dev, the preview project
+    // sarasotaconcrete-preview.pages.dev, and per-deployment subdomains like
+    // <hash>.sarasotaconcrete-preview.pages.dev. Without this the form 403s on every preview,
+    // which is exactly where it gets tested before the domain is attached.
+    if (hostname.endsWith(".pages.dev")) {
+      const project = hostname.slice(0, -".pages.dev".length).split(".").pop();
+      return project === "sarasotaconcrete" || project === "sarasotaconcrete-preview";
+    }
+    return false;
   } catch { return false; }
 }
 const field = (form, n) => { const v = form.get(n); return typeof v === "string" ? v.trim() : ""; };
@@ -28,7 +36,9 @@ function validate(p) {
   if (!p.email || p.email.length > LIMITS.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(p.email)) return "Please enter a valid email address.";
   if (p.service.length > LIMITS.service || p.city.length > LIMITS.city) return "Please choose a valid service and location.";
   if (p.message.length > LIMITS.message) return "The project description is too long.";
-  if (p.consent !== "yes") return "Please check the consent box so we can contact you.";
+  // "yes" = explicit checkbox on the long form. "submit" = the short hero form, where the
+  // disclosure sits directly above the button and submitting is the affirmative act.
+  if (p.consent !== "yes" && p.consent !== "submit") return "Please agree to be contacted so we can reply.";
   return null;
 }
 async function verifyTurnstile(token, secret, ip) {
