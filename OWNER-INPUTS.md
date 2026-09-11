@@ -108,42 +108,84 @@ social 512 e um guia de marca de uma página.
 
 ## 2. Bloqueantes para gerar lead
 
-### 2.1 `{{SARASOTA_TWILIO_NUMBER}}` — número 941
+### 2.1 Número Twilio — RESOLVIDO em 2026-09-11
 
-**Estado atual:** o site **não mostra telefone**. O cabeçalho traz "Get an estimate" em vez de
-"Call ...", e nenhum link `tel:` existe, porque o `_data.py` está com o placeholder e os templates
-esconderam o bloco em vez de imprimir `{{...}}`.
+**Número: (941) 274-3561** (`+19412743561`), já na conta Braza Cleaning.
 
-**O que fazer**, seguindo o padrão que já existe na sua conta Twilio (um número por site, serviço
-Functions `<site>-voice`, `FORWARD_TO` para o seu telefone):
+Configurado igual ao da Lakewood Ranch: serviço Serverless `sarasota-voice`
+(`ZS86822f300d06a7c894f4a1f713d3907d`), ambiente `prod` em
+`https://sarasota-voice-9463-prod.twil.io`, com as quatro funções `protected`
+`/incoming`, `/whisper`, `/accept` e `/voicemail`, e o webhook de voz do número
+apontando para `/incoming` via POST.
 
-1. Comprar um número com DDD **941**.
-2. Criar o serviço Functions `sarasota-voice`, com `FORWARD_TO` = seu telefone.
-3. Me passar o número em dois formatos: exibição `(941) XXX-XXXX` e E.164 `+1941XXXXXXX`.
+| Variável | Valor |
+|---|---|
+| `TWILIO_NUMBER` | `+19412743561` |
+| `FORWARD_TO` | `+16892427487` |
 
-Preencho `BUSINESS["phone_display"]` e `["phone_tel"]` e os links `tel:`/`sms:` com tracking
-aparecem em todas as 178 páginas automaticamente.
+Fluxo, verificado assinando as requisições como o Twilio faz (sem gastar ligação):
+
+1. Atende e fala primeiro: *"Thanks for calling Sarasota Concrete. Press any key to be connected."*,
+   repetido uma vez a 85% da velocidade. Sem tecla, desliga — é a triagem de robocall.
+2. Com tecla: *"One moment while we connect you."* e disca para `FORWARD_TO`, com `callerId` =
+   número real de quem ligou, `timeout` 20 s e gravação `record-from-answer-dual`.
+3. No seu celular toca o whisper: *"New lead from Sarasota Concrete. Press any key to accept."*,
+   depois de 2 s de pausa (o áudio VoLTE leva esse tempo para abrir).
+4. Tecla aceita → TwiML vazio conecta as duas pernas. Sem tecla → cai no voicemail.
+5. Voicemail grava até 120 s **com transcrição** e confirma o retorno.
+6. Requisição sem assinatura do Twilio recebe 403.
+
+O número já está publicado no site: botão do cabeçalho, links `tel:`/`sms:` com tracking,
+`llms.txt`, e a propriedade `telephone` da `Organization`.
 
 ### 2.2 `{{MAIN_DESTINATION_EMAIL}}` — onde os leads chegam
 
-O Worker `sarasotaconcrete-contact` já está escrito e envia por Cloudflare Email Workers a partir de
-`hello@sarasotaconcrete.com`. Preciso do e-mail de destino final, que entra como secret:
+Duas rotas, independentes:
+
+**Email de entrada (`hello@sarasotaconcrete.com`)** — as regras de Email Routing já estão criadas na
+zona, encaminhando para `opusdigitalmarketingflorida@gmail.com` (mesmo destino, já verificado, que
+grovelandconcrete.com e windermereconcrete.com usam): uma regra literal para
+`hello@sarasotaconcrete.com` e um catch-all para não perder nada.
+
+**Falta um passo manual seu**, porque a Cloudflare recusa ligar o Email Routing enquanto existirem MX
+de terceiros, e a importação da zona trouxe os registros de estacionamento do domínio:
+
+| Registro atual | O que é | Ação |
+|---|---|---|
+| `MX 0 .` | null MX — declara "este domínio não recebe email" | apagar |
+| `TXT "v=spf1 -all"` | SPF que rejeita todo envio | apagar |
+
+Em DNS → Records, apague esses dois, depois Email → Email Routing → **Enable**. A Cloudflare então
+publica sozinha os três MX `route1/2/3.mx.cloudflare.net`, o SPF
+`v=spf1 include:_spf.mx.cloudflare.net ~all` e a chave DKIM `cf2024-1._domainkey`. As regras já
+estão lá esperando; nada mais precisa ser criado.
+
+**Email de saída (o Worker que manda o lead do formulário)** — `sarasotaconcrete-contact` está
+escrito mas não publicado, porque Email Workers exigem o Email Routing já verificado na zona. Depois
+do passo acima:
 
 ```
 cd site/workers/contact-email
 wrangler secret put DESTINATION_EMAIL
+wrangler deploy
 ```
+
+e então descomentar o binding `CONTACT_EMAIL` em `site/wrangler.jsonc`.
 
 ### 2.3 Cloudflare — o que falta configurar
 
 | Item | Comando ou local | Estado |
 |---|---|---|
-| Repositório GitHub `sarasotaconcrete` | — | a criar |
-| Pages ligado ao repo, pasta `site`, output `dist` | Dashboard | a criar |
-| Email Routing `hello@sarasotaconcrete.com` | Dashboard | a criar |
-| Worker de contato publicado | `cd site/workers/contact-email && wrangler deploy` | a fazer |
-| Service binding `CONTACT_EMAIL` → Worker | `site/wrangler.jsonc` (já declarado) | a ligar |
-| KV `RATE_LIMIT_KV` | `wrangler kv namespace create RATE_LIMIT_KV`, depois preencher o id em `site/wrangler.jsonc` | a fazer |
+| Repositório GitHub `sarasotaconcrete` | — | **feito** |
+| Zona `sarasotaconcrete.com` na conta | NS `ullis`/`vicente.ns.cloudflare.com` | **ativa** (2026-09-11) |
+| Pages publicado | `wrangler pages deploy` → `sarasotaconcrete-preview` | **feito** (preview com `noindex`) |
+| KV de rate limit | `sarasotaconcrete-ratelimit` `2425ece680b2407a9aa3e60d0d961d44` | **feito** |
+| Regras de Email Routing | criadas por API | **feitas** |
+| Apagar `MX 0 .` e `TXT v=spf1 -all`, depois Enable no Email Routing | Dashboard | **a fazer (2.2)** |
+| Pages ligado ao repo (build automático no push) | Dashboard, OAuth do GitHub | a fazer |
+| Domínio `sarasotaconcrete.com` apontado no projeto Pages | Dashboard | a fazer |
+| Worker de contato publicado | `cd site/workers/contact-email && wrangler deploy` | depende de 2.2 |
+| Service binding `CONTACT_EMAIL` → Worker | `site/wrangler.jsonc` (comentado, com o motivo) | depende de 2.2 |
 | `TURNSTILE_SITE_KEY` e `TURNSTILE_SECRET_KEY` | Turnstile + variáveis do Pages | a fazer |
 | Redirect Rule www → apex | Dashboard (não dá em `_redirects`) | a fazer |
 | Desativar o bloqueio padrão de bots de IA no WAF para os bots de busca | Dashboard | a fazer |
@@ -259,8 +301,9 @@ GA4 (só após a revisão de privacidade) e monitoramento dos referrals `utm_sou
 
 1. **Escolha do logo** (item 1.6) — parada obrigatória do prompt.
 2. **Entidade legal** (1.1) e decisão sobre licença (1.3), porque definem o rodapé e o contrato.
-3. **Número Twilio** (2.1) e **e-mail de destino** (2.2), sem os quais o site não captura lead.
-4. **Infra Cloudflare** (2.3).
+3. **Apagar os dois registros de estacionamento e ligar o Email Routing** (2.2) — três cliques no
+   dashboard. É o único passo que falta para o formulário entregar o lead; o telefone já funciona.
+4. **Infra Cloudflare restante** (2.3): Pages ligado ao repo, domínio no projeto, Turnstile, WAF.
 
 Não impedem a publicação, mas decidem o resultado: **GBP e Yelp** (2.4) e os **dados do Search
 Console do Lakewood Ranch** (3.3), que são o gatilho dos 301 e da resolução de canibalização.
