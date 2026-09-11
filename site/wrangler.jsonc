@@ -2,10 +2,29 @@
   "name": "sarasotaconcrete",
   "compatibility_date": "2026-09-10",
   "pages_build_output_dir": "dist",
-  // Bindings for functions/api/contact.js:
-  //   CONTACT_EMAIL  -> service binding to the Worker "sarasotaconcrete-contact"
-  //   RATE_LIMIT_KV  -> KV namespace (create: wrangler kv namespace create RATE_LIMIT_KV)
-  //   TURNSTILE_SECRET_KEY -> secret (Pages > Settings > Environment variables)
-  "services": [{ "binding": "CONTACT_EMAIL", "service": "sarasotaconcrete-contact" }],
-  "kv_namespaces": [{ "binding": "RATE_LIMIT_KV", "id": "{{RATE_LIMIT_KV_ID}}" }]
+
+  // KV for the contact form's rate limit (5 submissions per rolling 10 minutes per IP).
+  // Namespace "sarasotaconcrete-ratelimit", created 2026-09-11. It is deliberately NOT the shared
+  // generic RATE_LIMIT_KV used by a sibling site: sharing it would rate-limit one visitor across
+  // every hub at once.
+  "kv_namespaces": [
+    { "binding": "RATE_LIMIT_KV", "id": "2425ece680b2407a9aa3e60d0d961d44" }
+  ]
+
+  // Re-enable once the email Worker is deployed. It cannot be deployed yet: Cloudflare Email
+  // Workers require Email Routing verified on the zone, which requires sarasotaconcrete.com to be
+  // in this Cloudflare account first.
+  //
+  //   cd workers/contact-email
+  //   wrangler secret put DESTINATION_EMAIL     # the owner's inbox
+  //   wrangler deploy
+  //
+  // then add back:
+  //   "services": [{ "binding": "CONTACT_EMAIL", "service": "sarasotaconcrete-contact" }]
+  //
+  // Until then functions/api/contact.js validates the submission and returns a 502 telling the
+  // visitor to email hello@sarasotaconcrete.com, which is honest rather than a silent failure.
+  //
+  // TURNSTILE_SECRET_KEY is a Pages environment secret, not a file binding. Without it the
+  // function treats verification as skipped, so the form works before Turnstile is configured.
 }

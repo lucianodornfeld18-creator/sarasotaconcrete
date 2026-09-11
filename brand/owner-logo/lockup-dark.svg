@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="150" viewBox="0 0 560 150" role="img">
+<g transform="translate(232,0) scale(1.5)"><defs><clipPath id="uh"><path d="M0,0 H64 V32 H0 Z"/></clipPath><clipPath id="lh"><path d="M0,32 H64 V64 H0 Z"/></clipPath></defs>
+<path d="M32.00,4.00 L56.25,18.00 L56.25,46.00 L32.00,60.00 L7.75,46.00 L7.75,18.00 Z M32.00,13.50 L48.02,22.75 L48.02,41.25 L32.00,50.50 L15.98,41.25 L15.98,22.75 Z" fill="#E8E3D8" fill-rule="evenodd" clip-path="url(#lh)"/>
+<path d="M32.00,4.00 L56.25,18.00 L56.25,46.00 L32.00,60.00 L7.75,46.00 L7.75,18.00 Z M32.00,13.50 L48.02,22.75 L48.02,41.25 L32.00,50.50 L15.98,41.25 L15.98,22.75 Z" fill="#E0BC63" fill-rule="evenodd" clip-path="url(#uh)"/>
+<path d="M41.5,20.5 H26.5 a5.5,5.5 0 0 0 0,11 H37.5 a5.5,5.5 0 0 1 0,11 H22.5" fill="none" stroke="#E0BC63" stroke-width="6.5" stroke-linecap="square"/>
+</g>
+<text x="280" y="120" text-anchor="middle" font-family="Archivo, 'Arial Black', sans-serif" font-weight="900" font-size="40" letter-spacing="1" fill="#F4F1EA">SARASOTA</text>
+<text x="280" y="140" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="9" fill="#E0BC63">CONCRETE</text>
+</svg>

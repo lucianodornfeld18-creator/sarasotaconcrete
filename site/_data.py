@@ -16,7 +16,8 @@ BUILD_DATE = "2026-09-10"
 
 BUSINESS = {
     "name": PUBLIC_NAME,
-    "tagline": "Concrete, pavers and pool decks built for the Gulf side of Florida.",
+    "tagline": "Solid foundations. Beautiful spaces.",
+    "tagline_plain": "Concrete, pavers and pool decks built for the Gulf side of Florida.",
     # Owner-supplied (placeholders hide the block until filled)
     "phone_display": "{{SARASOTA_TWILIO_NUMBER}}",      # e.g. "(941) 555-0100"
     "phone_tel": "{{SARASOTA_TWILIO_NUMBER_E164}}",      # e.g. "+19415550100"

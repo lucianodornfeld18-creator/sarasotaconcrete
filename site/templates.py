@@ -42,11 +42,11 @@ FONTS_CSS = """
 """
 
 CSS = r"""
-:root{--tide:#0F4C81;--deep:#0A3559;--ink:#14202B;--shell:#F7F4EE;--sand:#ECE6DA;--glass:#CDE7E1;--coq:#B8552E;--mute:#5C6873;--rule:#DED7C9;--card:#FFFFFF;
+:root{--tide:#C1922E;--deep:#8F6B1E;--ink:#1F1F1F;--shell:#FFFFFF;--sand:#F4F1EA;--glass:#F6EFDC;--coq:#2E2E30;--mute:#63615C;--rule:#E2DCD0;--card:#FFFFFF;--gold-lt:#E0BC63;--graphite:#2E2E30;
 --disp:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;--body:'Instrument Sans','Segoe UI',system-ui,sans-serif;--mono:'DM Mono',Consolas,monospace;--w:1140px;--r:10px}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;font-family:var(--body);font-size:17px;line-height:1.6;color:var(--ink);background:var(--shell)}
-a{color:var(--tide);text-decoration-thickness:1px;text-underline-offset:3px}a:hover{color:var(--deep)}
+a{color:var(--deep);text-decoration-thickness:1px;text-underline-offset:3px}a:hover{color:#6E5116}
 h1,h2,h3,h4{font-family:var(--disp);line-height:1.12;letter-spacing:-.015em;color:var(--ink);margin:0 0 .5em}
 h1{font-size:clamp(2rem,4.6vw,3.2rem);font-weight:800;font-variation-settings:'opsz' 96}
 h2{font-size:clamp(1.45rem,2.6vw,2rem);font-weight:700;margin-top:1.6em}
@@ -61,17 +61,20 @@ img{max-width:100%;height:auto;display:block}
 .top .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--disp);font-weight:800;font-size:1.22rem;letter-spacing:-.01em;white-space:nowrap}
 .brand svg{flex:0 0 auto}
-.brand small{display:block;font-family:var(--disp);font-weight:600;font-size:.62rem;letter-spacing:.32em;color:var(--tide);line-height:1;margin-top:2px}
+.brand{gap:9px}
+.brand .wm{display:block;line-height:1}
+.brand .wm b{display:block;font-family:var(--disp);font-weight:800;font-size:1.16rem;letter-spacing:.005em;color:var(--ink);line-height:1}
+.brand .wm small{display:block;font-family:var(--disp);font-weight:600;font-size:.6rem;letter-spacing:.30em;color:var(--deep);line-height:1;margin-top:3px}
 nav.primary{margin-left:auto}
 nav.primary>ul{list-style:none;margin:0;padding:0;display:flex;gap:2px}
 nav.primary>ul>li{position:relative}
 nav.primary a{display:block;padding:10px 11px;color:var(--ink);text-decoration:none;font-weight:600;font-size:.92rem;border-radius:8px}
 nav.primary a:hover,nav.primary a:focus{background:var(--sand)}
-nav.primary ul ul{display:none;position:absolute;left:0;top:100%;background:#fff;border:1px solid var(--rule);border-radius:var(--r);padding:8px;min-width:250px;box-shadow:0 12px 30px rgba(20,32,43,.12);list-style:none;margin:0;z-index:60}
+nav.primary ul ul{display:none;position:absolute;left:0;top:100%;background:#fff;border:1px solid var(--rule);border-radius:var(--r);padding:8px;min-width:250px;box-shadow:0 12px 30px rgba(31,31,31,.13);list-style:none;margin:0;z-index:60}
 nav.primary li:hover>ul,nav.primary li:focus-within>ul{display:block}
 nav.primary ul ul a{font-weight:500;padding:8px 10px;font-size:.9rem}
-.top .call{margin-left:6px;font-weight:700;color:#fff;background:var(--tide);padding:10px 16px;border-radius:999px;text-decoration:none;white-space:nowrap;font-size:.92rem}
-.top .call:hover{background:var(--deep);color:#fff}
+.top .call{margin-left:6px;font-weight:700;color:#1F1F1F;background:var(--tide);padding:10px 16px;border-radius:999px;text-decoration:none;white-space:nowrap;font-size:.92rem}
+.top .call:hover{background:var(--gold-lt);color:#1F1F1F}
 .navtoggle{display:none;margin-left:auto;background:none;border:1px solid var(--rule);border-radius:8px;padding:8px 10px;font:inherit;font-weight:600}
 @media(max-width:1000px){nav.primary{display:none;position:absolute;left:0;right:0;top:64px;background:var(--shell);border-bottom:1px solid var(--rule);padding:10px 16px 18px}
 nav.primary.open{display:block}nav.primary>ul{flex-direction:column}nav.primary ul ul{display:block;position:static;box-shadow:none;border:0;padding:0 0 4px 12px;background:transparent}
@@ -79,7 +82,7 @@ nav.primary.open{display:block}nav.primary>ul{flex-direction:column}nav.primary 
 /* hero */
 .hero{position:relative;padding:44px 0 26px;overflow:hidden}
 .hero .wrap{position:relative;max-width:900px}
-.hero .kicker{display:inline-block;font-family:var(--disp);font-weight:700;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--tide);margin-bottom:10px}
+.hero .kicker{display:inline-block;font-family:var(--disp);font-weight:700;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--deep);margin-bottom:10px}
 .hero .lede{font-size:1.15rem;color:#2C3A47;max-width:62ch;margin:.4em 0 0}
 .tide{position:absolute;right:-60px;top:-30px;width:520px;height:320px;opacity:.55;pointer-events:none}
 @media(max-width:700px){.tide{width:340px;right:-120px;top:-40px;opacity:.35}}
@@ -104,12 +107,12 @@ tbody th[scope=row]{font-weight:600;text-align:left;background:#FBFAF7}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:0 0 1.4em}
 .card{display:block;background:#fff;border:1px solid var(--rule);border-radius:var(--r);padding:16px;text-decoration:none;color:var(--ink);transition:transform .15s,border-color .15s}
 .card:hover{transform:translateY(-2px);border-color:var(--tide)}
-.card-t{display:block;font-family:var(--disp);font-weight:700;font-size:1.05rem;margin-bottom:6px;color:var(--tide)}
+.card-t{display:block;font-family:var(--disp);font-weight:700;font-size:1.05rem;margin-bottom:6px;color:var(--deep)}
 .card-x{display:block;font-size:.92rem;color:#3B4854}
-.cta-band{background:var(--ink);color:#fff;border-radius:var(--r);padding:22px 24px;margin:1.6em 0;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.cta-band{background:var(--graphite);color:#fff;border-radius:var(--r);padding:22px 24px;margin:1.6em 0;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 .cta-band .cta-sub{margin:0;color:#D7DEE4;font-size:.95rem;max-width:56ch}
-.btn{display:inline-block;background:var(--tide);color:#fff;font-weight:700;padding:12px 20px;border-radius:999px;text-decoration:none;border:0;font:inherit;cursor:pointer}
-.btn:hover{background:#1A63A8;color:#fff}.btn.outline{background:transparent;border:2px solid var(--tide);color:var(--tide)}
+.btn{display:inline-block;background:var(--tide);color:#1F1F1F;font-weight:700;padding:12px 20px;border-radius:999px;text-decoration:none;border:0;font:inherit;cursor:pointer}
+.btn:hover{background:var(--gold-lt);color:#1F1F1F}.btn.outline{background:transparent;border:2px solid var(--tide);color:var(--tide)}
 .reviewed{font-size:.88rem;color:var(--mute);border-top:1px solid var(--rule);padding-top:12px;margin-top:2em}
 .changelog{display:block;font-size:.85rem}
 .faq .qa{border-top:1px solid var(--rule);padding:10px 0 2px}.faq h3{margin-top:.2em;font-size:1.08rem}
@@ -143,11 +146,11 @@ textarea{min-height:120px}
 .tool .out{background:var(--glass);border-radius:var(--r);padding:14px 16px;margin-top:14px}
 .tool fieldset{border:0;padding:0;margin:0 0 10px}
 /* footer */
-footer{background:var(--ink);color:#D7DEE4;padding:44px 0 30px;font-size:.92rem}
+footer{background:var(--graphite);color:#D7DEE4;padding:44px 0 30px;font-size:.92rem}
 footer a{color:#fff}footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:24px}
 footer .colh{color:#fff;margin:0 0 10px;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;font-family:var(--disp);font-weight:700}
 footer ul{list-style:none;padding:0;margin:0}footer li{margin:4px 0}
-footer .legal{border-top:1px solid #2A3A48;margin-top:28px;padding-top:18px;color:#B7C2CC;font-size:.85rem}
+footer .legal{border-top:1px solid #46464A;margin-top:28px;padding-top:18px;color:#B7C2CC;font-size:.85rem}
 .tools-nav{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 1em}
 @media print{.top,footer,.cta-band{display:none}}
 """
@@ -161,14 +164,31 @@ def _minify(css):
 
 CSS_MIN = _minify(FONTS_CSS + CSS)
 
-MARK_SVG = ('<svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#0F4C81"/>'
-            '<g fill="none" stroke="#F7F4EE" stroke-width="4" stroke-linecap="round"><path d="M12 22c7-6 13-6 20 0s13 6 20 0"/>'
-            '<path d="M12 33c7-6 13-6 20 0s13 6 20 0"/><path d="M12 44c7-6 13-6 20 0s13 6 20 0"/></g></svg>')
+# Flat two-colour derivative of the owner's hexagonal monogram. The original art is an isometric
+# brass gradient with stone texture: it is unreadable at 16 px and adds weight to the LCP, so the
+# header, favicon and icons use this derivative while the original serves og:image, social and email.
+_HEX_OUTER = "M32.00,4.00 L56.25,18.00 L56.25,46.00 L32.00,60.00 L7.75,46.00 L7.75,18.00 Z"
+_HEX_INNER = "M32.00,13.50 L48.02,22.75 L48.02,41.25 L32.00,50.50 L15.98,41.25 L15.98,22.75 Z"
+_S_RIBBON = "M41.5,20.5 H26.5 a5.5,5.5 0 0 0 0,11 H37.5 a5.5,5.5 0 0 1 0,11 H22.5"
+MARK_SVG = (
+    f'<svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true" focusable="false">'
+    f'<defs><clipPath id="mkU"><path d="M0,0 H64 V32 H0 Z"/></clipPath>'
+    f'<clipPath id="mkL"><path d="M0,32 H64 V64 H0 Z"/></clipPath></defs>'
+    f'<path d="{_HEX_OUTER} {_HEX_INNER}" fill="#2E2E30" fill-rule="evenodd" clip-path="url(#mkL)"/>'
+    f'<path d="{_HEX_OUTER} {_HEX_INNER}" fill="#C1922E" fill-rule="evenodd" clip-path="url(#mkU)"/>'
+    f'<path d="{_S_RIBBON}" fill="none" stroke="#C1922E" stroke-width="6.5" stroke-linecap="square"/>'
+    f'</svg>')
 
-TIDE_SVG = ('<svg class="tide" viewBox="0 0 520 320" aria-hidden="true" fill="none" stroke="#0F4C81" stroke-width="1.4">'
-            + "".join(f'<path d="M0 {y}c60-{18 + i*2} 120-{18 + i*2} 180 0s120 {18 + i*2} 180 0 120-{18 + i*2} 180 0" opacity="{0.9 - i*0.09:.2f}"/>' for i, y in enumerate(range(20, 320, 30)))
-            + "</svg>")
-
+TIDE_SVG = (
+    '<svg class="tide" viewBox="0 0 520 320" aria-hidden="true" focusable="false" fill="none" '
+    'stroke="#C1922E" stroke-width="1.1">'
+    + "".join(
+        f'<path d="M{x},{y} l21,-12 l21,12 l0,24 l-21,12 l-21,-12 Z" opacity="{op:.2f}"/>'
+        for row, y in enumerate(range(10, 320, 36))
+        for col, x in enumerate(range(-10 + (21 if row % 2 else 0), 520, 42))
+        for op in [max(0.05, 0.34 - (row * 0.035) - (col * 0.012))]
+    )
+    + "</svg>")
 
 def _nav():
     items = []
@@ -178,7 +198,7 @@ def _nav():
             sub = "<ul>" + "".join(f'<li><a href="{h}">{esc(t)}</a></li>' for t, h in subs) + "</ul>"
         items.append(f'<li><a href="{href}">{esc(label)}</a>{sub}</li>')
     call = f'<a class="call" href="tel:{BUSINESS["phone_tel"]}" data-track="tel">Call {esc(BUSINESS["phone_display"])}</a>' if has("phone_display") else '<a class="call" href="/contact/">Get an estimate</a>'
-    return (f'<header class="top"><div class="wrap"><a class="brand" href="/">{MARK_SVG}<span>{PUBLIC_NAME}<small>SUNCOAST HARDSCAPE</small></span></a>'
+    return (f'<header class="top"><div class="wrap"><a class="brand" href="/">{MARK_SVG}<span class="wm"><b>SARASOTA</b><small>CONCRETE</small></span></a>'
             f'<button class="navtoggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>'
             f'<nav class="primary" id="primaryNav" aria-label="Primary"><ul>{"".join(items)}</ul></nav>{call}</div></header>')
 
