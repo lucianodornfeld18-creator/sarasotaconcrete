@@ -7,10 +7,10 @@
   "problems": []
  },
  "/about/": {
-  "words": 567,
-  "facts_per_150": 1.06,
+  "words": 571,
+  "facts_per_150": 1.05,
   "sentences": 29,
-  "avg_sentence": 20.7,
+  "avg_sentence": 20.9,
   "problems": []
  },
  "/accessibility/": {
@@ -553,10 +553,10 @@
   "problems": []
  },
  "/contact/": {
-  "words": 88,
+  "words": 94,
   "facts_per_150": 0.0,
-  "sentences": 7,
-  "avg_sentence": 13.9,
+  "sentences": 8,
+  "avg_sentence": 13.1,
   "problems": []
  },
  "/data-and-methods/": {
@@ -770,10 +770,10 @@
   "problems": []
  },
  "/": {
-  "words": 3311,
+  "words": 3317,
   "facts_per_150": 2.4,
-  "sentences": 158,
-  "avg_sentence": 22.4,
+  "sentences": 159,
+  "avg_sentence": 22.3,
   "problems": []
  },
  "/pavers/artificial-turf/": {
