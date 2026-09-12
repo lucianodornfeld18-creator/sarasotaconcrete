@@ -138,61 +138,37 @@ Fluxo, verificado assinando as requisições como o Twilio faz (sem gastar liga�
 O número já está publicado no site: botão do cabeçalho, links `tel:`/`sms:` com tracking,
 `llms.txt`, e a propriedade `telephone` da `Organization`.
 
-### 2.2 `{{MAIN_DESTINATION_EMAIL}}` — onde os leads chegam
+### 2.2 E-mail — RESOLVIDO em 2026-09-12
 
-Duas rotas, independentes:
+`hello@sarasotaconcrete.com` encaminha para `opusdigitalmarketingflorida@gmail.com`, o mesmo destino
+verificado que grovelandconcrete.com e windermereconcrete.com usam. Há a regra literal do `hello@` e
+um catch-all, então nada endereçado ao domínio se perde.
 
-**Email de entrada (`hello@sarasotaconcrete.com`)** — as regras de Email Routing já estão criadas na
-zona, encaminhando para `opusdigitalmarketingflorida@gmail.com` (mesmo destino, já verificado, que
-grovelandconcrete.com e windermereconcrete.com usam): uma regra literal para
-`hello@sarasotaconcrete.com` e um catch-all para não perder nada.
+Os 46 registros de estacionamento da Afternic que bloqueavam o Enable (erro 2008) foram apagados —
+backup em `cloudflare/dns-backup-sarasotaconcrete.com.json`, restaurável. A Cloudflare publicou
+sozinha os MX `route1/2/3`, o SPF `v=spf1 include:_spf.mx.cloudflare.net ~all` e o DKIM
+`cf2024-1._domainkey`.
 
-**Falta um passo manual seu**, porque a Cloudflare recusa ligar o Email Routing enquanto existirem MX
-de terceiros, e a importação da zona trouxe os registros de estacionamento do domínio:
+O Worker `sarasotaconcrete-contact` está publicado, com o binding `send_email` e o secret
+`DESTINATION_EMAIL`, e o binding `CONTACT_EMAIL` está em `site/wrangler.jsonc`. **O formulário foi
+testado ponta a ponta no domínio real**: envio válido devolve 303 para `/thank-you/`, telefone
+inválido 400, ZIP inválido 400, origem estranha 403, e o sexto envio do mesmo IP em dez minutos 429.
 
-| Registro atual | O que é | Ação |
-|---|---|---|
-| `MX 0 .` | null MX — declara "este domínio não recebe email" | apagar |
-| `TXT "v=spf1 -all"` | SPF que rejeita todo envio | apagar |
+### 2.3 Cloudflare — estado
 
-Em DNS → Records, apague esses dois, depois Email → Email Routing → **Enable**. A Cloudflare então
-publica sozinha os três MX `route1/2/3.mx.cloudflare.net`, o SPF
-`v=spf1 include:_spf.mx.cloudflare.net ~all` e a chave DKIM `cf2024-1._domainkey`. As regras já
-estão lá esperando; nada mais precisa ser criado.
-
-**Email de saída (o Worker que manda o lead do formulário)** — `sarasotaconcrete-contact` está
-escrito mas não publicado, porque Email Workers exigem o Email Routing já verificado na zona. Depois
-do passo acima:
-
-```
-cd site/workers/contact-email
-wrangler secret put DESTINATION_EMAIL
-wrangler deploy
-```
-
-e então descomentar o binding `CONTACT_EMAIL` em `site/wrangler.jsonc`.
-
-### 2.3 Cloudflare — o que falta configurar
-
-| Item | Comando ou local | Estado |
-|---|---|---|
-| Repositório GitHub `sarasotaconcrete` | — | **feito** |
-| Zona `sarasotaconcrete.com` na conta | NS `ullis`/`vicente.ns.cloudflare.com` | **ativa** (2026-09-11) |
-| Pages publicado | `wrangler pages deploy` → `sarasotaconcrete-preview` | **feito** (preview com `noindex`) |
-| KV de rate limit | `sarasotaconcrete-ratelimit` `2425ece680b2407a9aa3e60d0d961d44` | **feito** |
-| Regras de Email Routing | criadas por API | **feitas** |
-| Apagar `MX 0 .` e `TXT v=spf1 -all`, depois Enable no Email Routing | Dashboard | **a fazer (2.2)** |
-| Pages ligado ao repo (build automático no push) | Dashboard, OAuth do GitHub | a fazer |
-| Domínio `sarasotaconcrete.com` apontado no projeto Pages | Dashboard | a fazer |
-| Worker de contato publicado | `cd site/workers/contact-email && wrangler deploy` | depende de 2.2 |
-| Service binding `CONTACT_EMAIL` → Worker | `site/wrangler.jsonc` (comentado, com o motivo) | depende de 2.2 |
-| `TURNSTILE_SITE_KEY` e `TURNSTILE_SECRET_KEY` | Turnstile + variáveis do Pages | a fazer |
-| Redirect Rule www → apex | Dashboard (não dá em `_redirects`) | a fazer |
-| Desativar o bloqueio padrão de bots de IA no WAF para os bots de busca | Dashboard | a fazer |
-
-O formulário **degrada com elegância**: sem Turnstile configurado a verificação é ignorada (o código
-trata `secret` ausente como "ok, skipped") e sem KV o rate limit é ignorado. Ou seja, o site publica
-e funciona antes de tudo isso estar pronto, mas publique com Turnstile se quiser evitar spam.
+| Item | Estado |
+|---|---|
+| Zona `sarasotaconcrete.com` | **ativa**, NS `ullis`/`vicente.ns.cloudflare.com` |
+| DNS de estacionamento | **limpo** (46 registros, com backup) |
+| Projeto Pages `sarasotaconcrete` | **git-linked** ao repo, build `python build.py`, root `site`, output `dist` |
+| Domínio apex e `www` | **anexados e com certificado ativo** |
+| KV de rate limit | **ligado** — `sarasotaconcrete-ratelimit` |
+| Worker de e-mail + binding | **publicado e ligado** |
+| Email Routing | **ligado**, regra `hello@` + catch-all |
+| `sarasotaconcrete-preview` | projeto antigo de direct-upload, **a apagar**: `python cloudflare/setup_email_and_domain.py --delete-old` |
+| `TURNSTILE_SITE_KEY` / `TURNSTILE_SECRET_KEY` | a fazer — sem eles a verificação é pulada e o formulário funciona |
+| Redirect Rule www → apex | a fazer — precisa de um token com `Zone:Rulesets`, que nenhum dos dois tokens tem. As tags canônicas já apontam tudo para o apex, então é cosmético |
+| Bloqueio padrão de bots de IA no WAF | a fazer |
 
 ### 2.4 `{{GBP_DECISION}}` — **decisão de negócio urgente**
 
@@ -301,9 +277,9 @@ GA4 (só após a revisão de privacidade) e monitoramento dos referrals `utm_sou
 
 1. **Escolha do logo** (item 1.6) — parada obrigatória do prompt.
 2. **Entidade legal** (1.1) e decisão sobre licença (1.3), porque definem o rodapé e o contrato.
-3. **Apagar os dois registros de estacionamento e ligar o Email Routing** (2.2) — três cliques no
-   dashboard. É o único passo que falta para o formulário entregar o lead; o telefone já funciona.
-4. **Infra Cloudflare restante** (2.3): Pages ligado ao repo, domínio no projeto, Turnstile, WAF.
+3. **Infra Cloudflare restante** (2.3): Turnstile, redirect www → apex (precisa de token com
+   `Zone:Rulesets`) e o bloqueio de bots de IA no WAF. Nada disso impede o site de captar lead —
+   o domínio, o telefone, o formulário e o e-mail estão funcionando.
 
 Não impedem a publicação, mas decidem o resultado: **GBP e Yelp** (2.4) e os **dados do Search
 Console do Lakewood Ranch** (3.3), que são o gatilho dos 301 e da resolução de canibalização.
