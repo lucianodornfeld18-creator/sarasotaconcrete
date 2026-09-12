@@ -1,9 +1,10 @@
-site/dist/
-site/__pycache__/
-site/.wrangler/
-site/build-report.json
-__pycache__/
 *.pyc
-node_modules/
-dns-backup-*.json
+.wrangler/
+__pycache__/
 cloudflare/dns-backup-*.json
+dns-backup-*.json
+node_modules/
+site/.wrangler/
+site/__pycache__/
+site/build-report.json
+site/dist/
