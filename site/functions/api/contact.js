@@ -6,8 +6,8 @@
 const MAX_FORM_BYTES = 9_500_000; // 8 MB photo + fields
 const MAX_PHOTO_BYTES = 8_000_000;
 const HUB_ID = "sarasota";
-const LIMITS = { name: 100, phone: 40, email: 254, service: 120, city: 120, property_type: 60, flood_zone: 20, timeline: 60,
-  presence: 60, message: 3000, page_url: 300, referrer: 300, utm: 120 };
+const LIMITS = { name: 100, phone: 40, email: 254, service: 120, city: 120, zip: 10, property_type: 60, flood_zone: 20,
+  timeline: 60, presence: 60, message: 3000, page_url: 300, referrer: 300, utm: 120 };
 
 function isAllowedOrigin(origin) {
   if (!origin) return true;
@@ -35,6 +35,10 @@ function validate(p) {
   if (!p.phone || p.phone.length > LIMITS.phone || !/[0-9]{7,}/.test(p.phone.replace(/\D/g, ""))) return "Please enter a valid phone number.";
   if (!p.email || p.email.length > LIMITS.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(p.email)) return "Please enter a valid email address.";
   if (p.service.length > LIMITS.service || p.city.length > LIMITS.city) return "Please choose a valid service and location.";
+  // ZIP is what the form now asks for instead of a locality dropdown. Five digits, optionally
+  // ZIP+4, and only US shapes: everything served is in Florida. Kept required-on-the-server rather
+  // than trusting the browser's pattern attribute.
+  if (!p.zip || !/^[0-9]{5}(-[0-9]{4})?$/.test(p.zip)) return "Please enter a 5-digit ZIP code.";
   if (p.message.length > LIMITS.message) return "The project description is too long.";
   // "yes" = explicit checkbox on the long form. "submit" = the short hero form, where the
   // disclosure sits directly above the button and submitting is the affirmative act.
@@ -76,7 +80,8 @@ export async function onRequestPost({ request, env }) {
 
   const payload = {
     hub_id: HUB_ID, name: field(form, "name"), phone: field(form, "phone"), email: field(form, "email"),
-    service: field(form, "service"), city: field(form, "city"), property_type: field(form, "property_type").slice(0, LIMITS.property_type),
+    service: field(form, "service"), city: field(form, "city"), zip: field(form, "zip").slice(0, LIMITS.zip),
+    property_type: field(form, "property_type").slice(0, LIMITS.property_type),
     flood_zone: field(form, "flood_zone").slice(0, LIMITS.flood_zone), timeline: field(form, "timeline").slice(0, LIMITS.timeline),
     presence: field(form, "presence").slice(0, LIMITS.presence), message: field(form, "message"), consent: field(form, "consent"),
     page_url: field(form, "page_url").slice(0, LIMITS.page_url), referrer: field(form, "referrer").slice(0, LIMITS.referrer),

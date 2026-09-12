@@ -78,7 +78,7 @@ nav.primary ul ul a{font-weight:500;padding:8px 10px;font-size:.9rem}
 .navtoggle{display:none;margin-left:auto;background:none;border:1px solid var(--rule);border-radius:8px;padding:8px 10px;font:inherit;font-weight:600}
 @media(max-width:1000px){nav.primary{display:none;position:absolute;left:0;right:0;top:64px;background:var(--shell);border-bottom:1px solid var(--rule);padding:10px 16px 18px}
 nav.primary.open{display:block}nav.primary>ul{flex-direction:column}nav.primary ul ul{display:block;position:static;box-shadow:none;border:0;padding:0 0 4px 12px;background:transparent}
-.navtoggle{display:inline-block}.top .call{display:none}.top .wrap{gap:10px}}
+.navtoggle{display:inline-block}.top .wrap{gap:10px}.top .call{margin-left:auto;padding:8px 13px;font-size:.86rem}.top .call .calltxt{display:none}}@media(max-width:560px){.top .call{padding:8px 14px;font-size:.85rem}.top .call .calltxt{display:inline}.top .call .callnum{display:none}}
 /* hero */
 .hero{position:relative;padding:44px 0 26px;overflow:hidden}
 .hero .wrap{position:relative;max-width:900px}
@@ -98,7 +98,7 @@ nav.primary.open{display:block}nav.primary>ul{flex-direction:column}nav.primary 
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr;grid-template-areas:"copy" "form" "badges";row-gap:24px}.hero.photo .lede{max-width:none}}
 @media(max-width:560px){.hero.photo h1{font-size:1.72rem}.hero.photo .lede{font-size:1rem}.hero.photo .wrap{padding-top:30px;padding-bottom:34px}}
 .hero-badges{grid-area:badges;display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}
-.hero-badges li{font-size:.84rem;color:#E6E3DC;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.17);border-radius:999px;padding:5px 13px}
+.req{color:var(--tide);margin-left:2px}.form-call{margin:10px 0 0;font-size:.9rem;color:var(--mute)}.form-call a{color:var(--deep);font-weight:700}.hero-call{display:inline-flex;align-items:center;gap:9px;margin:18px 0 0;padding:12px 20px;border-radius:999px;background:var(--tide);color:#1F1F1F;font-weight:800;text-decoration:none;font-size:1.02rem}.hero-call:hover{background:var(--gold-lt)}.hero-call small{display:block;font-weight:600;font-size:.74rem;opacity:.78}@media(max-width:900px){.hero-call{width:100%;justify-content:center}}.hero-badges li{font-size:.84rem;color:#E6E3DC;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.17);border-radius:999px;padding:5px 13px}
 .hero-credit{position:relative;z-index:2;margin:0;padding:0 20px 10px;font-size:.7rem;color:rgba(255,255,255,.86);text-align:right}
 .hero .kicker{display:inline-block;font-family:var(--disp);font-weight:700;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--deep);margin-bottom:10px}
 .hero .lede{font-size:1.15rem;color:#2C3A47;max-width:62ch;margin:.4em 0 0}
@@ -157,7 +157,7 @@ form.lead.short .lead-h{margin:0 0 2px;font-family:var(--disp);font-weight:800;f
 form.lead.short .lead-s{margin:0 0 4px;font-size:.9rem;color:var(--mute)}
 form.lead .disclosure{margin:12px 0 0;font-size:.78rem;line-height:1.45;color:var(--mute)}
 form.lead.short button{width:100%;margin-top:14px;font-size:1rem;padding:13px 20px}
-form.lead .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:640px){form.lead .row{grid-template-columns:1fr}}
+form.lead .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}form.lead .row>div{min-width:0}form.lead select,form.lead input,form.lead textarea{max-width:100%}@media(max-width:640px){form.lead .row{grid-template-columns:1fr}}
 label{display:block;font-weight:600;font-size:.9rem;margin:10px 0 4px}
 input,select,textarea{width:100%;font:inherit;padding:10px 12px;border:1px solid #C9C2B4;border-radius:8px;background:#fff}
 textarea{min-height:120px}
@@ -220,7 +220,11 @@ def _nav():
         if subs:
             sub = "<ul>" + "".join(f'<li><a href="{h}">{esc(t)}</a></li>' for t, h in subs) + "</ul>"
         items.append(f'<li><a href="{href}">{esc(label)}</a>{sub}</li>')
-    call = f'<a class="call" href="tel:{BUSINESS["phone_tel"]}" data-track="tel">Call {esc(BUSINESS["phone_display"])}</a>' if has("phone_display") else '<a class="call" href="/contact/">Get an estimate</a>'
+    # The word "Call" is wrapped so the narrow-screen rule can drop it and keep the digits, rather
+    # than hiding the whole button as this header used to do.
+    call = (f'<a class="call" href="tel:{BUSINESS["phone_tel"]}" data-track="tel">'
+            f'<span class="calltxt">Call </span><span class="callnum">{esc(BUSINESS["phone_display"])}</span></a>'
+            ) if has("phone_display") else '<a class="call" href="/contact/">Get an estimate</a>'
     return (f'<header class="top"><div class="wrap"><a class="brand" href="/">{MARK_SVG}<span class="wm"><b>SARASOTA</b><small>CONCRETE</small></span></a>'
             f'<button class="navtoggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>'
             f'<nav class="primary" id="primaryNav" aria-label="Primary"><ul>{"".join(items)}</ul></nav>{call}</div></header>')
@@ -240,54 +244,78 @@ def _footer():
 
 
 def lead_form(short=False, city=None, service=None, prefix="f"):
-    """Renders the lead form.
+    """Renders the lead form, in the shape that works on ocoeeconcrete.com.
 
-    short=True is the open form in the home hero: four fields, because every extra field on a
-    first-touch form costs completions. The long form on /contact/ also asks for the location, a
-    description and a photo, which is what shortens the first phone call.
+    Ocoee asks six things and marks the required ones with an asterisk: name, phone, email, where,
+    service and free-text detail. That is the whole form. Sarasota now matches it, with one
+    deliberate difference: where Ocoee uses a dropdown of city names, this asks for a ZIP code. A
+    visitor types five digits faster than they scroll a list of twenty-one localities, and a ZIP
+    pins the address to a permitting jurisdiction more precisely than "Englewood" does, which is the
+    one place on this coast where the county line splits a single community.
+
+    short=True is the open form in the home hero and drops the free-text box, so the first touch is
+    five fields. The long form on /contact/ keeps the detail box and the optional photo, which is
+    what shortens the first phone call.
 
     prefix keeps element ids unique: the home page carries two forms, and duplicate ids are invalid
     HTML and break label-for association.
 
-    Consent: the long form uses an explicit checkbox. The short form puts the disclosure directly
-    above the button and submits consent="submit" (disclosure-by-submission), so the visitor still
-    reads it before the affirmative act. api/contact.js accepts either value.
+    Consent is disclosure-by-submission on both forms now, as on Ocoee: the disclosure sits directly
+    above the button, so it is read before the affirmative act, and no checkbox stands between a
+    ready visitor and sending. api/contact.js accepts consent="submit" as well as the old "yes".
     """
     opt = lambda xs, sel=None: "".join(f'<option{" selected" if x == sel else ""}>{esc(x)}</option>' for x in xs)
     turn = f'<div class="cf-turnstile" data-sitekey="{TURNSTILE_SITE_KEY}"></div>' if not TURNSTILE_SITE_KEY.startswith("{{") else ""
     hidden = ('<input type="hidden" name="hub_id" value="sarasota">'
+              '<input type="hidden" name="consent" value="submit">'
               '<input type="hidden" name="page_url" value=""><input type="hidden" name="referrer" value="">'
               '<input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value="">'
               '<input type="hidden" name="utm_campaign" value=""><input type="hidden" name="client_ts" value="">')
     honeypot = '<div class="hp" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>'
-    services = f'<optgroup label="Concrete">{opt(FORM_SERVICES_CONCRETE, service)}</optgroup><optgroup label="Pavers &amp; hardscape">{opt(FORM_SERVICES_PAVERS, service)}</optgroup>'
+    services = (f'<option value="">-- Select service --</option>'
+                f'<optgroup label="Concrete">{opt(FORM_SERVICES_CONCRETE, service)}</optgroup>'
+                f'<optgroup label="Pavers &amp; hardscape">{opt(FORM_SERVICES_PAVERS, service)}</optgroup>')
+    req = '<span class="req" aria-hidden="true">*</span>'
+    call_line = (f'<p class="form-call">Rather talk? <a href="tel:{BUSINESS["phone_tel"]}" data-track="tel">'
+                 f'Call or text {esc(BUSINESS["phone_display"])}</a></p>') if has("phone_display") else ""
+    disclosure = (f'<p class="disclosure">By sending, you agree {PUBLIC_NAME} may contact you about this request and may '
+                  f'forward it to the insured provider that serves your area. Reply STOP to end texts. '
+                  f'See the <a href="/privacy/">privacy policy</a>.</p>')
+
+    core = f'''<label for="{prefix}-name">Full Name {req}</label>
+<input id="{prefix}-name" name="name" required autocomplete="name" maxlength="100" placeholder="Your name">
+<div class="row"><div><label for="{prefix}-phone">Phone {req}</label>
+<input id="{prefix}-phone" name="phone" type="tel" required autocomplete="tel" maxlength="40" placeholder="(941) 274-3561"></div>
+<div><label for="{prefix}-email">Email {req}</label>
+<input id="{prefix}-email" name="email" type="email" required autocomplete="email" maxlength="254" placeholder="you@email.com"></div></div>
+<div class="row"><div><label for="{prefix}-zip">ZIP Code {req}</label>
+<input id="{prefix}-zip" name="zip" type="text" required autocomplete="postal-code" inputmode="numeric"
+ pattern="[0-9]{{5}}(-[0-9]{{4}})?" maxlength="10" placeholder="34236"></div>
+<div><label for="{prefix}-service">Service Needed {req}</label>
+<select id="{prefix}-service" name="service" required>{services}</select></div></div>'''
 
     if short:
         return f'''<form class="lead short" method="post" action="/api/contact" novalidate aria-labelledby="{prefix}-h">
-{hidden}<input type="hidden" name="consent" value="submit">
+{hidden}
 {honeypot}
-<p class="lead-h" id="{prefix}-h">Get a written estimate</p>
-<p class="lead-s">Four fields. We reply the same or next business day.</p>
-<label for="{prefix}-name">Name</label><input id="{prefix}-name" name="name" required autocomplete="name" maxlength="100">
-<div class="row"><div><label for="{prefix}-phone">Phone</label><input id="{prefix}-phone" name="phone" type="tel" required autocomplete="tel" maxlength="40"></div>
-<div><label for="{prefix}-email">Email</label><input id="{prefix}-email" name="email" type="email" required autocomplete="email" maxlength="254"></div></div>
-<label for="{prefix}-service">What do you need?</label><select id="{prefix}-service" name="service">{services}</select>
-{turn}<button class="btn" type="submit">Send my request</button>
-<p class="disclosure">By sending, you agree {PUBLIC_NAME} may contact you about this request and may forward it to the insured provider that serves your area. Reply STOP to end texts. See the <a href="/privacy/">privacy policy</a>.</p>
+<p class="lead-h" id="{prefix}-h">Get a free estimate</p>
+<p class="lead-s">Five fields. We reply the same or next business day.</p>
+{core}
+{turn}<button class="btn" type="submit">Get Free Estimate</button>
+{disclosure}
 <p class="form-msg" aria-live="polite"></p></form>'''
 
     return f'''<form class="lead" method="post" action="/api/contact" enctype="multipart/form-data" novalidate>
 {hidden}
 {honeypot}
-<div class="row"><div><label for="{prefix}-name">Name</label><input id="{prefix}-name" name="name" required autocomplete="name" maxlength="100"></div>
-<div><label for="{prefix}-phone">Phone</label><input id="{prefix}-phone" name="phone" type="tel" required autocomplete="tel" maxlength="40"></div></div>
-<div class="row"><div><label for="{prefix}-email">Email</label><input id="{prefix}-email" name="email" type="email" required autocomplete="email" maxlength="254"></div>
-<div><label for="{prefix}-city">Where is the property?</label><select id="{prefix}-city" name="city">{opt(FORM_LOCALITIES, city)}</select></div></div>
-<label for="{prefix}-service">What do you need?</label><select id="{prefix}-service" name="service">{services}</select>
-<label for="{prefix}-msg">Anything useful to know? (optional)</label><textarea id="{prefix}-msg" name="message" maxlength="3000" placeholder="Rough size, the material you have in mind, what is there now."></textarea>
+{core}
+<label for="{prefix}-msg">Project Details</label>
+<textarea id="{prefix}-msg" name="message" maxlength="3000" placeholder="Approximate size, the material you have in mind, what is there now, your timeline."></textarea>
 <label for="{prefix}-photo">Photo (optional, JPG or PNG up to 8 MB)</label><input id="{prefix}-photo" name="photo" type="file" accept="image/jpeg,image/png">
-<label class="consent"><input type="checkbox" name="consent" value="yes" required><span>{esc(BUSINESS["consent_text"])} See the <a href="/privacy/">privacy policy</a>.</span></label>
-{turn}<button class="btn" type="submit">Send my request</button><p class="form-msg" aria-live="polite"></p></form>'''
+{turn}<button class="btn" type="submit">Get Free Estimate</button>
+{disclosure}
+{call_line}
+<p class="form-msg" aria-live="polite"></p></form>'''
 
 
 def _breadcrumbs(bc):
@@ -345,6 +373,10 @@ def render_page(page):
     if page.get("hero_photo"):
         hp = page["hero_photo"]
         srcset = ", ".join(f'/static/images/{hp["slug"]}-{w}.webp {w}w' for w in (480, 768, 1024, 1440, 1920))
+        # Calling is the highest-intent action on a hero, and until now the number appeared only in
+        # the header, which is hidden on phones. This puts it beside the form on every hero page.
+        hero_call = (f'<a class="hero-call" href="tel:{BUSINESS["phone_tel"]}" data-track="tel">'
+                     f'{esc(BUSINESS["phone_display"])}<small>Call or text</small></a>') if has("phone_display") else ""
         badges = ('<ul class="hero-badges">' + "".join(f"<li>{esc(b)}</li>" for b in page.get("hero_badges", [])) + "</ul>") if page.get("hero_badges") else ""
         hero_preload = (f'<link rel="preload" as="image" href="/static/images/{hp["slug"]}-1440.webp" '
                         f'imagesrcset="{srcset}" imagesizes="100vw" fetchpriority="high">')
@@ -352,7 +384,7 @@ def render_page(page):
                 f'<img class="hero-img" src="/static/images/{hp["slug"]}-1440.webp" srcset="{srcset}" sizes="100vw" '
                 f'width="{hp["w"]}" height="{hp["h"]}" alt="{esc(hp["alt"])}" fetchpriority="high" decoding="async">'
                 f'<div class="wrap"><div class="hero-grid"><div class="hero-copy">{crumbs}{kicker}'
-                f'<h1>{page["h1"]}</h1>{lede}</div>'
+                f'<h1>{page["h1"]}</h1>{lede}{hero_call}</div>'
                 f'<div class="hero-form">{lead_form(short=True, prefix="hf")}</div>{badges}</div></div>'
                 f'<p class="hero-credit">{esc(hp["credit"])}</p></div>')
     else:

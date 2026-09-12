@@ -770,10 +770,10 @@
   "problems": []
  },
  "/": {
-  "words": 3317,
-  "facts_per_150": 2.4,
+  "words": 3320,
+  "facts_per_150": 2.39,
   "sentences": 159,
-  "avg_sentence": 22.3,
+  "avg_sentence": 22.4,
   "problems": []
  },
  "/pavers/artificial-turf/": {

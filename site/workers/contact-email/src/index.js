@@ -34,11 +34,15 @@ export default {
     const to = env.DESTINATION_EMAIL;
     if (!to) return new Response("DESTINATION_EMAIL not configured", { status: 500 });
     const from = env.FROM_EMAIL || "hello@sarasotaconcrete.com";
-    const rows = [["Name", p.name], ["Phone", p.phone], ["Email", p.email], ["Location", p.city], ["Service", p.service],
+    // ZIP replaced the locality dropdown on the form in 2026-09-12: a visitor knows their ZIP
+    // without scrolling a list, and it pins the address to a jurisdiction more precisely than a
+    // community name does. p.city is still read so submissions made before the change still render.
+    const where = p.zip ? (p.city ? `${p.zip} (${p.city})` : p.zip) : p.city;
+    const rows = [["Name", p.name], ["Phone", p.phone], ["Email", p.email], ["ZIP / location", where], ["Service", p.service],
       ["Property", p.property_type], ["Flood zone", p.flood_zone], ["Timeline", p.timeline], ["Presence", p.presence],
       ["Message", p.message], ["Consent", p.consent], ["Page", p.page_url], ["Referrer", p.referrer],
       ["UTM", [p.utm_source, p.utm_medium, p.utm_campaign].filter(Boolean).join(" / ")], ["Submitted", p.submittedAt]];
-    const subject = `[Sarasota Concrete] ${p.service || "Estimate"} — ${p.city || "Sarasota area"} — ${p.name}`;
+    const subject = `[Sarasota Concrete] ${p.service || "Estimate"} — ${where || "Sarasota area"} — ${p.name}`;
     const textBody = rows.map(([k, v]) => `${k}: ${v || "-"}`).join("\n");
     const htmlBody = `<h2 style="font-family:sans-serif">New estimate request (sarasotaconcrete.com)</h2><table style="font-family:sans-serif;border-collapse:collapse">` +
       rows.map(([k, v]) => `<tr><td style="padding:4px 10px 4px 0;color:#555"><b>${esc(k)}</b></td><td style="padding:4px 0">${esc(v || "-").replace(/\n/g, "<br>")}</td></tr>`).join("") + "</table>";
