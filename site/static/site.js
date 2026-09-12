@@ -21,6 +21,18 @@
   // Lead forms: progressive enhancement over a plain HTML POST to /api/contact.
   // querySelectorAll, not querySelector: the home page carries two forms (the short one in the hero
   // and the long one further down) and binding only the first would leave the other unenhanced.
+  // Lead forms post natively to Web3Forms. There is no fetch() here on purpose.
+  //
+  // Web3Forms sits behind Cloudflare Bot Management, which can answer a submission with an
+  // interstitial verification page instead of the API response. A navigation survives that - the
+  // visitor sees the check, then Web3Forms' own `redirect` field carries them to /thank-you/. A
+  // fetch cannot survive it: the challenge response carries no CORS headers, so the request dies as
+  // "Failed to fetch" and the visitor is told nothing useful. Verified against the live domain:
+  // fetch with JSON, FormData and urlencoded bodies all failed that way, while the native POST
+  // reached Web3Forms.
+  //
+  // Because the post is native, the browser's own required/pattern validation is what guards the
+  // fields, which is why the forms no longer carry `novalidate`.
   document.querySelectorAll("form.lead").forEach(function (form) {
     var q = new URLSearchParams(window.location.search);
     var set = function (n, v) { var el = form.querySelector('[name="' + n + '"]'); if (el && !el.value) el.value = v || ""; };
@@ -29,37 +41,14 @@
     set("utm_source", q.get("utm_source")); set("utm_medium", q.get("utm_medium")); set("utm_campaign", q.get("utm_campaign"));
     set("client_ts", new Date().toISOString());
     var started = false;
-    form.addEventListener("focusin", function () { if (!started) { started = true; track("form_start", { variant: form.classList.contains("short") ? "hero_short" : "full" }); } });
-    if (window.fetch) {
-      form.addEventListener("submit", function (evt) {
-        evt.preventDefault();
-        var msg = form.querySelector(".form-msg");
-        var btn = form.querySelector('button[type="submit"]');
-        var consent = form.querySelector('[name="consent"]');
-        if (consent && consent.type === "checkbox" && !consent.checked) {
-          if (msg) { msg.textContent = "Please check the consent box so we can contact you."; msg.className = "form-msg error"; }
-          return;
-        }
-        if (msg) { msg.textContent = ""; msg.className = "form-msg"; }
-        // A disabled button with unchanged text reads as a dead button. Say what is happening.
-        var label = btn ? btn.textContent : "";
-        if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
-        track("form_submit", { variant: form.classList.contains("short") ? "hero_short" : "full" });
-        // Web3Forms answers with JSON: {success: true|false, message: "..."}. A 4xx still carries a
-        // usable message, so the body is read either way rather than trusting res.ok alone.
-        fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
-          .then(function (res) { return res.json().catch(function () { return { success: res.ok }; }); })
-          .then(function (data) {
-            if (data && data.success) { window.location.href = "/thank-you/"; return; }
-            throw new Error((data && data.message) || "We could not send your request. Please call instead.");
-          })
-          .catch(function (err) {
-            track("form_error", { message: String(err.message).slice(0, 120) });
-            if (msg) { msg.textContent = err.message || "We could not send your request. Please call instead."; msg.className = "form-msg error"; }
-          })
-          .finally(function () { if (btn) { btn.disabled = false; btn.textContent = label; } });
-      });
-    }
+    var variant = form.classList.contains("short") ? "hero_short" : "full";
+    form.addEventListener("focusin", function () { if (!started) { started = true; track("form_start", { variant: variant }); } });
+    // Fires before the navigation begins, so the event is recorded; the submit is not intercepted.
+    form.addEventListener("submit", function () {
+      track("form_submit", { variant: variant });
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+    });
   });
 
   // Tools: each tool page defines window.SCTools[name](rootEl); site.js wires the common submit/input events.
