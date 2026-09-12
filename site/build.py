@@ -159,8 +159,13 @@ def inline_script_hashes():
 def write_headers_redirects():
     csp = "; ".join(["default-src 'self'", "script-src 'self' " + " ".join(inline_script_hashes()) + " https://challenges.cloudflare.com https://static.cloudflareinsights.com",
                      "style-src 'self' 'unsafe-inline'", "img-src 'self' data:", "font-src 'self'",
-                     "connect-src 'self' https://cloudflareinsights.com https://challenges.cloudflare.com", "frame-src https://challenges.cloudflare.com",
-                     "form-action 'self'", "base-uri 'self'", "object-src 'none'", "frame-ancestors 'self'", "upgrade-insecure-requests"])
+                     # api.web3forms.com is where the lead forms post. It has to be in connect-src for the
+                     # fetch path and in form-action for the plain-POST fallback when JavaScript is
+                     # off; default-src 'self' silently blocks both otherwise, with no console error
+                     # the visitor or the owner would ever see.
+                     "connect-src 'self' https://cloudflareinsights.com https://challenges.cloudflare.com https://api.web3forms.com",
+                     "frame-src https://challenges.cloudflare.com",
+                     "form-action 'self' https://api.web3forms.com", "base-uri 'self'", "object-src 'none'", "frame-ancestors 'self'", "upgrade-insecure-requests"])
     (DIST / "_headers").write_text(f"""/*
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN

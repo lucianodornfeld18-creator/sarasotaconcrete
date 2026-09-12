@@ -244,34 +244,47 @@ def _footer():
 
 
 def lead_form(short=False, city=None, service=None, prefix="f"):
-    """Renders the lead form, in the shape that works on ocoeeconcrete.com.
+    """Renders the lead form. Delivery goes through Web3Forms, posted from the browser.
 
-    Ocoee asks six things and marks the required ones with an asterisk: name, phone, email, where,
-    service and free-text detail. That is the whole form. Sarasota now matches it, with one
-    deliberate difference: where Ocoee uses a dropdown of city names, this asks for a ZIP code. A
-    visitor types five digits faster than they scroll a list of twenty-one localities, and a ZIP
-    pins the address to a permitting jurisdiction more precisely than "Englewood" does, which is the
-    one place on this coast where the county line splits a single community.
+    Field shape follows ocoeeconcrete.com - name, phone, email, where, service, detail, with the
+    required ones asterisked - except that "where" asks for a ZIP rather than offering a dropdown of
+    twenty-one localities, which is the owner's call: five digits beat scrolling a list, and a ZIP
+    pins the permitting jurisdiction, which on this coast decides the permit in Englewood where the
+    county line splits one community.
+
+    Why the post goes straight to Web3Forms and not through /api/contact: Web3Forms refuses
+    server-side calls on the free plan ("Use our API in client side ... Pro plan is required"), so
+    proxying it through the Pages Function is not an option. That means the validation, the KV rate
+    limit and the KV lead archive that used to run server-side no longer sit in front of a
+    submission. What is left guarding it is the browser's own required/pattern validation, the
+    Web3Forms honeypot below, and whatever captcha is enabled in their dashboard - worth enabling,
+    because the access key is public and anyone can post to it.
+
+    The photo field is gone with the change: attachments are a paid Web3Forms feature, and a file
+    input that silently discards the file is worse than no file input.
 
     short=True is the open form in the home hero and drops the free-text box, so the first touch is
-    five fields. The long form on /contact/ keeps the detail box and the optional photo, which is
-    what shortens the first phone call.
+    five fields. prefix keeps element ids unique, since the home page carries two forms.
 
-    prefix keeps element ids unique: the home page carries two forms, and duplicate ids are invalid
-    HTML and break label-for association.
-
-    Consent is disclosure-by-submission on both forms now, as on Ocoee: the disclosure sits directly
-    above the button, so it is read before the affirmative act, and no checkbox stands between a
-    ready visitor and sending. api/contact.js accepts consent="submit" as well as the old "yes".
+    Consent is disclosure-by-submission: the text sits directly above the button, read before the
+    affirmative act, and rides along as a field so the submission records it.
     """
     opt = lambda xs, sel=None: "".join(f'<option{" selected" if x == sel else ""}>{esc(x)}</option>' for x in xs)
     turn = f'<div class="cf-turnstile" data-sitekey="{TURNSTILE_SITE_KEY}"></div>' if not TURNSTILE_SITE_KEY.startswith("{{") else ""
+    # Web3Forms fields. `redirect` is what carries a visitor with JavaScript disabled to the
+    # thank-you page, so it has to be an absolute URL. `botcheck` is their honeypot: a hidden
+    # checkbox that only a bot ticks.
+    w3 = (f'<input type="hidden" name="access_key" value="{BUSINESS["web3forms_key"]}">'
+          f'<input type="hidden" name="subject" value="New estimate request - {PUBLIC_NAME}">'
+          f'<input type="hidden" name="from_name" value="{PUBLIC_NAME}">'
+          f'<input type="hidden" name="redirect" value="{BASE_URL}/thank-you/">')
     hidden = ('<input type="hidden" name="hub_id" value="sarasota">'
-              '<input type="hidden" name="consent" value="submit">'
+              '<input type="hidden" name="consent" value="Agreed to be contacted (disclosure shown above the button)">'
               '<input type="hidden" name="page_url" value=""><input type="hidden" name="referrer" value="">'
               '<input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value="">'
               '<input type="hidden" name="utm_campaign" value=""><input type="hidden" name="client_ts" value="">')
-    honeypot = '<div class="hp" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>'
+    honeypot = ('<div class="hp" aria-hidden="true"><label>Do not fill this in'
+                '<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>')
     services = (f'<option value="">-- Select service --</option>'
                 f'<optgroup label="Concrete">{opt(FORM_SERVICES_CONCRETE, service)}</optgroup>'
                 f'<optgroup label="Pavers &amp; hardscape">{opt(FORM_SERVICES_PAVERS, service)}</optgroup>')
@@ -281,6 +294,7 @@ def lead_form(short=False, city=None, service=None, prefix="f"):
     disclosure = (f'<p class="disclosure">By sending, you agree {PUBLIC_NAME} may contact you about this request and may '
                   f'forward it to the insured provider that serves your area. Reply STOP to end texts. '
                   f'See the <a href="/privacy/">privacy policy</a>.</p>')
+    action = 'action="https://api.web3forms.com/submit"'
 
     core = f'''<label for="{prefix}-name">Full Name {req}</label>
 <input id="{prefix}-name" name="name" required autocomplete="name" maxlength="100" placeholder="Your name">
@@ -295,8 +309,8 @@ def lead_form(short=False, city=None, service=None, prefix="f"):
 <select id="{prefix}-service" name="service" required>{services}</select></div></div>'''
 
     if short:
-        return f'''<form class="lead short" method="post" action="/api/contact" novalidate aria-labelledby="{prefix}-h">
-{hidden}
+        return f'''<form class="lead short" method="POST" {action} aria-labelledby="{prefix}-h">
+{w3}{hidden}
 {honeypot}
 <p class="lead-h" id="{prefix}-h">Get a free estimate</p>
 <p class="lead-s">Five fields. We reply the same or next business day.</p>
@@ -305,13 +319,12 @@ def lead_form(short=False, city=None, service=None, prefix="f"):
 {disclosure}
 <p class="form-msg" aria-live="polite"></p></form>'''
 
-    return f'''<form class="lead" method="post" action="/api/contact" enctype="multipart/form-data" novalidate>
-{hidden}
+    return f'''<form class="lead" method="POST" {action}>
+{w3}{hidden}
 {honeypot}
 {core}
 <label for="{prefix}-msg">Project Details</label>
 <textarea id="{prefix}-msg" name="message" maxlength="3000" placeholder="Approximate size, the material you have in mind, what is there now, your timeline."></textarea>
-<label for="{prefix}-photo">Photo (optional, JPG or PNG up to 8 MB)</label><input id="{prefix}-photo" name="photo" type="file" accept="image/jpeg,image/png">
 {turn}<button class="btn" type="submit">Get Free Estimate</button>
 {disclosure}
 {call_line}

@@ -24,6 +24,12 @@ BUSINESS = {
     "phone_display": "(941) 274-3561",
     "phone_tel": "+19412743561",
     "email": "hello@sarasotaconcrete.com",
+    # Web3Forms access key. Public by design: the service authenticates the form from the browser,
+    # so the key ships in the HTML of every page and there is no way to hide it. It identifies the
+    # destination inbox, it is not a credential that can read anything, and it is revocable from the
+    # Web3Forms dashboard. Because anyone can post to it, the honeypot below and the dashboard's
+    # captcha are the only spam protection, which is worth turning on.
+    "web3forms_key": "aa494292-272d-492c-a968-1d63f9d9f865",
     "legal_entity": "{{LEGAL_ENTITY}}",
     "license_number": "",                                  # blank = no license claim anywhere
     "insurance_statement": "Insured",                      # only "Insured" until proof + license supplied

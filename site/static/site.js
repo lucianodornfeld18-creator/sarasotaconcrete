@@ -45,10 +45,13 @@
         var label = btn ? btn.textContent : "";
         if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
         track("form_submit", { variant: form.classList.contains("short") ? "hero_short" : "full" });
+        // Web3Forms answers with JSON: {success: true|false, message: "..."}. A 4xx still carries a
+        // usable message, so the body is read either way rather than trusting res.ok alone.
         fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
-          .then(function (res) {
-            if (res.redirected || res.ok) { window.location.href = "/thank-you/"; return; }
-            return res.text().then(function (t) { throw new Error(t || "We could not send your request."); });
+          .then(function (res) { return res.json().catch(function () { return { success: res.ok }; }); })
+          .then(function (data) {
+            if (data && data.success) { window.location.href = "/thank-you/"; return; }
+            throw new Error((data && data.message) || "We could not send your request. Please call instead.");
           })
           .catch(function (err) {
             track("form_error", { message: String(err.message).slice(0, 120) });
