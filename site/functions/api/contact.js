@@ -1,5 +1,5 @@
 // Cloudflare Pages Function — POST /api/contact (sarasotaconcrete.com)
-// Server-side validation, honeypot, Turnstile (when TURNSTILE_SECRET_KEY is set), KV rate limit,
+// Server-side validation, honeypot, Turnstile (when TURNSTILE_SECRET_KEY is set), two KV rate limits,
 // optional photo attachment (<= 8 MB JPG/PNG), then hands the payload to the contact-email Worker
 // via a service binding. No PII is logged.
 
@@ -56,14 +56,28 @@ async function verifyTurnstile(token, secret, ip) {
     return { ok: !!d.success };
   } catch { return { ok: false }; }
 }
-async function rateLimit(env, ip) {
-  if (!env.RATE_LIMIT_KV || !ip) return true;
-  const key = `rl:${ip}`;
+// Two separate counters, because one counter conflates two different things.
+//
+// `rlq` is the flood guard: every POST that gets past the origin check counts, with a high ceiling.
+// It exists to stop a script hammering the endpoint, and it has to run before any work is done.
+//
+// `rl` counts only submissions that were accepted and sent. This is the one with the tight ceiling,
+// and it must not be charged for attempts that failed validation. The old single counter ran before
+// validate(), so a visitor who mistyped their email five times was locked out for ten minutes and
+// told to call instead - punishing exactly the person who was trying hardest to reach us.
+const RL_WINDOW = 600;               // ten minutes, rolling
+const RL_ACCEPTED_MAX = 5;           // accepted submissions per IP per window
+const RL_ATTEMPT_MAX = 40;           // raw POSTs per IP per window
+
+async function bump(env, key, max, ttl) {
+  if (!env.RATE_LIMIT_KV) return true;
   const n = Number((await env.RATE_LIMIT_KV.get(key)) || "0");
-  if (n >= 5) return false; // 5 submissions per rolling 10 minutes per IP
-  await env.RATE_LIMIT_KV.put(key, String(n + 1), { expirationTtl: 600 });
+  if (n >= max) return false;
+  await env.RATE_LIMIT_KV.put(key, String(n + 1), { expirationTtl: ttl });
   return true;
 }
+const attemptAllowed = (env, ip) => !ip ? Promise.resolve(true) : bump(env, `rlq:${ip}`, RL_ATTEMPT_MAX, RL_WINDOW);
+const acceptAllowed = (env, ip) => !ip ? Promise.resolve(true) : bump(env, `rl:${ip}`, RL_ACCEPTED_MAX, RL_WINDOW);
 
 // Keeps the lead even if the email fails. Cloudflare's outbound email path takes several seconds,
 // and it is the one part of this chain that can fail after the visitor is gone, so the payload is
@@ -90,7 +104,7 @@ export async function onRequestPost({ request, env, waitUntil }) {
   try { form = await request.formData(); } catch { return text("The form could not be read.", 400); }
   if (field(form, "company")) return Response.redirect(new URL("/thank-you/", request.url), 303); // honeypot
   const ip = request.headers.get("cf-connecting-ip") || "";
-  if (!(await rateLimit(env, ip))) return text("Too many requests. Please call us instead.", 429);
+  if (!(await attemptAllowed(env, ip))) return text("Too many requests from this connection. Please try again in a few minutes, or call us.", 429);
   const ts = await verifyTurnstile(field(form, "cf-turnstile-response"), env.TURNSTILE_SECRET_KEY, ip);
   if (!ts.ok) return text("We could not verify this submission was made by a person. Please try again.", 403);
 
@@ -107,6 +121,11 @@ export async function onRequestPost({ request, env, waitUntil }) {
   };
   const err = validate(payload);
   if (err) return text(err, 400);
+
+  // Only now does the submission count against the tight limit: it is real and about to be sent.
+  if (!(await acceptAllowed(env, ip))) {
+    return text("We already have your request - there is no need to send it again. We will reply shortly, or call us if it is urgent.", 429);
+  }
 
   const photo = form.get("photo");
   if (photo && typeof photo === "object" && photo.size) {
