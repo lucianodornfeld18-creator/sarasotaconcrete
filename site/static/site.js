@@ -41,7 +41,9 @@
           return;
         }
         if (msg) { msg.textContent = ""; msg.className = "form-msg"; }
-        if (btn) btn.disabled = true;
+        // A disabled button with unchanged text reads as a dead button. Say what is happening.
+        var label = btn ? btn.textContent : "";
+        if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
         track("form_submit", { variant: form.classList.contains("short") ? "hero_short" : "full" });
         fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
           .then(function (res) {
@@ -52,7 +54,7 @@
             track("form_error", { message: String(err.message).slice(0, 120) });
             if (msg) { msg.textContent = err.message || "We could not send your request. Please call instead."; msg.className = "form-msg error"; }
           })
-          .finally(function () { if (btn) btn.disabled = false; });
+          .finally(function () { if (btn) { btn.disabled = false; btn.textContent = label; } });
       });
     }
   });

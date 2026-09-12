@@ -65,7 +65,23 @@ async function rateLimit(env, ip) {
   return true;
 }
 
-export async function onRequestPost({ request, env }) {
+// Keeps the lead even if the email fails. Cloudflare's outbound email path takes several seconds,
+// and it is the one part of this chain that can fail after the visitor is gone, so the payload is
+// written to KV first under a key that sorts by time. Nothing reads these automatically; they exist
+// so a delivery failure is recoverable rather than a lost customer.
+async function archive(env, payload) {
+  if (!env.RATE_LIMIT_KV) return;
+  const key = `lead:${payload.submittedAt}:${Math.random().toString(36).slice(2, 8)}`;
+  const { photo, ...rest } = payload;           // the photo would blow past KV's value limit
+  try {
+    await env.RATE_LIMIT_KV.put(key, JSON.stringify({ ...rest, had_photo: !!photo }),
+      { expirationTtl: 60 * 60 * 24 * 90 });    // 90 days is long enough to notice and recover
+  } catch (e) {
+    console.error("lead archive failed", { name: e instanceof Error ? e.name : "Error" });
+  }
+}
+
+export async function onRequestPost({ request, env, waitUntil }) {
   if (Number(request.headers.get("content-length") || "0") > MAX_FORM_BYTES) return text("This request is too large.", 413);
   if (!isAllowedOrigin(request.headers.get("origin"))) return text("This form submission is not allowed.", 403);
   const ct = request.headers.get("content-type") || "";
@@ -100,12 +116,27 @@ export async function onRequestPost({ request, env }) {
     let bin = ""; for (let i = 0; i < buf.length; i += 0x8000) bin += String.fromCharCode.apply(null, buf.subarray(i, i + 0x8000));
     payload.photo = { name: (photo.name || "photo").replace(/[^\w.\-]/g, "_").slice(0, 80), type: photo.type, base64: btoa(bin) };
   }
-  try {
-    const r = await env.CONTACT_EMAIL.fetch("https://contact-email.internal/send", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(payload) });
-    if (!r.ok) { console.error("contact-email rejected", { status: r.status }); return text("We could not send your request right now. Please email hello@sarasotaconcrete.com.", 502); }
-  } catch (e) {
-    console.error("contact-email unavailable", { name: e instanceof Error ? e.name : "Error" });
-    return text("We could not send your request right now. Please email hello@sarasotaconcrete.com.", 502);
-  }
+  // Handing the payload to the email Worker used to be awaited here, and Cloudflare's send_email
+  // path takes four to eight seconds. That was four to eight seconds of a visitor staring at a
+  // disabled button after they had already done everything asked of them, which is where forms lose
+  // people. The submission is archived first, then the response goes out immediately and delivery
+  // finishes in the background under waitUntil, which keeps the request alive after the response.
+  //
+  // The cost of the change is honest: a delivery failure can no longer be reported to the visitor.
+  // That is the right trade. A failure is rare, the visitor could not act on it anyway, and the
+  // lead is in KV either way -- whereas the delay hit every single submission.
+  await archive(env, payload);
+
+  const deliver = (async () => {
+    try {
+      const r = await env.CONTACT_EMAIL.fetch("https://contact-email.internal/send",
+        { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(payload) });
+      if (!r.ok) console.error("contact-email rejected", { status: r.status });
+    } catch (e) {
+      console.error("contact-email unavailable", { name: e instanceof Error ? e.name : "Error" });
+    }
+  })();
+  if (typeof waitUntil === "function") waitUntil(deliver); else await deliver;
+
   return Response.redirect(new URL("/thank-you/", request.url), 303);
 }
